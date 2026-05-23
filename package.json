@@ -1,6 +1,7 @@
 {
-    "name": "edutrace-app",
+    "name": "edutraceapp",
     "version": "1.0.0",
+    "description": "Open-source STEM curriculum viewer for Egyptian high school students",
     "private": true,
     "engines": {
         "node": ">=22.0.0",
