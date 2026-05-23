@@ -1,0 +1,731 @@
+/**
+ * EduTrace Design System v3.0 - Academic Premium
+ * ================================================
+ * Single source of truth for all design tokens.
+ * All other CSS files reference --ds-* variables.
+ * Legacy aliases live in globals.css.
+ *
+ * Aesthetic: Clean · Modern · Academic · Focused
+ * Palette: Indigo primary, cool-neutral darks, DM Sans, Fraunces
+ */
+
+/* ==================== CSS CUSTOM PROPERTIES ==================== */
+:root {
+    /* ── Primary (Indigo) ── */
+    --ds-color-primary: #4285f4;
+    --ds-color-primary-hover: #5a95f5;
+    --ds-color-primary-active: #3b78e7;
+    --ds-color-primary-light: rgba(66, 133, 244, 0.1);
+    --ds-color-primary-lighter: rgba(66, 133, 244, 0.05);
+    --ds-color-primary-border: rgba(66, 133, 244, 0.25);
+
+    /* ── Semantic ── */
+    --ds-color-success: #22c55e;
+    --ds-color-success-hover: #4ade80;
+    --ds-color-success-light: rgba(34, 197, 94, 0.1);
+    --ds-color-success-border: rgba(34, 197, 94, 0.25);
+
+    --ds-color-warning: #f59e0b;
+    --ds-color-warning-hover: #fbbf24;
+    --ds-color-warning-light: rgba(245, 158, 11, 0.1);
+    --ds-color-warning-border: rgba(245, 158, 11, 0.25);
+
+    --ds-color-error: #ef4444;
+    --ds-color-danger: var(--ds-color-error);
+    --ds-color-error-hover: #f87171;
+    --ds-color-error-light: rgba(239, 68, 68, 0.1);
+    --ds-color-error-border: rgba(239, 68, 68, 0.25);
+
+    /* ── Extended ── */
+    --ds-color-purple: #a78bfa;
+    --ds-color-purple-hover: #c4b5fd;
+    --ds-color-purple-light: rgba(167, 139, 250, 0.1);
+    --ds-color-purple-border: rgba(167, 139, 250, 0.25);
+
+    --ds-color-info: #4285f4;
+    --ds-color-info-hover: #5a95f5;
+    --ds-color-info-light: rgba(66, 133, 244, 0.1);
+    --ds-color-info-border: rgba(66, 133, 244, 0.25);
+
+    --ds-color-accent: #4285f4;
+    --ds-color-accent-hover: #5a95f5;
+
+    /* ── Backgrounds (cool neutral) ── */
+    --ds-bg-primary: #09090b;
+    --ds-bg-secondary: #0c0c0e;
+    --ds-bg-tertiary: #111113;
+    --ds-bg-elevated: #18181b;
+    --ds-bg-hover: #1f1f23;
+    --ds-bg-active: #27272a;
+    --ds-bg-card: #111113;
+
+    /* ── Text ── */
+    --ds-text-primary: #fafafa;
+    --ds-text-secondary: rgba(250, 250, 250, 0.72);
+    --ds-text-tertiary: rgba(250, 250, 250, 0.5);
+    --ds-text-quaternary: rgba(250, 250, 250, 0.38);
+    --ds-text-muted: rgba(250, 250, 250, 0.38);
+    --ds-text-disabled: rgba(250, 250, 250, 0.2);
+
+    /* ── Borders ── */
+    --ds-border-default: rgba(250, 250, 250, 0.08);
+    --ds-border-subtle: rgba(250, 250, 250, 0.04);
+    --ds-border-emphasis: rgba(250, 250, 250, 0.14);
+    --ds-border-strong: rgba(250, 250, 250, 0.22);
+    --ds-border-focus: #4285f4;
+
+    /* ── Spacing (4px base) ── */
+    --ds-space-1: 4px;
+    --ds-space-2: 8px;
+    --ds-space-3: 12px;
+    --ds-space-4: 16px;
+    --ds-space-5: 20px;
+    --ds-space-6: 24px;
+    --ds-space-8: 32px;
+    --ds-space-10: 40px;
+    --ds-space-12: 48px;
+    --ds-space-16: 64px;
+    --ds-space-20: 80px;
+
+    /* ── Border Radius (simplified) ── */
+    --ds-radius-none: 0;
+    --ds-radius-sm: 4px;
+    --ds-radius-md: 6px;
+    --ds-radius-lg: 8px;
+    --ds-radius-xl: 12px;
+    --ds-radius-2xl: 16px;
+    --ds-radius-3xl: 20px;
+    --ds-radius-full: 9999px;
+    --ds-radius-pill: 100px;
+
+    /* Component Radius */
+    --ds-radius-button: 6px;
+    --ds-radius-input: 6px;
+    --ds-radius-card: 8px;
+
+    /* ── Shadows (tuned for dark theme) ── */
+    --ds-shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.3);
+    --ds-shadow-md: 0 2px 8px rgba(0, 0, 0, 0.32);
+    --ds-shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.36);
+    --ds-shadow-xl: 0 16px 48px rgba(0, 0, 0, 0.4);
+    --ds-shadow-dropdown: 0 4px 16px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(250, 250, 250, 0.06);
+    --ds-shadow-card: 0 1px 4px rgba(0, 0, 0, 0.3);
+
+    /* ── Easing (no bounce - focused, not playful) ── */
+    --ds-ease-default: cubic-bezier(0.2, 0, 0, 1);
+    --ds-ease-in: cubic-bezier(0.3, 0, 1, 1);
+    --ds-ease-out: cubic-bezier(0, 0, 0.3, 1);
+    --ds-ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+    --ds-ease-bounce: cubic-bezier(0.4, 0, 0.2, 1); /* maps to in-out - no bounce */
+    --ds-ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.1);
+
+    /* ── Transitions ── */
+    --ds-transition-fast: 0.1s ease;
+    --ds-transition-base: 0.15s ease;
+    --ds-transition-slow: 0.25s ease;
+    --ds-transition-slower: 0.35s ease;
+    --ds-transition-smooth: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    /* Motion Presets */
+    --ds-motion-fade: 150ms var(--ds-ease-default);
+    --ds-motion-slide: 200ms var(--ds-ease-default);
+    --ds-motion-scale: 180ms var(--ds-ease-default);
+    --ds-motion-bounce: 250ms var(--ds-ease-in-out);
+
+    /* ── Typography - Font Families ──
+       Anthropic-like stacks:
+       - Prefer Inter for clean UI, Playfair for elegant headers.
+       - Fallback to system fonts. */
+    --ds-font-sans:
+        'DM Sans', var(--font-sans-primary), ui-sans-serif, system-ui, -apple-system,
+        BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    --ds-font-mono: var(--font-mono-code), 'SF Mono', 'Fira Code', 'Consolas', monospace;
+    --ds-font-serif-display:
+        'Fraunces', var(--font-serif-display), ui-serif, Georgia, 'Times New Roman', serif;
+    --ds-font-serif-secondary:
+        'Source Serif 4', var(--font-serif-secondary), ui-serif, Georgia, 'Times New Roman', serif;
+
+    /* Typography - Font Sizes (rem for accessibility) */
+    --ds-font-size-xs: 0.75rem; /* 12px */
+    --ds-font-size-sm: 0.8125rem; /* 13px */
+    --ds-font-size-base: 0.875rem; /* 14px */
+    --ds-font-size-md: 0.9375rem; /* 15px */
+    --ds-font-size-lg: 1rem; /* 16px */
+    --ds-font-size-xl: 1.125rem; /* 18px */
+    --ds-font-size-2xl: 1.25rem; /* 20px */
+    --ds-font-size-3xl: 1.5rem; /* 24px */
+    --ds-font-size-4xl: 1.875rem; /* 30px */
+    --ds-font-size-5xl: 2.25rem; /* 36px */
+
+    /* Typography - Font Weights */
+    --ds-font-normal: 400;
+    --ds-font-medium: 500;
+    --ds-font-semibold: 600;
+    --ds-font-bold: 700;
+
+    /* Typography - Line Heights */
+    --ds-leading-none: 1;
+    --ds-leading-tight: 1.25;
+    --ds-leading-snug: 1.375;
+    --ds-leading-normal: 1.5;
+    --ds-leading-relaxed: 1.625;
+    --ds-leading-loose: 1.8;
+
+    /* Typography - Letter Spacing */
+    --ds-tracking-tighter: -0.04em;
+    --ds-tracking-tight: -0.02em;
+    --ds-tracking-normal: 0;
+    --ds-tracking-wide: 0.025em;
+    --ds-tracking-wider: 0.05em;
+
+    /* ── Layout ── */
+    --ds-navbar-height: 52px;
+    --ds-navbar-height-mobile: 48px;
+    --ds-mobile-nav-height: 64px;
+    --ds-sidebar-width: 240px;
+    --ds-touch-target-min: 44px;
+
+    /* Container Width Scale */
+    --ds-container-xs: 480px; /* Auth modals, empty states, small forms */
+    --ds-container-sm: 640px; /* Focused content, quiz take, narrow forms */
+    --ds-container-md: 900px; /* Team page, narrow article layouts */
+    --ds-container-lg: 1200px; /* Feature areas, content with sidebar widgets */
+    --ds-container-xl: 1440px; /* Full dashboard, curriculum trackers */
+
+    /* Legacy aliases - prefer the scale above */
+    --ds-container-max: var(--ds-container-xl);
+    --ds-container-focused: var(--ds-container-sm);
+    --ds-content-max-width: var(--ds-container-xl);
+
+    /* Z-Index Scale */
+    --ds-z-dropdown: 100;
+    --ds-z-sticky: 200;
+    --ds-z-fixed: 300;
+    --ds-z-modal-backdrop: 400;
+    --ds-z-modal: 500;
+    --ds-z-popover: 600;
+    --ds-z-tooltip: 700;
+    --ds-z-toast: 800;
+    --ds-z-max: 9999;
+
+    /* ── Gradients ── */
+    --ds-gradient-primary: linear-gradient(135deg, #4285f4 0%, #3b78e7 100%);
+    --ds-gradient-success: linear-gradient(135deg, #22c55e 0%, #16a34a 100%);
+    --ds-gradient-hero: linear-gradient(135deg, #4285f4 0%, #a78bfa 100%);
+
+    /* ── Global surfaces (use tokens instead of one-off hex across CSS files) ── */
+    --ds-bg-landing: var(--ds-bg-primary);
+    --ds-surface-prose-bg: var(--ds-bg-card);
+    --ds-surface-prose-border: var(--ds-border-default);
+    --ds-surface-prose-shadow: var(--ds-shadow-card);
+
+    /* ── Cluster spacing (badges, tabs, tag rows) - use everywhere for even rhythm ── */
+    --ds-cluster-gap-tight: var(--ds-space-1);
+    --ds-cluster-gap: var(--ds-space-2);
+    --ds-cluster-gap-relaxed: var(--ds-space-3);
+
+    /* ── Component Sizes ── */
+    --ds-button-height-sm: 32px;
+    --ds-button-height-md: 36px;
+    --ds-button-height-lg: 44px;
+
+    --ds-input-height-sm: 32px;
+    --ds-input-height-md: 40px;
+    --ds-input-height-lg: 48px;
+}
+
+/* Reduced Motion - disable transitions & animations for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    :root {
+        --ds-transition-fast: 0s;
+        --ds-transition-base: 0s;
+        --ds-transition-slow: 0s;
+        --ds-transition-slower: 0s;
+        --ds-transition-smooth: 0s;
+        --ds-motion-fade: 0s;
+        --ds-motion-slide: 0s;
+        --ds-motion-scale: 0s;
+        --ds-motion-bounce: 0s;
+    }
+}
+
+/* ==================== UTILITY CLASSES ==================== */
+
+/* Text Colors */
+.ds-text-primary {
+    color: var(--ds-text-primary);
+}
+
+.ds-text-secondary {
+    color: var(--ds-text-secondary);
+}
+
+.ds-text-tertiary {
+    color: var(--ds-text-tertiary);
+}
+
+.ds-text-muted {
+    color: var(--ds-text-muted);
+}
+
+.ds-text-success {
+    color: var(--ds-color-success);
+}
+
+.ds-text-error {
+    color: var(--ds-color-error);
+}
+
+.ds-text-warning {
+    color: var(--ds-color-warning);
+}
+
+/* Background Colors */
+.ds-bg-primary {
+    background-color: var(--ds-bg-primary);
+}
+
+.ds-bg-secondary {
+    background-color: var(--ds-bg-secondary);
+}
+
+.ds-bg-card {
+    background-color: var(--ds-bg-card);
+}
+
+.ds-bg-elevated {
+    background-color: var(--ds-bg-elevated);
+}
+
+/* Spacing - Padding */
+.ds-p-0 {
+    padding: 0;
+}
+
+.ds-p-1 {
+    padding: var(--ds-space-1);
+}
+
+.ds-p-2 {
+    padding: var(--ds-space-2);
+}
+
+.ds-p-3 {
+    padding: var(--ds-space-3);
+}
+
+.ds-p-4 {
+    padding: var(--ds-space-4);
+}
+
+.ds-p-6 {
+    padding: var(--ds-space-6);
+}
+
+.ds-p-8 {
+    padding: var(--ds-space-8);
+}
+
+/* Spacing - Margin */
+.ds-m-0 {
+    margin: 0;
+}
+
+.ds-m-auto {
+    margin: auto;
+}
+
+.ds-mt-2 {
+    margin-top: var(--ds-space-2);
+}
+
+.ds-mt-4 {
+    margin-top: var(--ds-space-4);
+}
+
+.ds-mt-6 {
+    margin-top: var(--ds-space-6);
+}
+
+.ds-mb-2 {
+    margin-bottom: var(--ds-space-2);
+}
+
+.ds-mb-4 {
+    margin-bottom: var(--ds-space-4);
+}
+
+.ds-mb-6 {
+    margin-bottom: var(--ds-space-6);
+}
+
+/* Spacing - Gap */
+.ds-gap-1 {
+    gap: var(--ds-space-1);
+}
+
+.ds-gap-2 {
+    gap: var(--ds-space-2);
+}
+
+.ds-gap-3 {
+    gap: var(--ds-space-3);
+}
+
+.ds-gap-4 {
+    gap: var(--ds-space-4);
+}
+
+.ds-gap-6 {
+    gap: var(--ds-space-6);
+}
+
+/* Border Radius */
+.ds-rounded-sm {
+    border-radius: var(--ds-radius-sm);
+}
+
+.ds-rounded-md {
+    border-radius: var(--ds-radius-md);
+}
+
+.ds-rounded-lg {
+    border-radius: var(--ds-radius-lg);
+}
+
+.ds-rounded-full {
+    border-radius: var(--ds-radius-full);
+}
+
+/* Flexbox */
+.ds-flex {
+    display: flex;
+}
+
+.ds-flex-col {
+    flex-direction: column;
+}
+
+.ds-flex-row {
+    flex-direction: row;
+}
+
+.ds-flex-wrap {
+    flex-wrap: wrap;
+}
+
+.ds-items-center {
+    align-items: center;
+}
+
+.ds-items-start {
+    align-items: flex-start;
+}
+
+.ds-justify-center {
+    justify-content: center;
+}
+
+.ds-justify-between {
+    justify-content: space-between;
+}
+
+.ds-justify-end {
+    justify-content: flex-end;
+}
+
+.ds-flex-1 {
+    flex: 1;
+}
+
+/* Grid */
+.ds-grid {
+    display: grid;
+}
+
+.ds-grid-cols-1 {
+    grid-template-columns: repeat(1, 1fr);
+}
+
+.ds-grid-cols-2 {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.ds-grid-cols-3 {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.ds-grid-cols-4 {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+/* Width */
+.ds-w-full {
+    width: 100%;
+}
+
+.ds-w-auto {
+    width: auto;
+}
+
+.ds-max-w-sm {
+    max-width: 640px;
+}
+
+.ds-max-w-md {
+    max-width: 768px;
+}
+
+.ds-max-w-lg {
+    max-width: 1024px;
+}
+
+.ds-max-w-xl {
+    max-width: 1280px;
+}
+
+/* Typography */
+.ds-text-xs {
+    font-size: var(--ds-font-size-xs);
+}
+
+.ds-text-sm {
+    font-size: var(--ds-font-size-sm);
+}
+
+.ds-text-base {
+    font-size: var(--ds-font-size-base);
+}
+
+.ds-text-lg {
+    font-size: var(--ds-font-size-lg);
+}
+
+.ds-text-xl {
+    font-size: var(--ds-font-size-xl);
+}
+
+.ds-text-2xl {
+    font-size: var(--ds-font-size-2xl);
+}
+
+.ds-text-3xl {
+    font-size: var(--ds-font-size-3xl);
+}
+
+.ds-font-normal {
+    font-weight: 400;
+}
+
+.ds-font-medium {
+    font-weight: 500;
+}
+
+.ds-font-semibold {
+    font-weight: 600;
+}
+
+.ds-font-bold {
+    font-weight: 700;
+}
+
+.ds-text-center {
+    text-align: center;
+}
+
+.ds-text-left {
+    text-align: left;
+}
+
+.ds-text-right {
+    text-align: right;
+}
+
+/* ==================== ANIMATIONS ==================== */
+@keyframes ds-fade-in {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes ds-fade-in-up {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes ds-scale-in {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes ds-spin {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes ds-pulse {
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+/* Animation Classes */
+.ds-animate-fade-in {
+    animation: ds-fade-in 0.2s ease;
+}
+
+.ds-animate-fade-in-up {
+    animation: ds-fade-in-up 0.3s ease;
+}
+
+.ds-animate-scale-in {
+    animation: ds-scale-in 0.2s ease;
+}
+
+.ds-animate-spin {
+    animation: ds-spin 1s linear infinite;
+}
+
+.ds-animate-pulse {
+    animation: ds-pulse 2s ease-in-out infinite;
+}
+
+/* ==================== DIVIDER ==================== */
+.ds-divider {
+    height: 1px;
+    background: var(--ds-border-default);
+    margin: var(--ds-space-4) 0;
+}
+
+.ds-divider--vertical {
+    width: 1px;
+    height: auto;
+    margin: 0 var(--ds-space-4);
+}
+
+/* ==================== RESPONSIVE UTILITIES ==================== */
+@media (max-width: 768px) {
+    .ds-hidden-mobile {
+        display: none !important;
+    }
+}
+
+@media (min-width: 769px) {
+    .ds-hidden-desktop {
+        display: none !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .ds-grid-cols-2,
+    .ds-grid-cols-3,
+    .ds-grid-cols-4 {
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .ds-grid-cols-4 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================== FOCUS STYLES ==================== */
+.ds-focus-ring:focus-visible {
+    outline: 2px solid var(--ds-color-primary);
+    outline-offset: 2px;
+}
+
+/* ==================== SCROLLBAR ==================== */
+.ds-scrollbar {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(255, 255, 255, 0.2) transparent;
+}
+
+.ds-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.ds-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.ds-scrollbar::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 3px;
+}
+
+.ds-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+/* ==================== LEGACY COMPATIBILITY ==================== */
+/* Bridge old button classes to new design system - remove as components migrate */
+
+.btn-primary,
+.custom-button,
+.quiz-btn {
+    background: var(--ds-color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--ds-radius-button);
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background var(--ds-transition-base),
+        box-shadow var(--ds-transition-base);
+}
+
+.btn-primary:hover,
+.custom-button:hover,
+.quiz-btn:hover {
+    background: var(--ds-color-primary-hover);
+}
+
+.btn-secondary {
+    background: rgba(250, 250, 250, 0.06);
+    color: var(--ds-text-primary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-button);
+    padding: 10px 20px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background var(--ds-transition-base),
+        border-color var(--ds-transition-base);
+}
+
+.btn-secondary:hover {
+    background: rgba(250, 250, 250, 0.1);
+    border-color: var(--ds-border-emphasis);
+}

@@ -1,0 +1,539 @@
+/* ==========================================
+   Micro-interactions & Animations
+   ========================================== */
+
+/* Button Interactions */
+.btn-interactive {
+    position: relative;
+    overflow: hidden;
+    transition: box-shadow 0.15s ease;
+}
+
+.btn-interactive:hover {
+    /* No transform on hover */
+}
+
+.btn-interactive:active {
+    transform: translateY(0) scale(0.98);
+}
+
+/* Ripple Effect */
+.ripple {
+    position: relative;
+    overflow: hidden;
+}
+
+.ripple::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+}
+
+.ripple:active::after {
+    animation: ripple-effect 0.4s ease-out;
+}
+
+@keyframes ripple-effect {
+    0% {
+        width: 0;
+        height: 0;
+        opacity: 0.5;
+    }
+
+    100% {
+        width: 200%;
+        height: 200%;
+        opacity: 0;
+    }
+}
+
+/* Card Hover Effects */
+.card-hover {
+    transition:
+        border-color var(--ds-transition-base),
+        box-shadow var(--ds-transition-base);
+}
+
+.card-hover:hover {
+    border-color: var(--ds-border-emphasis);
+    box-shadow: var(--ds-shadow-sm);
+}
+
+.card-hover:active {
+    /* no transform - focused, not playful */
+}
+
+/* Icon Hover - subtle opacity shift, no bounce */
+.icon-bounce {
+    transition:
+        opacity 0.15s ease,
+        color 0.15s ease;
+}
+
+.icon-bounce:hover {
+    opacity: 0.8;
+}
+
+/* Icon Spin */
+.icon-spin {
+    transition: transform 0.3s ease;
+}
+
+.icon-spin:hover {
+    transform: rotate(180deg);
+}
+
+/* Scale on Hover - subtle */
+.scale-hover {
+    transition: transform 0.15s ease;
+}
+
+.scale-hover:hover {
+    transform: scale(1.02);
+}
+
+.scale-hover:active {
+    transform: scale(0.98);
+}
+
+/* Fade In Animation - keyframes defined in utilities.css */
+.fade-in {
+    animation: fadeIn 0.3s ease;
+}
+
+/* Fade In Up - keyframes defined in utilities.css */
+.fade-in-up {
+    animation: fadeInUp 0.3s ease;
+}
+
+/* Fade In Down - keyframes defined in utilities.css */
+.fade-in-down {
+    animation: fadeInDown 0.3s ease;
+}
+
+/* Slide In Left */
+.slide-in-left {
+    animation: slideInLeft 0.3s ease;
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Slide In Right */
+.slide-in-right {
+    animation: slideInRight 0.3s ease;
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* Pop In - refined, no overshoot */
+.pop-in {
+    animation: popIn 0.2s cubic-bezier(0.2, 0, 0, 1);
+}
+
+@keyframes popIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Shake Animation (for errors) - keyframes defined in utilities.css */
+.shake {
+    animation: shake 0.5s ease;
+}
+
+/* Pulse Animation - keyframes defined in utilities.css */
+.pulse {
+    animation: pulse 2s infinite;
+}
+
+/* Glow Effect - subtle */
+.glow {
+    transition: box-shadow 0.2s ease;
+}
+
+.glow:hover {
+    box-shadow: 0 0 12px rgba(66, 133, 244, 0.2);
+}
+
+/* Checkbox Animation */
+.checkbox-animated {
+    position: relative;
+}
+
+.checkbox-animated input[type='checkbox'] {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--ds-border-default);
+    border-radius: 4px;
+    cursor: pointer;
+    transition:
+        color 0.2s ease,
+        background-color 0.2s ease,
+        border-color 0.2s ease;
+    position: relative;
+}
+
+.checkbox-animated input[type='checkbox']:hover {
+    border-color: var(--ds-color-primary);
+}
+
+.checkbox-animated input[type='checkbox']:checked {
+    background: var(--ds-color-primary);
+    border-color: var(--ds-color-primary);
+}
+
+.checkbox-animated input[type='checkbox']:checked::after {
+    content: '';
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    width: 6px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    animation: checkmark 0.2s ease-out;
+}
+
+@keyframes checkmark {
+    from {
+        opacity: 0;
+        transform: rotate(45deg) scale(0);
+    }
+
+    to {
+        opacity: 1;
+        transform: rotate(45deg) scale(1);
+    }
+}
+
+/* Toggle Switch Animation */
+.toggle-switch {
+    position: relative;
+    width: 44px;
+    height: 24px;
+    background: var(--ds-bg-3);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.toggle-switch::after {
+    content: '';
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    background: white;
+    border-radius: 50%;
+    transition: transform 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch.active {
+    background: var(--ds-color-primary);
+}
+
+.toggle-switch.active::after {
+    transform: translateX(20px);
+}
+
+/* Progress Bar Animation */
+.progress-animated {
+    height: 4px;
+    background: var(--ds-bg-2);
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.progress-animated .progress-bar {
+    height: 100%;
+    background: linear-gradient(90deg, var(--ds-color-primary), var(--ds-color-purple));
+    border-radius: 2px;
+    transition: width 0.5s ease;
+    position: relative;
+}
+
+.progress-animated .progress-bar::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+    animation: shimmer-progress 1.5s infinite;
+}
+
+@keyframes shimmer-progress {
+    0% {
+        transform: translateX(-100%);
+    }
+
+    100% {
+        transform: translateX(100%);
+    }
+}
+
+/* Floating Label Input */
+.input-floating {
+    position: relative;
+}
+
+.input-floating input {
+    padding: 20px 16px 8px;
+}
+
+.input-floating label {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--ds-text-quaternary);
+    pointer-events: none;
+    transition:
+        color 0.2s ease,
+        top 0.2s ease,
+        font-size 0.2s ease;
+}
+
+.input-floating input:focus + label,
+.input-floating input:not(:placeholder-shown) + label {
+    top: 12px;
+    font-size: 11px;
+    color: var(--ds-color-primary);
+}
+
+/* Staggered List Animation */
+.stagger-list > * {
+    opacity: 0;
+    animation: fadeInUp 0.3s ease forwards;
+}
+
+.stagger-list > *:nth-child(1) {
+    animation-delay: 0.05s;
+}
+
+.stagger-list > *:nth-child(2) {
+    animation-delay: 0.1s;
+}
+
+.stagger-list > *:nth-child(3) {
+    animation-delay: 0.15s;
+}
+
+.stagger-list > *:nth-child(4) {
+    animation-delay: 0.2s;
+}
+
+.stagger-list > *:nth-child(5) {
+    animation-delay: 0.25s;
+}
+
+.stagger-list > *:nth-child(6) {
+    animation-delay: 0.3s;
+}
+
+.stagger-list > *:nth-child(7) {
+    animation-delay: 0.35s;
+}
+
+.stagger-list > *:nth-child(8) {
+    animation-delay: 0.4s;
+}
+
+.stagger-list > *:nth-child(9) {
+    animation-delay: 0.45s;
+}
+
+.stagger-list > *:nth-child(10) {
+    animation-delay: 0.5s;
+}
+
+/* Counter Animation */
+.counter-animate {
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.counter-animate.increment {
+    animation: counterPop 0.3s ease;
+}
+
+@keyframes counterPop {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Loading Dots */
+.loading-dots {
+    display: inline-flex;
+    gap: 4px;
+}
+
+.loading-dots span {
+    width: 8px;
+    height: 8px;
+    background: var(--ds-color-primary);
+    border-radius: 50%;
+    animation: loadingDots 1.4s infinite ease-in-out both;
+}
+
+.loading-dots span:nth-child(1) {
+    animation-delay: -0.32s;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: -0.16s;
+}
+
+@keyframes loadingDots {
+    0%,
+    80%,
+    100% {
+        transform: scale(0);
+    }
+
+    40% {
+        transform: scale(1);
+    }
+}
+
+/* Typing Indicator */
+.typing-indicator {
+    display: flex;
+    gap: 4px;
+    padding: 8px 12px;
+    background: var(--ds-bg-2);
+    border-radius: 16px;
+    width: fit-content;
+}
+
+.typing-indicator span {
+    width: 6px;
+    height: 6px;
+    background: var(--ds-text-quaternary);
+    border-radius: 50%;
+    animation: typingBounce 1.4s infinite ease-in-out;
+}
+
+.typing-indicator span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.typing-indicator span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-indicator span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typingBounce {
+    0%,
+    60%,
+    100% {
+        transform: translateY(0);
+    }
+
+    30% {
+        transform: translateY(-4px);
+    }
+}
+
+/* Focus Ring */
+.focus-ring:focus-visible {
+    outline: none;
+    box-shadow:
+        0 0 0 2px var(--ds-bg-primary),
+        0 0 0 4px var(--ds-color-primary);
+}
+
+/* Smooth Scroll */
+.smooth-scroll {
+    scroll-behavior: smooth;
+}
+
+/* Hide Scrollbar but keep functionality */
+.hide-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+/* Custom Scrollbar */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: var(--ds-border-default);
+    border-radius: 3px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: var(--ds-border-emphasis);
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}

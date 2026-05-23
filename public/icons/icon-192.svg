@@ -1,0 +1,6 @@
+<svg viewBox="0 0 192 192" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="192" height="192" rx="36" fill="#0a0a0a"/>
+  <!-- Logo Path -->
+  <path d="M38 134 Q67 58 96 96 T154 58" stroke="#4285f4" stroke-width="16" stroke-linecap="round" fill="none"/>
+</svg>

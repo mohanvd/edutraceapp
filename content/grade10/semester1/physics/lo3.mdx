@@ -1,0 +1,1434 @@
+---
+title: "Forces, Newton's Laws & Circular Motion"
+sidebarTitle: "Newton's Laws"
+---
+
+# Forces, Newton's Laws & Circular Motion
+
+<Callout type="info" emoji="🍎">
+You're in a car. The driver slams the brakes. Your body lurches forward - but **WHY?** You didn't push yourself. Nobody shoved you. Yet your body flew toward the dashboard as if possessed. The answer lives in three laws written by a young genius during a plague lockdown in 1665. These laws - **Newton's Laws of Motion** - explain everything from why seatbelts save lives to why the International Space Station doesn't fall out of the sky. Master them, and you hold the key to predicting the motion of **everything in the universe**.
+</Callout>
+
+<Callout type="default" emoji="🎯">
+**Learning Outcome:** PH.1.03 - Predict an object's motion based on the forces acting on it.
+
+**Essential Questions:**
+- 🏗️ How can you design a tall structure that doesn't blow over in heavy winds?
+- 🌲 How can you control the direction a large tree falls when chopping it down?
+- 📄 Why can a sheet of paper be dragged from beneath a heavy body without the body moving?
+
+**Big Idea:** Every change in motion - speeding up, slowing down, turning, orbiting - is caused by **forces**. Newton's three laws give us the complete mathematical framework to predict and control that motion.
+</Callout>
+
+---
+
+## Part 1 - The Foundation: Forces & Reference Frames
+
+Before we can predict motion or state the laws that govern the universe, we must first understand what a **force** is - its magnitude and direction - and the **perspective** (reference frame) from which we measure it.
+
+### 1.1 The Nature of Force
+
+<Definition term="Force (القوة)">
+A **push or pull** acting on an object that can cause it to accelerate, decelerate, or change direction. Force is measured in **Newtons (N)**, where **1 N = 1 kg·m/s²**. Force is a **vector quantity** - it has both magnitude AND direction.
+</Definition>
+
+Forces come in two fundamental categories:
+
+<Compare>
+<Item label="Contact Forces (قوى التلامس)">
+- Require **physical contact** between objects
+- Examples: **Normal force**, **friction**, **tension**, **applied force**, **spring force**
+- The track pushing a dragster's tires, a rope pulling a sled, your hand pushing a door
+</Item>
+<Item label="Field Forces (قوى المجال)">
+- Act **at a distance** - no contact needed
+- Examples: **Gravity**, **electromagnetic force**, **nuclear force**
+- Earth pulling an apple down, magnets attracting iron filings
+</Item>
+</Compare>
+
+### 1.2 Scalars vs. Vectors - The Critical Difference
+
+To solve force problems, you must classify physical quantities into two categories:
+
+| Scalar Quantities (كميات قياسية) | Vector Quantities (كميات متجهة) |
+| --- | --- |
+| Have **magnitude only** | Have **magnitude + direction** |
+| Mass [kg] | Weight [N] ↓ |
+| Time [s] | Force [N] → |
+| Distance [m] | Displacement [m] → |
+| Speed [m/s] | Velocity [m/s] → |
+| Energy [J] | Acceleration [m/s²] → |
+| Temperature [°C] | Momentum [kg·m/s] → |
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - Mass ≠ Weight**
+
+Students frequently use "mass" and "weight" interchangeably, but they are **entirely different quantities**:
+- **Mass (m)** is a **scalar** - the amount of matter in an object [kg]. It **NEVER changes**, regardless of location.
+- **Weight (W)** is a **vector** - the gravitational force on that mass, always pointing **downward**: **W = mg**.
+- A 70 kg person weighs **686 N on Earth** but only **113 N on the Moon** - same mass, different weight!
+</Callout>
+
+### 1.3 Vector Mathematics & Components
+
+Because forces are vectors, you **cannot** simply add them like regular numbers if they point in different directions. For example, **5 N North + 5 N East ≠ 10 N**. Instead, forces must be resolved into an **x–y coordinate system**.
+
+<Steps>
+<Step title="Choose a Coordinate System">
+Draw standard x (horizontal) and y (vertical) axes. For inclined planes, tilt the axes so x runs **parallel** to the surface.
+</Step>
+<Step title="Resolve Vectors into Components">
+Use trigonometry: **Fₓ = F cos θ** (horizontal) and **Fᵧ = F sin θ** (vertical). The component **adjacent** to the angle gets **cosine**; the component **opposite** gets **sine**.
+</Step>
+<Step title="Sum the x-direction Forces">
+Add all horizontal components: **ΣFₓ** (Right = positive, Left = negative).
+</Step>
+<Step title="Sum the y-direction Forces">
+Add all vertical components: **ΣFᵧ** (Up = positive, Down = negative).
+</Step>
+<Step title="Calculate the Resultant Magnitude">
+Use the Pythagorean theorem: **R = √(ΣFₓ² + ΣFᵧ²)**
+</Step>
+<Step title="Calculate the Angle">
+**θ = tan⁻¹(|ΣFᵧ| / |ΣFₓ|)** - then determine the quadrant based on the signs of ΣFₓ and ΣFᵧ.
+</Step>
+</Steps>
+
+<ImageWithText src="https://commons.wikimedia.org/wiki/Special:FilePath/Vector_components.svg" alt="Vector decomposition into horizontal and vertical components" caption="Any diagonal vector can be resolved into unique x and y components." width="300px" />
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - Trig Functions**
+
+Students often assume the x-component **always** uses cosine and y **always** uses sine. This is only true if θ is measured **from the horizontal x-axis**. If the angle is given from the vertical, the functions **flip**. **Always draw your right triangle first** and identify which side is adjacent (cos) and which is opposite (sin) to the given angle.
+</Callout>
+
+<Example title="Worked Example - Adding 2D Force Vectors">
+**Scenario:** A box is subjected to two forces: F₁ = 45 N pushing horizontally to the right (+x), and F₂ = 60 N acting vertically downward (−y). Find the resultant net force vector and its angle.
+
+**Step 1 - Components:** Both forces lie on the axes, so no decomposition needed. ΣFₓ = +45 N, ΣFᵧ = −60 N.
+
+**Step 2 - Magnitude:** R = √(45² + 60²) = √(2025 + 3600) = √5625 = **75 N**
+
+**Step 3 - Angle:** θ = tan⁻¹(60/45) = **53.1° below the positive x-axis** (Standard position: 360° − 53.1° = 306.9°)
+</Example>
+
+### 1.4 Frames of Reference & Relative Motion
+
+<Definition term="Frame of Reference (الإطار المرجعي)">
+The **perspective** from which an observer measures position, velocity, and acceleration. An object can be "moving" in one frame and "at rest" in another - motion is **relative**.
+</Definition>
+
+<Steps>
+<Step title="Identify the Object's velocity">
+V_Object - the velocity of the thing you're observing.
+</Step>
+<Step title="Identify the Frame's velocity">
+V_Frame - the velocity of YOUR observation point.
+</Step>
+<Step title="Assign signs based on direction">
+e.g., East = positive (+), West = negative (−).
+</Step>
+<Step title="Calculate relative velocity">
+**V_Relative = V_Object − V_Frame**
+</Step>
+</Steps>
+
+<Example title="Worked Example - Relative Velocity">
+**Scenario:** Car A moves East at +20 m/s. Car B moves West at −70 m/s. Find the speed of Car A relative to Car B.
+
+V_Relative = V_A − V_B = (+20) − (−70) = 20 + 70 = **90 m/s**
+
+From Car B's perspective, Car A approaches at **90 m/s**.
+</Example>
+
+### 1.5 Inertial Reference Frames
+
+<Definition term="Inertial Reference Frame (إطار مرجعي قصوري)">
+A reference frame that is **at rest** or moving at **constant velocity** (zero acceleration). Newton's Laws are **only valid** in inertial reference frames. A frame accelerating or rotating is **non-inertial** - fictitious forces appear.
+</Definition>
+
+<Callout type="info" emoji="🛗">
+**REAL-WORLD ANCHOR - The Accelerating Elevator**
+
+- **Stationary or constant velocity** (a = 0): Scale reads **N = mg** → true weight. This IS an inertial frame.
+- **Accelerating upward** (a > 0): Scale reads **N = m(g + a)** → you feel **heavier**.
+- **Accelerating downward** (a > 0): Scale reads **N = m(g − a)** → you feel **lighter**.
+- **Free-falling** (a = g): Scale reads **N = 0** → apparent **weightlessness**!
+
+A moving bus at constant speed is a valid inertial frame. But the moment it accelerates or brakes, it becomes non-inertial - which is why you lurch!
+</Callout>
+
+---
+
+## Part 2 - Visualizing the Physics: Free-Body Diagrams & Net Force
+
+If you can accurately identify forces, draw a **Free-Body Diagram (FBD)**, and calculate the **net force**, applying Newton's Laws becomes straightforward. This is your most important tool.
+
+### 2.1 The Common Force Types
+
+| Force | Symbol | Direction | Formula | When It Appears |
+| --- | --- | --- | --- | --- |
+| **Weight / Gravity** | W or Fg | Always **straight down** | W = mg | Always (every object has weight) |
+| **Normal Force** | N or Fₙ | **Perpendicular** to the contact surface, outward | N = mg (flat); N = mg cos θ (incline) | Object rests on or is pressed against a surface |
+| **Applied Force** | Fₐₚₚ | Direction of the push/pull | Given in problem | Someone/something pushes or pulls |
+| **Friction** | f or Ff | **Opposite** to direction of motion (or intended motion) | f = μN | Rough surfaces in contact |
+| **Tension** | T | **Along** the rope/string, away from the object | From FBD analysis | Ropes, strings, cables |
+| **Centripetal** | Fᴄ | **Toward** the center of circular path | Fᴄ = mv²/r | Object moves in a circle |
+
+### 2.2 Drawing Free-Body Diagrams (FBDs)
+
+<Definition term="Free-Body Diagram (مخطط الجسم الحر)">
+A pictorial tool used to analyze forces acting on a body. The object is **isolated** from its environment and replaced by **force arrows** showing every external force. It is the **first step** in solving any force problem.
+</Definition>
+
+<Steps>
+<Step title="Isolate the Object">
+Draw a simple **box or dot** to represent the object. Remove everything else - no ground, no ropes, no other objects. Just the body.
+</Step>
+<Step title="Identify ALL External Forces">
+List every force acting **on** the body: Weight? Normal? Tension? Applied? Friction? Do NOT include internal forces or forces the object exerts on other things.
+</Step>
+<Step title="Draw Force Vectors">
+Draw an arrow for each force pointing **away from the center** of the object. Arrow length ≈ relative magnitude. Arrowhead points in the **exact direction** of the force.
+</Step>
+<Step title="Assign a Coordinate System">
+Superimpose x–y axes. On a **ramp**, tilt the axes so the x-axis runs **parallel** to the surface and the y-axis is **perpendicular** to it.
+</Step>
+<Step title="Label Everything">
+Label each arrow with its symbol (Fg, Fₙ, T, Fₐₚₚ, f) and any given values or angles.
+</Step>
+</Steps>
+
+<ImageWithText src="https://commons.wikimedia.org/wiki/Special:FilePath/Free_body.svg" alt="Free body diagram of a block on an inclined plane" caption="A standard Free-Body Diagram. The object is isolated, and all external forces are drawn as arrows originating from the center." width="250px" />
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - Normal Force ≠ mg Always**
+
+Students frequently assume **Fₙ = mg** in every scenario. This is **only true on a perfectly flat, horizontal surface** with no other vertical forces acting. Here's what actually happens:
+- **On a ramp:** Fₙ = mg cos θ
+- **Upward-accelerating elevator:** Fₙ = m(g + a)
+- **Extra downward force applied:** Fₙ > mg
+- **Upward pull applied:** Fₙ < mg
+
+Always calculate the normal force from **ΣFᵧ = 0** (or ΣFᵧ = ma if accelerating vertically).
+</Callout>
+
+### 2.3 Determining Net Force (ΣF)
+
+<Definition term="Net Force - ΣF (محصلة القوى)">
+The **vector sum** of all individual forces acting on a body. It is the single equivalent force that produces the same effect as all the individual forces combined. Also called the **resultant force**.
+</Definition>
+
+<Formula name="Net Force Magnitude">
+**F_net = √( (ΣFₓ)² + (ΣFᵧ)² )**
+
+If all forces are along one axis: **F_net = ΣF** (just add/subtract with signs).
+</Formula>
+
+<Example title="Worked Example - Sled on a Snow-Covered Hill">
+**Scenario:** A sled is tied to a tree on a **frictionless** hill (θ = 30.0°). The sled weighs 77.0 N. It is in **static equilibrium**. Find the tension (T) and normal force (N).
+
+**Step 1 - FBD:** Tilt axes so x is parallel to the hill. Three forces act: Tension (up the incline, +x), Normal (perpendicular to hill, +y), Weight (straight down - must be decomposed).
+
+**Step 2 - Weight Components:**
+- Down the ramp (−x): Wₓ = W sin 30° = 77.0 × 0.500 = 38.5 N
+- Into the ramp (−y): Wᵧ = W cos 30° = 77.0 × 0.866 = 66.7 N
+
+**Step 3 - ΣFₓ = 0:** T − W sin 30° = 0 → **T = 38.5 N**
+
+**Step 4 - ΣFᵧ = 0:** N − W cos 30° = 0 → **N = 66.7 N**
+</Example>
+
+---
+
+## Part 3 - State of Balance: Newton's 1st Law & Equilibrium
+
+We start our journey into Newton's Laws with the simplest state: when the **net force equals zero** (ΣF = 0). Understanding **inertia** and **equilibrium** is essential before we introduce acceleration.
+
+### 3.1 Newton's First Law - The Law of Inertia
+
+<Definition term="Newton's First Law - Law of Inertia (قانون نيوتن الأول - قانون القصور الذاتي)">
+An object **at rest stays at rest** and an object **in motion stays in motion** with the same speed and in the same direction, **unless acted upon by an unbalanced (net) force**. Objects tend to "keep on doing what they're doing."
+
+**Mathematical form:** If **ΣF = 0**, then **a = 0** (velocity is constant or zero).
+</Definition>
+
+<Definition term="Inertia (القصور الذاتي)">
+The natural tendency of an object to **resist changes** in its state of motion. An object resists any attempt to speed it up, slow it down, or change its direction. Inertia is **directly proportional to mass** - the more massive an object, the harder it is to change its motion.
+</Definition>
+
+<Callout type="info" emoji="🪙">
+**REAL-WORLD ANCHOR - The Tablecloth Trick**
+
+Place a heavy coin on a piece of paper over a cup. **Yank** the paper quickly - the coin drops **straight into the cup** instead of flying with the paper. Why? The coin's large mass gives it enormous **inertia**. The friction force acts for too little time (**impulse J = F·Δt ≈ 0**) to overcome that inertia. The coin stays stationary while the paper slides out beneath it. This is **Newton's First Law in action** - and it's also the answer to our essential question about dragging paper from beneath a heavy body!
+</Callout>
+
+### 3.2 The Two States of Equilibrium
+
+When all forces perfectly balance (**ΣF = 0**), the object does **not accelerate** - this state is called **Equilibrium**.
+
+<Compare>
+<Item label="Static Equilibrium (الاتزان السكوني)">
+- Object is **at rest** (v = 0 m/s)
+- Requirements: **a = 0**, **ΣF = 0**, **F_net = 0**
+- Example: A book resting on a table, a bridge standing still
+- The object was stationary and **stays stationary**
+</Item>
+<Item label="Dynamic Equilibrium (الاتزان الحركي)">
+- Object moves at **constant velocity** (v ≠ 0 m/s, but constant)
+- Requirements: **a = 0**, **ΣF = 0**, **F_net = 0**
+- Example: A parachutist at terminal velocity, a car cruising at constant speed
+- The object is moving but **not accelerating**
+</Item>
+</Compare>
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - "Motion Requires a Constant Force"**
+
+Many students assume that if an object is moving to the right, there **must** be a force pushing it to the right. **WRONG.** Newton's First Law says a force is **NOT needed** to keep a moving object moving. A book on a frictionless surface slides **forever**. It only slows in the real world because of **unbalanced friction** - not because "motion needs force."
+</Callout>
+
+### 3.3 Solving Equilibrium Problems
+
+When an object is in equilibrium, you automatically know **ΣFₓ = 0** and **ΣFᵧ = 0**. This gives you two powerful equations to solve for unknown forces.
+
+<Steps>
+<Step title="Confirm the State">
+Verify the object is **at rest** or moving at **constant velocity** (a = 0 m/s²). Keywords: "at rest," "constant speed," "uniform velocity," "equilibrium."
+</Step>
+<Step title="Draw the Free-Body Diagram">
+Represent the object as a point or box. Draw ALL force vectors with correct directions and labels.
+</Step>
+<Step title="Resolve Components">
+Break any diagonal forces into x and y components using trigonometry (F cos θ, F sin θ).
+</Step>
+<Step title="Set Up Equations">
+Write: **ΣFₓ = 0** and **ΣFᵧ = 0**
+</Step>
+<Step title="Solve for the Unknown">
+Use algebra to isolate the missing variable - tension, normal force, friction, applied force, etc.
+</Step>
+</Steps>
+
+<Callout type="info" emoji="🏗️">
+**CAPSTONE CONNECTION - Designing Wind-Resistant Structures**
+
+To ensure a tall solar tower (15,000 kg) doesn't blow over in a 45,000 N wind, engineers apply **ΣFₓ = 0**: F_wind − F_friction = 0 → **F_friction = 45,000 N**. The foundation must provide **exactly 45,000 N** of shear resistance to maintain static equilibrium. A low center of gravity and wide base of support ensure the structure won't topple. This is Newton's 1st Law applied to real engineering!
+</Callout>
+
+---
+
+## Part 4 - State of Change: Newton's 2nd Law & Acceleration
+
+In Part 3 we established the rules for equilibrium (**ΣF = 0**). Now we **break** the equilibrium - what happens when the net force is **NOT** zero?
+
+### 4.1 Newton's Second Law - The Law of Acceleration
+
+<Definition term="Newton's Second Law (قانون نيوتن الثاني)">
+The **acceleration** of an object is **directly proportional** to the net force acting on it, in the **same direction** as the net force, and **inversely proportional** to the object's mass.
+
+**ΣF = m × a** → **a = F_net / m**
+</Definition>
+
+<Formula name="Newton's Second Law">
+**ΣF = ma**
+
+Where:
+- **ΣF** = net force (sum of ALL forces) [N]
+- **m** = mass [kg]
+- **a** = acceleration [m/s²]
+</Formula>
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - "Use Any Force"**
+
+Students often plug a **single applied force** directly into F = ma. Newton's 2nd Law requires the **NET force** (F_net = ΣF) - the vector sum of **ALL** forces. You must **subtract opposing forces** (like friction) before calculating acceleration!
+</Callout>
+
+### 4.2 The Three Laws - At a Glance
+
+| Law | Name | Statement | Equation | Condition |
+| --- | --- | --- | --- | --- |
+| **1st** | Law of Inertia | An object at rest stays at rest; in motion stays in motion, unless acted on by an unbalanced force | ΣF = 0 → a = 0 | Balanced forces |
+| **2nd** | Law of Acceleration | Acceleration is proportional to net force and inversely proportional to mass | **ΣF = ma** | Unbalanced forces |
+| **3rd** | Law of Action-Reaction | For every action force, there is an equal and opposite reaction force | F₁₂ = −F₂₁ | All interactions |
+
+### 4.3 Proportionality Relationships
+
+<Tabs items={["📈 Force & Acceleration", "📉 Mass & Acceleration"]}>
+<Tab label="📈 Force & Acceleration">
+
+### Direct Proportionality
+
+From **a = F_net / m** (with mass constant):
+
+- If net force **doubles** → acceleration **doubles**
+- If net force **triples** → acceleration **triples**
+- They are **directly proportional**: a ∝ F_net
+
+**Graph:** A straight line through the origin when plotting a vs F (at constant mass).
+
+</Tab>
+<Tab label="📉 Mass & Acceleration">
+
+### Inverse Proportionality
+
+From **a = F_net / m** (with force constant):
+
+- If mass **doubles** → acceleration **halves**
+- If mass **triples** → acceleration becomes **one-third**
+- They are **inversely proportional**: a ∝ 1/m
+
+**Graph:** A curved (hyperbolic) line when plotting a vs m.
+
+</Tab>
+</Tabs>
+
+### 4.4 Weight, Mass & Universal Gravitation
+
+<Formula name="Weight">
+**W = mg**
+
+Where g = 9.8 m/s² near Earth's surface. Weight is a **force** [N], not a mass [kg].
+</Formula>
+
+<Formula name="Newton's Law of Universal Gravitation">
+**Fg = G · m₁ · m₂ / r²**
+
+Where G = 6.67 × 10⁻¹¹ N·m²/kg². Every object with mass attracts every other object with mass.
+</Formula>
+
+### 4.5 The 5-Step Universal Method for Force Problems
+
+<Callout type="info" emoji="🔑">
+This method works for **ANY force problem** - equilibrium or accelerating, flat or inclined, simple or complex. Master these 5 steps and you can solve any question the exam throws at you.
+</Callout>
+
+<Steps>
+<Step title="Draw a Free-Body Diagram">
+Represent the object as a dot or box. Draw **every external force** as an arrow. Label each with its symbol and given values.
+</Step>
+<Step title="Break Forces into Components">
+Resolve any diagonal forces: **Fₓ = F cos θ** (parallel to surface) and **Fᵧ = F sin θ** (perpendicular to surface).
+</Step>
+<Step title="Redraw with Components Only">
+Create a clean version of your FBD showing only the pure x and y vectors. This prevents calculation errors.
+</Step>
+<Step title="Sum Forces per Axis">
+Add/subtract all x-forces (Right = +, Left = −) and all y-forces (Up = +, Down = −). Get **ΣFₓ** and **ΣFᵧ**.
+</Step>
+<Step title="Apply F_net = ma">
+For acceleration: **ΣF = ma → a = ΣF/m**. For equilibrium: **ΣF = 0** → solve for the unknown force.
+</Step>
+</Steps>
+
+<Example title="Worked Example - The Log Drag">
+**Scenario:** A 50 N applied force drags an 8.16 kg log to the right. A 40.0 N friction force resists the motion. What is the acceleration?
+
+**Step 1 - Forces:** Applied (+50 N right), Friction (−40 N left), Weight (down), Normal (up).
+
+**Step 2 - Components:** All forces lie on the axes - no trig needed.
+
+**Step 3 - ΣFₓ:** 50 − 40 = **+10 N** (net rightward)
+
+**Step 4 - Apply F = ma:** 10 = 8.16 × a → **a = 10/8.16 = 1.23 m/s²** to the right.
+</Example>
+
+<Example title="Worked Example - Airboat Acceleration">
+**Scenario:** An airboat (mass 350 kg) has an engine producing a net horizontal force of 770 N. (a) Find the acceleration. (b) Starting from rest, how long to reach 12.0 m/s?
+
+**(a)** a = F_net / m = 770 / 350 = **2.20 m/s²**
+
+**(b)** Using kinematics: v = v₀ + at → 12.0 = 0 + (2.20)t → **t = 5.45 s**
+</Example>
+
+---
+
+## Part 5 - Multi-Body Systems & Newton's Third Law
+
+The real world does not occur in isolated textbook problems. Here we apply Newton's Laws to **multi-body systems** and **action-reaction pairs**.
+
+### 5.1 Newton's Third Law - Action and Reaction
+
+<Definition term="Newton's Third Law (قانون نيوتن الثالث)">
+For every **action force**, there is an **equal and opposite reaction force**. These forces act on **DIFFERENT objects**.
+
+**F₁₂ = −F₂₁** (equal magnitudes, opposite directions, different objects)
+</Definition>
+
+<Callout type="info" emoji="🍈">
+**Key Insight:** It is critical to distinguish between **balanced forces** and **action-reaction pairs**:
+- **Balanced Forces:** Two forces act on a **SINGLE body** (e.g., gravity and normal force on a cantaloupe resting on a table). These CAN result in equilibrium.
+- **Action-Reaction Pairs:** Forces act on **DIFFERENT interacting bodies** (e.g., Earth pulls cantaloupe down AND cantaloupe pulls Earth up). These NEVER cancel each other out because they act on different objects!
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - Normal Force is NOT the Reaction to Gravity**
+
+Students often think that the normal force on an object is the "reaction" to gravity because they are equal and opposite. **Impossible** - they both act on the **same object**! The true reaction to Earth's gravity pulling the cantaloupe **down** is the cantaloupe's gravity pulling **Earth up**. They act on different objects (cantaloupe → Earth, Earth → cantaloupe).
+</Callout>
+
+### 5.2 Multi-Body System Formulas
+
+When multiple objects are connected (by ropes, pulleys, or contact), they accelerate **together** as a single system.
+
+| System | Setup | Acceleration Formula |
+| --- | --- | --- |
+| **Vertical Atwood Machine** | Two masses over a frictionless pulley; m₂ > m₁ | a = (m₂ − m₁)g / (m₁ + m₂) |
+| **Horizontal Table System** | m₁ on smooth table, m₂ hanging off the edge | a = m₂g / (m₁ + m₂) |
+| **Inclined Plane + Hanging Mass** | m₁ on incline (angle θ), m₂ hanging; m₂ > m₁ sin θ | a = (m₂ − m₁ sin θ)g / (m₁ + m₂) |
+| **Blocks in Contact** | Two blocks pushed by external force F on a smooth surface | a = F / (m₁ + m₂) |
+
+<ImageWithText src="https://commons.wikimedia.org/wiki/Special:FilePath/Atwood_machine.svg" alt="Atwood machine diagram with two masses and a pulley" caption="An Atwood Machine: two masses connected by a string over a frictionless pulley. They accelerate as a single system." width="200px" />
+
+**Additional Useful Formulas:**
+
+<Formula name="Atwood Machine Tension">
+**T = 2m₁m₂g / (m₁ + m₂)**
+</Formula>
+
+<Formula name="Contact Force Between Blocks">
+**F_contact = m₂F / (m₁ + m₂)**
+
+Where F is the applied force on block 1, and F_contact is the force block 1 exerts on block 2.
+</Formula>
+
+### 5.3 Center of Mass & Structural Stability
+
+<Definition term="Center of Mass / Center of Gravity (مركز الكتلة / مركز الثقل)">
+The theoretical point where **all the mass** of an object is considered concentrated. An object remains in **stable equilibrium** as long as the center of gravity falls **vertically within** its base of support.
+</Definition>
+
+<Callout type="warning" emoji="⚠️">
+**COMMON MISCONCEPTION - "Heavier = More Stable"**
+
+Adding mass to the **TOP** of a structure **raises** its center of gravity, making it **LESS stable**. True stability comes from a **LOW center of gravity** and a **WIDE base of support**, not just total mass.
+</Callout>
+
+<ImageWithText src="https://commons.wikimedia.org/wiki/Special:FilePath/The_Leaning_Tower_of_Pisa_SB.jpeg" alt="The Leaning Tower of Pisa" caption="The Leaning Tower of Pisa remains standing solely because its center of mass still falls vertically within its base footprint." width="250px" />
+
+<Callout type="info" emoji="🏛️">
+**REAL-WORLD ANCHOR - The Leaning Tower of Pisa**
+
+Despite its severe tilt, the tower remains standing because its center of gravity still falls **vertically within** its wide foundation base. Engineers also added lead counterweights to the base and removed soil from one side to correct the lean - all applications of center-of-mass physics.
+</Callout>
+
+---
+
+## Part 6 - Uniform Circular Motion & Centripetal Forces
+
+Up to now, we treated acceleration primarily as a change in **speed**. But because velocity is a **vector**, a change in **direction** ALSO constitutes acceleration. Objects can move at constant speed while **continuously accelerating**.
+
+### 6.1 The "Constant Speed but Accelerating" Paradox
+
+<Definition term="Uniform Circular Motion (الحركة الدائرية المنتظمة)">
+Motion in a **circle** at **constant speed**. Although speed is constant, the **velocity continuously changes direction** - therefore the object is **always accelerating** toward the center.
+</Definition>
+
+Three key vectors in circular motion:
+
+| Vector | Direction | Symbol |
+| --- | --- | --- |
+| **Instantaneous Velocity (v)** | Always **TANGENT** to the circular path (pointing "outward") | v |
+| **Centripetal Acceleration (aᴄ)** | Always **TOWARD the center** (perpendicular to v) | aᴄ |
+| **Centripetal Force (Fᴄ)** | Always **TOWARD the center** (same direction as aᴄ) | Fᴄ |
+
+<ImageWithText src="https://commons.wikimedia.org/wiki/Special:FilePath/Centripetal_force_diagram.svg" alt="Diagram showing centripetal force and tangental velocity" caption="Notice how the velocity vector is always tangent to the circle, while acceleration and force point inwards." width="300px" />
+
+<Callout type="info" emoji="🔄">
+**WHY A CIRCLE REQUIRES FORCE**
+
+Newton's 1st Law says an object moves in a **straight line** unless a net force acts on it. If you release a rock on a string, it flies off in a **straight tangent** - not a circle. Therefore, to maintain circular motion, a **continuous inward force** must constantly pull the object away from that straight-line path. That inward force is the **centripetal force**.
+</Callout>
+
+### 6.2 The Mathematics of Circular Motion
+
+<Formula name="Linear (Tangential) Speed">
+**v = 2πr / T**
+
+Where r = radius [m] and T = period (time for one complete revolution) [s].
+</Formula>
+
+<Formula name="Centripetal Acceleration">
+**aᴄ = v² / r = 4π²r / T²**
+
+Always directed **toward the center** of the circular path.
+</Formula>
+
+<Formula name="Centripetal Force">
+**Fᴄ = m·aᴄ = m·v² / r**
+
+This is NOT a new type of force - it is the **net inward force** (could be tension, gravity, friction, normal force, or a combination) that causes circular motion.
+</Formula>
+
+<Callout type="error" emoji="🚫">
+**COMMON MISCONCEPTION - "Centrifugal Force"**
+
+When riding in a turning car, you feel "pushed" outward. There is **NO force pushing you out**. Your body's **inertia** (Newton's 1st Law) wants to continue in a straight line while the car turns away from you. **NEVER draw a "centrifugal force" on a free-body diagram.** Centripetal force is strictly an **inward** net force.
+</Callout>
+
+<Example title="Worked Example - The Rock on a String">
+**Scenario:** A 0.150 kg rock is whirled in a horizontal circle (radius = 0.600 m) with period T = 0.500 s. What is the tension in the string?
+
+**Step 1 - Find Speed:** v = 2πr/T = 2π(0.600)/0.500 = **7.54 m/s**
+
+**Step 2 - Identify Radial Force:** Only the string's **tension** acts horizontally toward the center.
+
+**Step 3 - Apply ΣFᵣ = mv²/r:**
+F_T = (0.150)(7.54²)/(0.600) = (0.150)(56.85)/(0.600) = **14.2 N**
+
+**Conclusion:** The string exerts **14.2 N** of inward centripetal force to maintain the circular orbit.
+</Example>
+
+<Callout type="info" emoji="🌍">
+**GRAND CHALLENGE CONNECTION**
+
+**Exponential Population Growth:** As cities grow taller and denser, every high-rise must be engineered to remain in **static equilibrium** under wind loads, seismic forces, and occupant weight. Newton's Laws - especially **ΣF = 0** for stability and **ΣF = ma** for dynamic loading - are the core tools.
+
+**Efficient Use of Arid Land:** Wind turbine blades spinning at high speed are governed by **centripetal force** (Fᴄ = mv²/r). Solar arrays in deserts must withstand forces exceeding 60,000 N in sandstorms - equilibrium analysis determines the minimum anchor force.
+</Callout>
+
+---
+
+## Vocabulary
+
+<Vocabulary title="Key Terms - PH.1.03">
+<Term word="Force (القوة)">A push or pull on an object, measured in Newtons (N). A vector quantity requiring both magnitude and direction. 1 N = 1 kg·m/s².</Term>
+<Term word="Vector Quantity (كمية متجهة)">A physical quantity that has both magnitude and direction. Examples: force, velocity, acceleration, displacement.</Term>
+<Term word="Scalar Quantity (كمية قياسية)">A physical quantity that has magnitude only. Examples: mass, time, speed, distance, energy.</Term>
+<Term word="Net Force / Resultant Force (القوة المحصلة)">The vector sum of all forces acting on an object. Determines whether the object accelerates (ΣF ≠ 0) or is in equilibrium (ΣF = 0).</Term>
+<Term word="Free-Body Diagram (مخطط الجسم الحر)">A visual tool showing all external forces acting on an isolated body as arrows. The first step in solving any force problem.</Term>
+<Term word="Normal Force (القوة العمودية)">The perpendicular contact force exerted by a surface on an object resting on it. A reaction force to the component of weight pressing into the surface.</Term>
+<Term word="Tension (قوة الشد)">The pulling force transmitted through a rope, string, or cable. Direction: along the rope, away from the object.</Term>
+<Term word="Friction (قوة الاحتكاك)">A contact force opposing the direction of motion (or intended motion) between two surfaces. f = μN.</Term>
+<Term word="Weight (الوزن)">The gravitational force on an object: W = mg. A vector pointing straight down. Measured in Newtons, not kilograms.</Term>
+<Term word="Mass (الكتلة)">The amount of matter in an object, measured in kg. A scalar that never changes regardless of location.</Term>
+<Term word="Inertia (القصور الذاتي)">An object's natural resistance to changes in its state of motion. Directly proportional to mass.</Term>
+<Term word="Newton's 1st Law (قانون نيوتن الأول)">Law of Inertia: an object maintains its state of rest or uniform motion unless acted on by a net external force. ΣF = 0 → a = 0.</Term>
+<Term word="Newton's 2nd Law (قانون نيوتن الثاني)">Net force equals mass times acceleration: ΣF = ma. Acceleration is proportional to net force and inversely proportional to mass.</Term>
+<Term word="Newton's 3rd Law (قانون نيوتن الثالث)">For every action force there is an equal and opposite reaction force acting on a different object: F₁₂ = −F₂₁.</Term>
+<Term word="Equilibrium (الاتزان)">State where ΣF = 0 and a = 0. Can be static (at rest) or dynamic (constant velocity).</Term>
+<Term word="Static Equilibrium (الاتزان السكوني)">Object at rest with zero net force and zero acceleration.</Term>
+<Term word="Dynamic Equilibrium (الاتزان الحركي)">Object moving at constant velocity with zero net force and zero acceleration.</Term>
+<Term word="Centripetal Acceleration (التسارع المركزي)">Acceleration directed toward the center of a circular path: aᴄ = v²/r. Caused by a change in velocity direction, not speed.</Term>
+<Term word="Centripetal Force (القوة المركزية)">The net inward force that causes circular motion: Fᴄ = mv²/r. Not a new force - it's the resultant of existing forces (tension, gravity, friction, etc.).</Term>
+<Term word="Uniform Circular Motion (حركة دائرية منتظمة)">Motion in a circle at constant speed. Velocity changes direction continuously, so the object accelerates toward the center.</Term>
+<Term word="Inertial Reference Frame (إطار مرجعي قصوري)">A reference frame at rest or moving at constant velocity (a = 0). Newton's Laws are valid only in inertial frames.</Term>
+<Term word="Center of Mass (مركز الكتلة)">The point where all mass is considered concentrated. Stability requires the center of mass to fall within the base of support.</Term>
+<Term word="Universal Gravitation (الجاذبية الكونية)">Every mass attracts every other mass: Fg = Gm₁m₂/r². G = 6.67 × 10⁻¹¹ N·m²/kg².</Term>
+</Vocabulary>
+
+---
+
+## Key Takeaways
+
+<KeyPoints title="What You Need to Remember">
+<Point>**Force** is a vector quantity (magnitude + direction), measured in Newtons. **Mass** (scalar, kg) ≠ **Weight** (vector force, N). Weight = mg.</Point>
+<Point>**Scalar vs Vector**: Scalars have magnitude only (mass, time, speed). Vectors have magnitude AND direction (force, velocity, acceleration, displacement).</Point>
+<Point>**Vector components**: Fₓ = F cos θ, Fᵧ = F sin θ (when θ is from the horizontal). Resultant: R = √(Fₓ² + Fᵧ²). Angle: θ = tan⁻¹(Fᵧ/Fₓ).</Point>
+<Point>**Free-Body Diagrams** are your #1 tool. Isolate the object → draw ALL forces → choose axes → resolve components → sum per axis.</Point>
+<Point>**Newton's 1st Law (Inertia)**: ΣF = 0 → a = 0. Objects resist changes in motion. No force needed to maintain constant velocity.</Point>
+<Point>**Equilibrium** means ΣF = 0, a = 0. **Static** = at rest. **Dynamic** = constant velocity. Both have zero acceleration.</Point>
+<Point>**Newton's 2nd Law**: ΣF = ma. Use NET force, not individual forces. Force and acceleration are directly proportional; mass and acceleration are inversely proportional.</Point>
+<Point>**Newton's 3rd Law**: Action-reaction pairs act on DIFFERENT objects, have equal magnitude, and opposite directions. They never cancel each other.</Point>
+<Point>**Normal force ≠ mg** always. On a ramp: N = mg cos θ. In an elevator: N = m(g ± a). With extra vertical forces: adjust accordingly.</Point>
+<Point>**Circular motion**: Constant speed but changing direction = acceleration toward center. aᴄ = v²/r. Fᴄ = mv²/r. Velocity is tangent; force and acceleration point inward.</Point>
+<Point>**"Centrifugal force" does NOT exist** - it's your inertia resisting the turn. Never draw it on an FBD.</Point>
+<Point>**Inertial frames**: Newton's Laws hold only in frames with a = 0 (at rest or constant velocity). Accelerating/rotating frames are non-inertial.</Point>
+<Point>**Stability** requires a LOW center of gravity and WIDE base of support. Adding mass to the top makes structures LESS stable.</Point>
+</KeyPoints>
+
+---
+
+## Quick-Reference Formula Sheet
+
+| Formula | Equation | Units |
+| --- | --- | --- |
+| Newton's 2nd Law | **ΣF = ma** → a = F_net / m | N, kg, m/s² |
+| Weight | **W = mg** | N |
+| Vector Components | **Fₓ = F cos θ**, **Fᵧ = F sin θ** | N |
+| Resultant Magnitude | **R = √(Rₓ² + Rᵧ²)** | N |
+| Resultant Angle | **θ = tan⁻¹(\|Rᵧ\| / \|Rₓ\|)** | degrees |
+| Relative Velocity | **V_BA = V_B − V_A** | m/s |
+| Centripetal Acceleration | **aᴄ = v² / r = 4π²r / T²** | m/s² |
+| Centripetal Force | **Fᴄ = mv² / r** | N |
+| Linear Speed (circular) | **v = 2πr / T** | m/s |
+| Universal Gravitation | **Fg = Gm₁m₂ / r²** | N |
+| Friction | **f = μN** | N |
+| Normal Force (incline) | **N = mg cos θ** | N |
+| Atwood Acceleration | **a = (m₂−m₁)g / (m₁+m₂)** | m/s² |
+| Atwood Tension | **T = 2m₁m₂g / (m₁+m₂)** | N |
+| Contact Force | **F_contact = m₂F / (m₁+m₂)** | N |
+| Kinematics (from rest) | **d = ½at²**, **v = at** | m, m/s |
+
+---
+
+## Test Yourself
+
+<Callout type="info" emoji="📝">
+**102 practice questions** sourced from past STEM exams and reference materials. For questions that include diagrams, the image is shown within the question card.
+</Callout>
+
+### 🔄 Centripetal Force & Circular Motion
+
+<Quiz question="1. What happens to the centripetal force exerted on an object if you triple the velocity?">
+<Choice>It increases to 3×</Choice>
+<Choice>It decreases to 6×</Choice>
+<Choice>It increases to 6×</Choice>
+<Choice correct>It increases to 9×</Choice>
+</Quiz>
+
+<Quiz question="2. Which of the following is the unit for centripetal force?">
+<Choice>J</Choice>
+<Choice>m/s</Choice>
+<Choice>kg·m/s</Choice>
+<Choice correct>N</Choice>
+</Quiz>
+
+<Quiz question="3. Calculate the mass of an object if it took 20 N to rotate it in a circle with a radius of 2 m and a velocity of 4 m/s.">
+<Choice>4.1 kg</Choice>
+<Choice correct>2.5 kg</Choice>
+<Choice>3.6 kg</Choice>
+<Choice>1.8 kg</Choice>
+</Quiz>
+
+<Quiz question="4. Calculate the centripetal force required to make a 5 kg ball move at 4 m/s in a circle with a radius of 2 m.">
+<Choice>10 N</Choice>
+<Choice>20 N</Choice>
+<Choice correct>40 N</Choice>
+<Choice>30 N</Choice>
+</Quiz>
+
+<Quiz question="5. Calculate the centripetal force it takes for a softball pitcher to rotate a ball at 3 m/s if the ball has mass 0.12 kg and her arm is 0.65 m long.">
+<Choice>0.38 N</Choice>
+<Choice>1.23 N</Choice>
+<Choice correct>0.55 N (approx. 1.66 N)</Choice>
+<Choice>1.66 N</Choice>
+</Quiz>
+
+### 🔬 Reference Frames & Units
+
+<Quiz question="6. An example of an inertial reference frame is:">
+<Choice>Any reference frame that is not accelerating</Choice>
+<Choice correct>A frame attached to a particle on which there are no forces</Choice>
+<Choice>Any reference frame that is at rest</Choice>
+<Choice>A reference frame attached to the center of the universe</Choice>
+</Quiz>
+
+<Quiz question="7. An object moving at constant velocity in an inertial frame must:">
+<Choice>Have a net force on it</Choice>
+<Choice>Eventually stop due to gravity</Choice>
+<Choice>Not have any force of gravity on it</Choice>
+<Choice correct>Have zero net force on it</Choice>
+</Quiz>
+
+<Quiz question="8. In SI units, a force is numerically equal to the ______ when the force is applied to it.">
+<Choice>Velocity of the standard kilogram</Choice>
+<Choice>Speed of the standard kilogram</Choice>
+<Choice>Velocity of any object</Choice>
+<Choice correct>Acceleration of the standard kilogram</Choice>
+</Quiz>
+
+<Quiz question="9. Which of the following quantities is NOT a vector?">
+<Choice correct>Mass</Choice>
+<Choice>Displacement</Choice>
+<Choice>Weight</Choice>
+<Choice>Acceleration</Choice>
+</Quiz>
+
+<Quiz question="10. A newton is the force:">
+<Choice>Of gravity on a 1 kg body</Choice>
+<Choice>Of gravity on a 1 g body</Choice>
+<Choice>That gives a 1 g body an acceleration of 1 cm/s²</Choice>
+<Choice correct>That gives a 1 kg body an acceleration of 1 m/s²</Choice>
+</Quiz>
+
+### ⚖️ Newton's 1st Law & Inertia
+
+<Quiz question="11. The inertia of a body tends to cause the body to:">
+<Choice>Speed up</Choice>
+<Choice>Slow down</Choice>
+<Choice correct>Resist any change in its motion</Choice>
+<Choice>Fall toward Earth</Choice>
+</Quiz>
+
+<Quiz question="12. A heavy ball is suspended by two strings (one above, one below). A quick jerk on the lower string will break that string, but a slow pull will break the upper string. The first result occurs because:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture1" imageAlt="A heavy ball suspended by two strings">
+<Choice>The force is too small to move the ball</Choice>
+<Choice>Action and reaction is operating</Choice>
+<Choice correct>The ball has inertia</Choice>
+<Choice>Air friction holds the ball back</Choice>
+</Quiz>
+
+<Quiz question="13. When a certain force is applied to the standard kilogram its acceleration is 5.0 m/s². When the same force is applied to another object its acceleration is one-fifth as much. The mass of the object is:">
+<Choice>0.2 kg</Choice>
+<Choice>0.5 kg</Choice>
+<Choice>1.0 kg</Choice>
+<Choice correct>5.0 kg</Choice>
+</Quiz>
+
+<Quiz question="14. Mass differs from weight in that:">
+<Choice>All objects have weight, but some lack mass</Choice>
+<Choice correct>Weight is a force, and mass is not</Choice>
+<Choice>The mass of an object is always more than its weight</Choice>
+<Choice>Mass can be expressed only in the metric system</Choice>
+</Quiz>
+
+<Quiz question="15. One Newton force produces an acceleration of:">
+<Choice correct>1 m/s² while acting on a body of 1 kg mass</Choice>
+<Choice>1 cm/s² while acting on a body of 1 g mass</Choice>
+<Choice>1 cm/s² while acting on a body of 1 kg mass</Choice>
+<Choice>1 m/s² while acting on a body of 1 g mass</Choice>
+</Quiz>
+
+<Quiz question="16. Which law of Newton explains the trick of pulling a tablecloth out from underneath dishes without disturbing them?">
+<Choice correct>First law</Choice>
+<Choice>Second law</Choice>
+<Choice>Third law</Choice>
+<Choice>Gravitational law</Choice>
+</Quiz>
+
+<Quiz question="17. Which law of Newton represents the reason for using a seat belt while driving?">
+<Choice correct>First law</Choice>
+<Choice>Second law</Choice>
+<Choice>Third law</Choice>
+<Choice>Gravitational law</Choice>
+</Quiz>
+
+<Quiz question="18. You are standing in a moving bus, facing forward, and suddenly fall backwards. You can imply from this that the bus:">
+<Choice correct>Velocity increased suddenly</Choice>
+<Choice>Velocity decreased suddenly</Choice>
+<Choice>Comes to an immediate stop</Choice>
+<Choice>Speed remained the same, but it's turning</Choice>
+</Quiz>
+
+### ⚖️ Equilibrium & Balanced Forces
+
+<Quiz question="19. A car is moving at uniform velocity. The forward driving force is 2000 N. The drag force due to air resistance and friction would be:">
+<Choice>Zero</Choice>
+<Choice>Less than 2000 N</Choice>
+<Choice>Greater than 2000 N</Choice>
+<Choice correct>Equal to 2000 N</Choice>
+</Quiz>
+
+<Quiz question="20. The least number of unequal forces acting on an object to make it in physical equilibrium is:">
+<Choice correct>2</Choice>
+<Choice>4</Choice>
+<Choice>6</Choice>
+<Choice>8</Choice>
+</Quiz>
+
+<Quiz question="21. Equilibrium is achieved in a system of three forces acting concurrently on an object. If the system includes a 5.0 N force due North and a 2.0 N force due South, the third force must be:">
+<Choice>3.0 N North</Choice>
+<Choice correct>3.0 N South</Choice>
+<Choice>7.0 N North</Choice>
+<Choice>7.0 N South</Choice>
+</Quiz>
+
+
+
+<Quiz question="22. A crate rests on a horizontal surface and a woman pulls on it with a 10 N force. Rank the situations shown according to the magnitude of the normal force, least to greatest." image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture3" imageAlt="Three crate-pulling scenarios with different force angles">
+<Choice>1, 2, 3</Choice>
+<Choice>2, 1, 3</Choice>
+<Choice>2, 3, 1</Choice>
+<Choice>1, 3, 2</Choice>
+<Choice correct>3, 2, 1</Choice>
+</Quiz>
+
+<Quiz question="23. A heavy wooden block is dragged by a force along a rough steel plate. The magnitude of the applied force is the same for both cases. The normal force in case (ii), compared with case (i), is:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture4" imageAlt="A wooden block dragged at different angles">
+<Choice>The same</Choice>
+<Choice>Greater</Choice>
+<Choice correct>Less</Choice>
+<Choice>Less for some angles and greater for others</Choice>
+</Quiz>
+
+<Quiz question="24. Equal forces act on isolated bodies A and B. The mass of B is three times that of A. The magnitude of the acceleration of A is:">
+<Choice correct>Three times that of B</Choice>
+<Choice>1/3 that of B</Choice>
+<Choice>The same as B</Choice>
+<Choice>Nine times that of B</Choice>
+</Quiz>
+
+<Quiz question="25. A car travels east at constant velocity. The net force on the car is:">
+<Choice>East</Choice>
+<Choice>West</Choice>
+<Choice>Up</Choice>
+<Choice>Down</Choice>
+<Choice correct>Zero</Choice>
+</Quiz>
+
+<Quiz question="26. A constant force of 8.0 N is exerted for 4.0 s on a 16 kg object initially at rest. The change in speed of this object will be:">
+<Choice>0.5 m/s</Choice>
+<Choice correct>2 m/s</Choice>
+<Choice>4 m/s</Choice>
+<Choice>8 m/s</Choice>
+</Quiz>
+
+<Quiz question="27. A 6 kg object is moving south. A net force of 12 N north acts on it. The acceleration is:">
+<Choice correct>2 m/s², north</Choice>
+<Choice>2 m/s², south</Choice>
+<Choice>6 m/s², north</Choice>
+<Choice>18 m/s², north</Choice>
+</Quiz>
+
+<Quiz question="28. A 9000 N automobile is pushed along a level road by four students who apply a total forward force of 500 N. Neglecting friction, the acceleration is:">
+<Choice>0.055 m/s²</Choice>
+<Choice correct>0.54 m/s²</Choice>
+<Choice>1.8 m/s²</Choice>
+<Choice>9.8 m/s²</Choice>
+</Quiz>
+
+<Quiz question="29. An object rests on a horizontal frictionless surface. A horizontal force of magnitude F is applied. This force produces an acceleration:">
+<Choice>Only if F is larger than the weight of the object</Choice>
+<Choice>Only while the object suddenly changes from rest to motion</Choice>
+<Choice correct>Always</Choice>
+<Choice>Only if the inertia of the object decreases</Choice>
+</Quiz>
+
+<Quiz question="30. A 25 kg crate is pushed across a frictionless horizontal floor with a force of 20 N directed 20° below the horizontal. The acceleration of the crate is:">
+<Choice>0.27 m/s²</Choice>
+<Choice correct>0.75 m/s²</Choice>
+<Choice>0.80 m/s²</Choice>
+<Choice>170 m/s²</Choice>
+</Quiz>
+
+<Quiz question="31. A ball with a weight of 1.5 N is thrown at an angle of 30° above the horizontal with an initial speed of 12 m/s. At its highest point, the net force on the ball is:">
+<Choice>9.8 N, 30° below horizontal</Choice>
+<Choice>Zero</Choice>
+<Choice>9.8 N, up</Choice>
+<Choice>9.8 N, down</Choice>
+<Choice correct>1.5 N, down</Choice>
+</Quiz>
+
+<Quiz question="32. Two forces are applied to a 5.0 kg crate: 6.0 N to the north and 8.0 N to the west. The magnitude of the acceleration of the crate is:">
+<Choice>0.50 m/s²</Choice>
+<Choice correct>2.0 m/s²</Choice>
+<Choice>2.8 m/s²</Choice>
+<Choice>10 m/s²</Choice>
+</Quiz>
+
+<Quiz question="33. A 400 N steel ball is suspended by a light rope from the ceiling. The tension in the rope is:">
+<Choice correct>400 N</Choice>
+<Choice>800 N</Choice>
+<Choice>Zero</Choice>
+<Choice>200 N</Choice>
+</Quiz>
+
+<Quiz question="34. A heavy steel ball B is suspended by a cord from a block of wood W. The entire system is dropped through the air. Neglecting air resistance, the tension in the cord is:">
+<Choice correct>Zero</Choice>
+<Choice>The difference in the masses of B and W</Choice>
+<Choice>The difference in the weights of B and W</Choice>
+<Choice>The weight of B</Choice>
+</Quiz>
+
+<Quiz question="35. A circus performer of weight W is walking along a 'high wire' as shown. The tension in the wire is:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture5" imageAlt="A circus performer walking on a high wire">
+<Choice>Approximately W</Choice>
+<Choice>Approximately W/2</Choice>
+<Choice>Much less than W</Choice>
+<Choice correct>Much more than W</Choice>
+<Choice>Depends on whether he stands on one foot or two feet</Choice>
+</Quiz>
+
+<Quiz question="36. A 1000 kg elevator is rising and its speed is increasing at 3 m/s². The tension force of the cable on the elevator is:">
+<Choice>6800 N</Choice>
+<Choice>1000 N</Choice>
+<Choice>3000 N</Choice>
+<Choice>9800 N</Choice>
+<Choice correct>12800 N</Choice>
+</Quiz>
+
+<Quiz question="37. A 5 kg block is suspended by a rope from the ceiling of an elevator as the elevator accelerates downward at 3.0 m/s². The tension force of the rope on the block is:">
+<Choice>15 N, up</Choice>
+<Choice correct>34 N, up</Choice>
+<Choice>34 N, down</Choice>
+<Choice>64 N, up</Choice>
+</Quiz>
+
+<Quiz question="38. A crane operator lowers a 16,000 N steel ball with a downward acceleration of 3 m/s². The tension force of the cable is:">
+<Choice>4900 N</Choice>
+<Choice correct>11,000 N (approx.)</Choice>
+<Choice>16,000 N</Choice>
+<Choice>21,000 N</Choice>
+</Quiz>
+
+<Quiz question="39. A 1 N pendulum bob is held at an angle θ from the vertical by a 2 N horizontal force F. The tension in the string (in newtons) is:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture6" imageAlt="A pendulum bob held at angle θ by a horizontal force">
+<Choice>cos θ</Choice>
+<Choice>2/cos θ</Choice>
+<Choice correct>√5</Choice>
+<Choice>1</Choice>
+</Quiz>
+
+<Quiz question="40. A car moves horizontally with a constant acceleration of 3 m/s². A ball suspended by a string from the ceiling does not swing. What angle does the string make with the vertical?">
+<Choice correct>17°</Choice>
+<Choice>35°</Choice>
+<Choice>52°</Choice>
+<Choice>73°</Choice>
+</Quiz>
+
+<Quiz question="41. A man weighing 700 N is in an elevator accelerating upward at 4 m/s². The force exerted on him by the elevator floor is:">
+<Choice>71 N</Choice>
+<Choice>290 N</Choice>
+<Choice>410 N</Choice>
+<Choice>700 N</Choice>
+<Choice correct>990 N</Choice>
+</Quiz>
+
+<Quiz question="42. You stand on a spring scale on the floor of an elevator. The scale shows the highest reading when the elevator:">
+<Choice correct>Moves upward with increasing speed</Choice>
+<Choice>Moves upward with decreasing speed</Choice>
+<Choice>Remains stationary</Choice>
+<Choice>Moves downward with increasing speed</Choice>
+<Choice>Moves downward at constant speed</Choice>
+</Quiz>
+
+<Quiz question="43. You stand on a spring scale on the floor of an elevator. Of the following, the scale shows the highest reading when the elevator:">
+<Choice>Moves downward with increasing speed</Choice>
+<Choice correct>Moves downward with decreasing speed</Choice>
+<Choice>Remains stationary</Choice>
+<Choice>Moves upward with decreasing speed</Choice>
+<Choice>Moves upward at constant speed</Choice>
+</Quiz>
+
+
+### 📐 More Force & Acceleration Problems
+
+<Quiz question="44. A 1000 kg car is travelling at 20 m/s. It takes 5 s to stop the car. What braking force is needed to stop the car?">
+<Choice>1000 N</Choice>
+<Choice>2000 N</Choice>
+<Choice correct>4000 N</Choice>
+<Choice>8000 N</Choice>
+</Quiz>
+
+<Quiz question="45. What net force would be required to give a 0.040 kg golf ball an acceleration of 20 m/s²?">
+<Choice>0.40 N</Choice>
+<Choice correct>0.80 N</Choice>
+<Choice>1.2 N</Choice>
+<Choice>200 N</Choice>
+</Quiz>
+
+<Quiz question="46. If a 900 N force is applied to a 3 kg object on a frictionless surface, what is the acceleration?">
+<Choice>100 m/s²</Choice>
+<Choice>200 m/s²</Choice>
+<Choice correct>300 m/s²</Choice>
+<Choice>400 m/s²</Choice>
+</Quiz>
+
+<Quiz question="47. A body of mass 5 kg is moved by a constant force of 20 N. Calculate the acceleration.">
+<Choice>2 m/s²</Choice>
+<Choice>3 m/s²</Choice>
+<Choice correct>4 m/s²</Choice>
+<Choice>5 m/s²</Choice>
+</Quiz>
+
+<Quiz question="48. Two objects are dropped from the same height. Object A has mass 5 kg and Object B has mass 10 kg. In the absence of air resistance, which reaches the ground first?">
+<Choice>Object A</Choice>
+<Choice>Object B</Choice>
+<Choice correct>They reach the ground at the same time</Choice>
+<Choice>It depends on the height</Choice>
+</Quiz>
+
+<Quiz question="49. A force of 50 N is applied to two blocks (10 kg and 5 kg) in contact on a frictionless surface. What is the acceleration of the system?">
+<Choice>2.0 m/s²</Choice>
+<Choice>2.5 m/s²</Choice>
+<Choice correct>3.33 m/s²</Choice>
+<Choice>5.0 m/s²</Choice>
+</Quiz>
+
+<Quiz question="50. An object of mass 2 kg rests on a smooth surface. A horizontal force of 6 N is applied for 3 seconds. What is the velocity of the object?">
+<Choice>3 m/s</Choice>
+<Choice>6 m/s</Choice>
+<Choice correct>9 m/s</Choice>
+<Choice>12 m/s</Choice>
+</Quiz>
+
+<Quiz question="51. A car of mass 1500 kg accelerates from rest to 30 m/s in 10 seconds. What is the net force on the car?">
+<Choice>3000 N</Choice>
+<Choice correct>4500 N</Choice>
+<Choice>6000 N</Choice>
+<Choice>15000 N</Choice>
+</Quiz>
+
+
+### ↔️ Newton's 3rd Law & Action-Reaction
+
+<Quiz question="52. A horse pulls a cart with force F. According to Newton's 3rd Law, the cart pulls the horse with:">
+<Choice>Greater force than F</Choice>
+<Choice>Less force than F</Choice>
+<Choice correct>Equal force F but in opposite direction</Choice>
+<Choice>No force, since the horse is stronger</Choice>
+</Quiz>
+
+<Quiz question="53. A large truck collides head-on with a small car. During the collision:">
+<Choice>The truck exerts a greater force on the car</Choice>
+<Choice>The car exerts a greater force on the truck</Choice>
+<Choice correct>The forces are equal in magnitude</Choice>
+<Choice>The force depends on the speed of the truck only</Choice>
+</Quiz>
+
+<Quiz question="54. A 1 kg ball and a 10 kg ball are dropped from the same height. The force Earth exerts on the 10 kg ball compared to the 1 kg ball is:">
+<Choice>The same</Choice>
+<Choice correct>10 times greater</Choice>
+<Choice>10 times smaller</Choice>
+<Choice>100 times greater</Choice>
+</Quiz>
+
+<Quiz question="55. When you push against a wall with your fingers, they bend because:">
+<Choice>The wall pushes against you with less force</Choice>
+<Choice>The wall pushes against you with more force</Choice>
+<Choice correct>The wall pushes against you with the same force</Choice>
+<Choice>There is no reaction from the wall</Choice>
+</Quiz>
+
+<Quiz question="56. A book rests on a table. A student identifies the action-reaction pair as: 'Weight of book pulls it down, normal force pushes it up.' Is this correct?">
+<Choice correct>No - the action-reaction pairs act on DIFFERENT objects, but both of these act on the book</Choice>
+<Choice>Yes - they are equal and opposite</Choice>
+<Choice>Yes - they cancel each other</Choice>
+<Choice>No - because the forces are not equal</Choice>
+</Quiz>
+
+<Quiz question="57. A rifle exerts a force on a bullet, accelerating it. The bullet also exerts a force on the rifle. Why doesn't the rifle shoot backward at the same speed as the bullet?">
+<Choice>The forces are not equal</Choice>
+<Choice correct>The rifle has much more mass, so its acceleration is much smaller</Choice>
+<Choice>The bullet exerts a smaller force on the rifle</Choice>
+<Choice>Friction prevents the rifle from moving</Choice>
+</Quiz>
+
+<Quiz question="58. Which of Newton's Laws explains why a rocket can accelerate in the vacuum of space?">
+<Choice>First Law</Choice>
+<Choice>Second Law</Choice>
+<Choice correct>Third Law</Choice>
+<Choice>Law of Universal Gravitation</Choice>
+</Quiz>
+
+
+### 🔄 Circular Motion - Advanced
+
+<Quiz question="59. A ball moves in a circular path as shown. At the marked point, the velocity is tangent to the circle and the acceleration points toward the center. Which diagram correctly shows both vectors?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture7" imageAlt="Ball moving in a circular path showing velocity and acceleration vectors">
+<Choice>Velocity inward, acceleration tangent</Choice>
+<Choice>Both vectors point outward</Choice>
+<Choice correct>Velocity tangent (upward), acceleration toward center (inward)</Choice>
+<Choice>Both vectors point inward</Choice>
+</Quiz>
+
+<Quiz question="60. A stone rotates on a string in a horizontal circle. The string suddenly breaks. The stone will:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture8" imageAlt="A stone on a string rotating in a circle - string breaks">
+<Choice>Continue in a circular path</Choice>
+<Choice>Fly outward (radially away from center)</Choice>
+<Choice correct>Move in a straight line tangent to the circle at the point of release</Choice>
+<Choice>Stop immediately</Choice>
+</Quiz>
+
+<Quiz question="61. A stone attached to a string rotates in a circle. The string breaks at point X. Which path does the stone follow after breaking?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture9" imageAlt="A stone on a string rotating - breaks at point X">
+<Choice>Curves outward</Choice>
+<Choice>Spirals inward</Choice>
+<Choice correct>Straight line tangent at point X</Choice>
+<Choice>Continues in the circle briefly</Choice>
+</Quiz>
+
+<Quiz question="62. A roller coaster car has mass 500 kg. At the bottom of a circular dip of radius 40 m, its speed is 16 m/s. The magnitude of the force the track exerts on the car is:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture10" imageAlt="Roller coaster car at the bottom of a circular dip">
+<Choice correct>8.1 kN</Choice>
+<Choice>1.7 kN</Choice>
+<Choice>3.2 kN</Choice>
+<Choice>4.9 kN</Choice>
+</Quiz>
+
+<Quiz question="63. An object undergoes uniform circular motion with centripetal force 4.0 N. If the mass decreases by a factor of 2 and the speed increases by a factor of 2, the new centripetal force is:">
+<Choice>1 N</Choice>
+<Choice>2 N</Choice>
+<Choice>4 N</Choice>
+<Choice correct>8 N</Choice>
+</Quiz>
+
+<Quiz question="64. A planet orbiting a star experiences gravitational force F when its orbital radius is R. If the orbital radius changes to 2R (same speed), the gravitational force becomes:">
+<Choice correct>F/4</Choice>
+<Choice>F/2</Choice>
+<Choice>2F</Choice>
+<Choice>4F</Choice>
+</Quiz>
+
+<Quiz question="65. An airplane flies in a horizontal circle of radius 500 m at speed 150 m/s. If the radius changes to 1000 m and the speed to 300 m/s, by what factor does the centripetal acceleration change?">
+<Choice>0.50</Choice>
+<Choice>1.00</Choice>
+<Choice>1.50</Choice>
+<Choice correct>2.00</Choice>
+</Quiz>
+
+<Quiz question="66. An object travels at constant speed around a circular track. Which quantity is constant?">
+<Choice>Velocity</Choice>
+<Choice>Acceleration</Choice>
+<Choice correct>Speed</Choice>
+<Choice>Net force direction</Choice>
+</Quiz>
+
+<Quiz question="67. An astronaut orbiting Earth at a constant speed in a space station is:">
+<Choice>Not accelerating because speed is constant</Choice>
+<Choice>Not accelerating because gravity is zero</Choice>
+<Choice correct>Accelerating toward Earth because direction is continuously changing</Choice>
+<Choice>Decelerating due to air resistance</Choice>
+</Quiz>
+
+
+### 🧩 Mixed Applications
+
+<Quiz question="68. When a person pushes on a wall and is not able to move the wall, the reaction force is:">
+<Choice>Friction of the floor on the person</Choice>
+<Choice correct>The force of the wall pushing back on the person</Choice>
+<Choice>The person's weight</Choice>
+<Choice>Zero, since the wall didn't move</Choice>
+</Quiz>
+
+<Quiz question="69. A horizontal force of 100 N is applied to a 50 kg crate on a rough surface (friction = 30 N). The acceleration is:">
+<Choice correct>1.4 m/s²</Choice>
+<Choice>2.0 m/s²</Choice>
+<Choice>0.6 m/s²</Choice>
+<Choice>2.6 m/s²</Choice>
+</Quiz>
+
+<Quiz question="70. A boy pushes a shopping cart. Identify the force that MOVES the boy forward:">
+<Choice>The boy's push on the cart</Choice>
+<Choice>The cart's push on the boy</Choice>
+<Choice correct>Friction of the ground on the boy's feet</Choice>
+<Choice>Gravity</Choice>
+</Quiz>
+
+<Quiz question="71. A 0.5 kg ball is thrown upward. What is the net force at the highest point? (neglect air resistance)">
+<Choice>Zero</Choice>
+<Choice>0.5 N upward</Choice>
+<Choice correct>4.9 N downward</Choice>
+<Choice>9.8 N downward</Choice>
+</Quiz>
+
+<Quiz question="72. An elevator descends with acceleration g. A person inside the elevator will experience:">
+<Choice>Normal weight</Choice>
+<Choice>Double weight</Choice>
+<Choice correct>Weightlessness (apparent weight = 0)</Choice>
+<Choice>Half weight</Choice>
+</Quiz>
+
+<Quiz question="73. The weight of a 60 kg astronaut on the Moon (g_moon = 1.6 m/s²) is:">
+<Choice>60 N</Choice>
+<Choice correct>96 N</Choice>
+<Choice>588 N</Choice>
+<Choice>600 N</Choice>
+</Quiz>
+
+<Quiz question="74. A swimmer pushes backward on the water. The swimmer moves forward because:">
+<Choice>The swimmer's push is greater than the water's push</Choice>
+<Choice correct>The water pushes forward on the swimmer (Newton's 3rd Law)</Choice>
+<Choice>The swimmer is lighter than the water</Choice>
+<Choice>Gravity pulls the swimmer forward</Choice>
+</Quiz>
+
+<Quiz question="75. A 10 kg object is on a frictionless incline at 30°. The acceleration down the incline is:">
+<Choice>9.8 m/s²</Choice>
+<Choice>8.5 m/s²</Choice>
+<Choice correct>4.9 m/s²</Choice>
+<Choice>0 m/s²</Choice>
+</Quiz>
+
+<Quiz question="76. The net force on a 10 kg object with acceleration 5 m/s² is:">
+<Choice>2 N</Choice>
+<Choice>15 N</Choice>
+<Choice correct>50 N</Choice>
+<Choice>500 N</Choice>
+</Quiz>
+
+<Quiz question="77. What is the mass of an object that requires 600 N of net force to accelerate at 15 m/s²?">
+<Choice>20 kg</Choice>
+<Choice>30 kg</Choice>
+<Choice correct>40 kg</Choice>
+<Choice>9000 kg</Choice>
+</Quiz>
+
+<Quiz question="78. A free-body diagram should include:">
+<Choice>Only the largest force acting on the object</Choice>
+<Choice>Forces that the object exerts on other objects</Choice>
+<Choice correct>All external forces acting on the object</Choice>
+<Choice>Only horizontal forces</Choice>
+</Quiz>
+
+### 🔗 Multi-Body Systems & Projectiles
+
+<Quiz question="79. In the Atwood machine shown, the acceleration is 3.0 m/s² and M1 = 2.0 kg. What is the mass of M2?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture11" imageAlt="Atwood machine with masses M1 and M2 over a frictionless pulley">
+<Choice correct>3.8 kg</Choice>
+<Choice>2.0 kg</Choice>
+<Choice>5.0 kg</Choice>
+<Choice>1.3 kg</Choice>
+</Quiz>
+
+<Quiz question="80. At the highest point Q of the parabolic path, which direction does the acceleration point?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture12" imageAlt="A ball follows a parabolic path through the air">
+<Choice>Along the direction of motion</Choice>
+<Choice>There is no acceleration at the highest point</Choice>
+<Choice correct>Straight downward</Choice>
+<Choice>Upward</Choice>
+</Quiz>
+
+<Quiz question="81. At point P (on the way up), the direction of the net force is:">
+<Choice>Along the path of motion (tangent)</Choice>
+<Choice>There is no net force</Choice>
+<Choice correct>Straight downward (due to gravity only)</Choice>
+<Choice>Upward and to the right</Choice>
+</Quiz>
+
+<Quiz question="82. The speed of the ball at the highest point Q is:">
+<Choice>Zero</Choice>
+<Choice correct>Equal to the horizontal component of the initial velocity</Choice>
+<Choice>Equal to the initial speed</Choice>
+<Choice>Greater than the initial speed</Choice>
+</Quiz>
+
+
+### 📊 FBDs, Graphs & Analysis
+
+<Quiz question="83. The free-body diagram shows forces on a balloon rising at constant velocity. What can you conclude?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture15" imageAlt="Free-body diagram showing forces on a balloon">
+<Choice>The upward force is greater than the downward forces</Choice>
+<Choice>The balloon is accelerating upward</Choice>
+<Choice correct>The net force is zero - the balloon is in dynamic equilibrium</Choice>
+<Choice>Gravity is not acting on the balloon</Choice>
+</Quiz>
+
+<Quiz question="84. A bullet is fired horizontally from a rifle. Ignoring air resistance, the only force on the bullet after it leaves the barrel is:">
+<Choice>The force from the explosion pushing it forward</Choice>
+<Choice>Air pushing it forward</Choice>
+<Choice correct>Gravity pulling it downward</Choice>
+<Choice>No forces act on it</Choice>
+</Quiz>
+
+<Quiz question="85. The graph shows centripetal acceleration vs speed for an object in circular motion. From this graph, the relationship between ac and v is:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture16" imageAlt="Graph of centripetal acceleration vs speed">
+<Choice>Linear (ac ∝ v)</Choice>
+<Choice correct>Quadratic (ac ∝ v²)</Choice>
+<Choice>Inversely proportional (ac ∝ 1/v)</Choice>
+<Choice>Constant</Choice>
+</Quiz>
+
+<Quiz question="86. Two objects X and Y have the same centripetal acceleration, but X travels twice as fast as Y. The orbit radius of X compared to Y is:">
+<Choice>One fourth</Choice>
+<Choice correct>Four times</Choice>
+<Choice>The same</Choice>
+<Choice>Twice</Choice>
+</Quiz>
+
+<Quiz question="87. A car rounds a curve of radius 200 m at 90 km/h (25 m/s). The centripetal acceleration is:">
+<Choice>1.56 m/s²</Choice>
+<Choice correct>3.13 m/s²</Choice>
+<Choice>6.25 m/s²</Choice>
+<Choice>450 m/s²</Choice>
+</Quiz>
+
+<Quiz question="88. At what angle should a 50 m radius curved road be banked for cars at 12 m/s on an icy surface?">
+<Choice>8°</Choice>
+<Choice correct>16°</Choice>
+<Choice>32°</Choice>
+<Choice>45°</Choice>
+</Quiz>
+
+<Quiz question="89. A ball is rolling on a frictionless surface. If no net force acts on it, the ball will:">
+<Choice>Gradually slow down and stop</Choice>
+<Choice>Speed up</Choice>
+<Choice correct>Continue at constant velocity forever</Choice>
+<Choice>Change direction randomly</Choice>
+</Quiz>
+
+<Quiz question="90. A force of 30 N acts on an object at rest and accelerates it to 5 m/s. Then another force of 30 N in the opposite direction is also applied. The velocity of the object:">
+<Choice>Increases to 10 m/s</Choice>
+<Choice>Decreases to 2.5 m/s</Choice>
+<Choice>The body will stop</Choice>
+<Choice correct>Remains at 5 m/s (net force = 0, so no acceleration change)</Choice>
+</Quiz>
+
+
+### 📈 Graphs, Velocity-Time & Applied Problems
+
+<Quiz question="91. From the acceleration vs force graph shown, which object has the greatest mass?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture17" imageAlt="Graph showing acceleration vs force for four objects">
+<Choice>Object A (steepest slope)</Choice>
+<Choice>Object B</Choice>
+<Choice>Object C</Choice>
+<Choice correct>Object D (shallowest slope - greatest mass produces least acceleration per unit force)</Choice>
+</Quiz>
+
+<Quiz question="92. A 2 kg object accelerates at 3 m/s² horizontally to the right. If friction is 4 N, the applied horizontal force is:">
+<Choice>2 N</Choice>
+<Choice>6 N</Choice>
+<Choice correct>10 N</Choice>
+<Choice>14 N</Choice>
+</Quiz>
+
+<Quiz question="93. During which stage of the velocity-time graph is the object in dynamic equilibrium (ΣF = 0)?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture18" imageAlt="Velocity-time graph with stages A, B, C, D">
+<Choice>Stage A (velocity increasing)</Choice>
+<Choice correct>Stage B (constant velocity)</Choice>
+<Choice>Stage C (velocity decreasing)</Choice>
+<Choice>Stage D (at rest)</Choice>
+</Quiz>
+
+<Quiz question="94. During which stage does the object experience the greatest net force?">
+<Choice correct>The stage with the steepest slope (greatest acceleration)</Choice>
+<Choice>The stage with constant velocity</Choice>
+<Choice>The stage where velocity is zero</Choice>
+<Choice>All stages have equal force</Choice>
+</Quiz>
+
+<Quiz question="95. From the velocity-time graph, during which phase is the net force on the object directed opposite to the direction of motion?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture19" imageAlt="Velocity-time graph showing acceleration and deceleration">
+<Choice>During acceleration (velocity increasing)</Choice>
+<Choice correct>During deceleration (velocity decreasing - force opposes motion)</Choice>
+<Choice>During constant velocity</Choice>
+<Choice>There is never an opposing force</Choice>
+</Quiz>
+
+<Quiz question="96. A 1500 kg car decelerates from 20 m/s to 0 in 5 seconds. The braking force is:">
+<Choice>3000 N</Choice>
+<Choice correct>6000 N</Choice>
+<Choice>7500 N</Choice>
+<Choice>30000 N</Choice>
+</Quiz>
+
+<Quiz question="97. Which of the following is NOT a real force that should appear on a free-body diagram?">
+<Choice>Normal force</Choice>
+<Choice>Tension</Choice>
+<Choice correct>Centrifugal force</Choice>
+<Choice>Friction</Choice>
+</Quiz>
+
+<Quiz question="98. From the force diagram shown, the net force on the object is:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture20" imageAlt="Force diagram of an object on a horizontal surface">
+<Choice>Zero - the forces balance</Choice>
+<Choice correct>In the direction of the larger horizontal force (calculate vector sum)</Choice>
+<Choice>Vertically downward</Choice>
+<Choice>Vertically upward</Choice>
+</Quiz>
+
+<Quiz question="99. An object is pulled along a surface by a force F at angle θ above the horizontal. The horizontal acceleration depends on:" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture21" imageAlt="Object pulled at an angle on a surface">
+<Choice>F only</Choice>
+<Choice>F sin θ</Choice>
+<Choice correct>F cos θ (the horizontal component of the applied force minus friction)</Choice>
+<Choice>The normal force only</Choice>
+</Quiz>
+
+<Quiz question="100. An airplane flies at constant velocity and altitude. From the force diagram, what must be true?" image="https://www.edutrace.app/cdn/content/grade10/semester1/physics/lo3/Picture22" imageAlt="Free-body diagram of an airplane in flight">
+<Choice>Thrust is greater than drag</Choice>
+<Choice>Lift is greater than weight</Choice>
+<Choice correct>Thrust = Drag AND Lift = Weight (dynamic equilibrium in both axes)</Choice>
+<Choice>All four forces are equal</Choice>
+</Quiz>
+
+<Quiz question="101. The airplane begins to climb at constant speed. This means:">
+<Choice correct>Lift must be greater than weight to provide upward acceleration</Choice>
+<Choice>Thrust must be reduced</Choice>
+<Choice>Drag increases and thrust decreases</Choice>
+<Choice>All forces remain the same as level flight</Choice>
+</Quiz>
+
+<Quiz question="102. If the airplane's thrust is 50,000 N and drag is 35,000 N, and its mass is 5,000 kg, what is the horizontal acceleration?">
+<Choice>1.0 m/s²</Choice>
+<Choice>2.0 m/s²</Choice>
+<Choice correct>3.0 m/s²</Choice>
+<Choice>7.0 m/s²</Choice>
+</Quiz>
+
+
+---
+
+<Callout type="default" emoji="🤲">
+**After studying this material, you've learned to predict the motion of anything in the universe using just three laws and a handful of equations.** Newton published the *Principia* at age 44 - you're learning this at 15. That's a head start. Use it wisely.
+
+*"If I have seen further, it is by standing on the shoulders of giants."* - Isaac Newton
+</Callout>
+
+<FeedbackForm />

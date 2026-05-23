@@ -1,0 +1,174 @@
+/**
+ * EduTrace Design System - Card Component
+ * Unified card styles across the entire platform
+ */
+
+/* ==================== BASE CARD ==================== */
+.ds-card {
+    background: var(--ds-bg-card);
+    border-radius: var(--ds-radius-xl, 22px);
+    border: 1px solid var(--ds-border-default);
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    display: flex;
+    flex-direction: column;
+}
+
+/* ==================== VARIANTS ==================== */
+
+/* Default Card */
+.ds-card--default {
+    background: var(--ds-bg-card);
+}
+
+/* Elevated Card */
+.ds-card--elevated {
+    background: var(--ds-bg-elevated);
+    box-shadow: var(--ds-shadow-md);
+    border-color: var(--ds-border-subtle);
+}
+
+/* Outlined Card */
+.ds-card--outlined {
+    background: transparent;
+    border-color: var(--ds-border-emphasis);
+}
+
+/* Interactive Card */
+.ds-card--interactive {
+    cursor: pointer;
+}
+
+.ds-card--interactive:hover {
+    border-color: var(--ds-color-primary-border);
+    background: var(--ds-color-primary-lighter);
+    transform: translateY(-1px);
+    box-shadow: var(--ds-shadow-lg);
+}
+
+.ds-card--interactive:active {
+    transform: translateY(0);
+}
+
+/* ==================== PADDING SIZES ==================== */
+.ds-card--padding-none {
+    padding: 0;
+}
+
+.ds-card--padding-sm {
+    padding: var(--ds-space-4);
+}
+
+.ds-card--padding-md {
+    padding: var(--ds-space-6);
+}
+
+.ds-card--padding-lg {
+    padding: var(--ds-space-8);
+}
+
+/* ==================== MODIFIERS ==================== */
+.ds-card--full-width {
+    width: 100%;
+}
+
+/* ==================== CARD HEADER ==================== */
+.ds-card-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 16px;
+}
+
+.ds-card-header__content {
+    flex: 1;
+    min-width: 0;
+}
+
+.ds-card-header__title {
+    font-size: var(--ds-font-size-lg);
+    font-weight: var(--ds-font-semibold);
+    color: var(--ds-text-primary);
+    margin: 0;
+    line-height: 1.4;
+}
+
+.ds-card-header__subtitle {
+    font-size: var(--ds-font-size-sm);
+    color: var(--ds-text-tertiary);
+    margin: 4px 0 0 0;
+    line-height: 1.5;
+}
+
+.ds-card-header__action {
+    flex-shrink: 0;
+}
+
+/* ==================== CARD BODY ==================== */
+.ds-card-body {
+    flex: 1;
+    color: var(--ds-text-secondary);
+    font-size: var(--ds-font-size-base);
+    line-height: 1.6;
+}
+
+/* ==================== CARD FOOTER ==================== */
+.ds-card-footer {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-top: 20px;
+    padding-top: 16px;
+    border-top: 1px solid var(--ds-border-default);
+}
+
+.ds-card-footer--left {
+    justify-content: flex-start;
+}
+
+.ds-card-footer--center {
+    justify-content: center;
+}
+
+.ds-card-footer--right {
+    justify-content: flex-end;
+}
+
+.ds-card-footer--between {
+    justify-content: space-between;
+}
+
+/* ==================== NESTED CARDS SPACING ==================== */
+.ds-card--padding-none .ds-card-header,
+.ds-card--padding-none .ds-card-body,
+.ds-card--padding-none .ds-card-footer {
+    padding-left: 24px;
+    padding-right: 24px;
+}
+
+.ds-card--padding-none .ds-card-header {
+    padding-top: 24px;
+}
+
+.ds-card--padding-none .ds-card-footer {
+    padding-bottom: 24px;
+}
+
+/* ==================== RESPONSIVE ==================== */
+@media (max-width: 640px) {
+    .ds-card--padding-md {
+        padding: 16px;
+    }
+
+    .ds-card--padding-lg {
+        padding: 20px;
+    }
+
+    .ds-card-header__title {
+        font-size: 16px;
+    }
+
+    .ds-card-header__subtitle {
+        font-size: 13px;
+    }
+}

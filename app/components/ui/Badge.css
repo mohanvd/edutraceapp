@@ -1,0 +1,54 @@
+/* Profile / reputation badges - matches --ds-* theme (no hardcoded hex) */
+
+.et-badge-icon-wrap {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--ds-color-primary);
+    transition: transform var(--ds-transition-base);
+}
+
+.et-badge-icon-wrap--verified {
+    color: var(--ds-color-primary);
+}
+
+.et-badge-icon-wrap--contributor {
+    color: var(--ds-color-warning);
+}
+
+.et-badge-icon-wrap--earlyAdopter {
+    color: var(--ds-color-success);
+}
+
+.et-badge-label {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--ds-cluster-gap);
+    padding: var(--ds-space-1) var(--ds-space-3) var(--ds-space-1) var(--ds-space-1);
+    border-radius: var(--ds-radius-full);
+    font-family: var(--ds-font-sans);
+    font-weight: 600;
+    line-height: 1.3;
+    border: 1px solid transparent;
+    transition:
+        transform var(--ds-transition-base),
+        border-color var(--ds-transition-base);
+}
+
+.et-badge-label--verified {
+    background: var(--ds-color-primary-light);
+    color: var(--ds-color-primary);
+    border-color: var(--ds-color-primary-border);
+}
+
+.et-badge-label--contributor {
+    background: var(--ds-color-warning-light);
+    color: var(--ds-color-warning);
+    border-color: var(--ds-color-warning-border);
+}
+
+.et-badge-label--earlyAdopter {
+    background: var(--ds-color-success-light);
+    color: var(--ds-color-success);
+    border-color: var(--ds-color-success-border);
+}

@@ -1,0 +1,1109 @@
+---
+title: "Right Triangle Trigonometry"
+sidebarTitle: "Right Triangle Trig"
+---
+
+# Right Triangle Trigonometry
+
+<Callout type="info" emoji="🏗️">
+  Imagine standing on a street corner, looking up at a towering skyscraper. You want to know its height, but you can't climb it, and you don't have a 200-meter ruler. All you need is **one angle** and **one distance**. That's the power of **Trigonometry**, the mathematics that lets you calculate what you cannot physically reach.
+</Callout>
+
+<Callout type="default" emoji="🎯">
+  **Learning Outcome:** MA.1.01: Create, interpret and analyze trigonometric ratios that model real-world situations.
+
+  **Essential Questions:**
+  - *Why is modeling an indispensable tool?*
+  - *Why do we represent phenomena in multiple ways?*
+
+  **Big Idea:** We use mathematical modeling with a variety of classes of functions to solve applications in biology, finance, mechanics, and calculus.
+
+  **Weeks:** 01 – 04 &nbsp;|&nbsp; **Textbook:** Math Connections 2a: Sections 1.8, 3.1–3.4, 3.6, 3.7
+</Callout>
+
+---
+
+## 🏛️ Etymology & Origins: The Language of Triangles
+
+The word "Trigonometry" comes from the Greek words *trigōnon* (triangle) and *metron* (measure). It is literally the science of measuring triangles. But the beauty of trigonometry lies in its interconnectedness. 
+
+Consider the "Cosine". The prefix "co-" is not random. It stands for "complement's sine". In any right triangle, the two acute angles are complementary (they add up to $90^\circ$). The sine of an angle is exactly equal to the cosine of its complement.
+
+<Formula name="⭐ CORE TRUTH: Complementary Angle Identities">
+  $$\sin \theta = \cos(90^\circ - \theta)$$
+  $$\cos \theta = \sin(90^\circ - \theta)$$
+  $$\tan \theta = \cot(90^\circ - \theta)$$
+</Formula>
+
+This explains why $\sin 30^\circ = \cos 60^\circ$. They are two sides of the exact same geometric coin.
+
+---
+
+## 🗺️ What You'll Master
+
+| # | Concept | Skill You'll Gain |
+|---|---------|-------------------|
+| 1 | Unit Circle | Relate coordinates on the unit circle to sine and cosine |
+| 2 | Six Trigonometric Functions | Define all six in terms of right triangles |
+| 3 | Related Angles (Reference Angles) | Determine trig values in any quadrant |
+| 4 | Sine Law & Cosine Law | Derive and apply both laws to solve triangles |
+| 5 | Angle of Elevation & Depression | Solve real-world application problems |
+| 6 | Directed Angle | Understand angle direction and sign |
+| 7 | Positive, Negative & Co-terminal Angles | Draw and identify co-terminal angles of rotation |
+
+---
+
+## 📐 Part 1: Mastering the Right Triangle & Pythagorean Theorem
+
+### 1.1 Anatomy of a Right Triangle
+
+<Definition term="Right Triangle (مثلث قائم الزاوية)">
+  A triangle that contains exactly one **90° angle** (right angle). The side opposite the right angle is always the longest side, called the **hypotenuse**.
+</Definition>
+
+Every right triangle has three sides with special names, and which side is "opposite" or "adjacent" **depends on the angle you're looking at** (we call it $\theta$):
+
+<RightTriangle hypotenuse="Hypotenuse (الوتر)" opposite="Opposite (المقابل)" adjacent="Adjacent (المجاور)" angle="θ" orientation="right" />
+
+Let's compare these three crucial sides to see how they behave depending on your perspective:
+
+<Compare>
+  <Item label="Hypotenuse (الوتر)">
+    - Always **opposite the 90° angle**
+    - Always the **longest** side of the triangle
+    - **Never changes** regardless of which acute angle you pick
+  </Item>
+  <Item label="Opposite (المقابل)">
+    - The side **directly across** from angle $\theta$
+    - Changes when you switch which angle you're examining
+  </Item>
+  <Item label="Adjacent (المجاور)">
+    - The side **next to** angle $\theta$ (that isn't the hypotenuse)
+    - Changes when you switch which angle you're examining
+  </Item>
+</Compare>
+
+<Callout type="info" emoji="💡">
+  **Memory Trick:** Stand at angle $\theta$. The side **facing you** = Opposite. The side **beside you** = Adjacent. The **longest** side = Hypotenuse. Always.
+</Callout>
+
+### 1.2 The Pythagorean Theorem
+
+<Formula name="⭐ CORE TRUTH: Pythagorean Theorem (نظرية فيثاغورس)">
+  $$a^2 + b^2 = c^2$$
+
+  Where $c$ is **always** the hypotenuse, and $a$, $b$ are the other two sides (the legs).
+</Formula>
+
+<Example title="Finding the Hypotenuse">
+  A right triangle has legs of length **3** and **4**. Find the hypotenuse.
+
+  $$3^2 + 4^2 = c^2$$
+  $$9 + 16 = 25$$
+  $$c = \sqrt{25} = 5$$
+</Example>
+
+<Example title="Finding a Missing Leg">
+  A right triangle has a hypotenuse of **13** and one leg of **5**. Find the other leg.
+
+  $$5^2 + b^2 = 13^2$$
+  $$25 + b^2 = 169$$
+  $$b^2 = 144$$
+  $$b = \sqrt{144} = 12$$
+</Example>
+
+<Callout type="default" emoji="🧠">
+  **Pythagorean Triples**: Memorize these sets of whole numbers that satisfy $a^2 + b^2 = c^2$. They save you time in exams!
+
+  | Triple | × 2 | × 3 |
+  |--------|-----|-----|
+  | **3, 4, 5** | 6, 8, 10 | 9, 12, 15 |
+  | **5, 12, 13** | 10, 24, 26 | 15, 36, 39 |
+  | **8, 15, 17** | 16, 30, 34 | 24, 45, 51 |
+  | **7, 24, 25** | 14, 48, 50 | 21, 72, 75 |
+
+  Any whole-number multiple of a Pythagorean triple is also a Pythagorean triple!
+</Callout>
+
+### 1.3 The Euclidean Theorem (Geometric Mean Theorems)
+
+When you drop an altitude from the right angle of a right triangle to its hypotenuse, you create three similar triangles. This unlocks powerful proportional relationships known as the Euclidean Theorem.
+
+Let $\triangle ABC$ be a right triangle at $A$, and let $AD$ be the altitude drawn to the hypotenuse $BC$.
+
+<Formula name="⭐ CORE TRUTH: The Euclidean Theorem">
+  **The Altitude Rule:** The altitude squared is the product of the two segments of the hypotenuse.
+  $$AD^2 = BD \times CD$$
+
+  **The Leg Rule:** Each leg squared is the product of the adjacent hypotenuse segment and the entire hypotenuse.
+  $$AB^2 = BD \times BC$$
+  $$AC^2 = CD \times BC$$
+</Formula>
+
+These formulas provide a brilliant shortcut for finding missing lengths without calculating any angles.
+
+<Accordion>
+  <AccordionItem title="🧠 For Curious Minds: Why do these rules work?">
+    When you drop the altitude $AD$, it cuts the large triangle into two smaller triangles that are **similar** to each other and to the original large triangle. Because their angles match exactly, their sides are proportional. Setting up a cross-multiplication of those side ratios gives you these exact formulas!
+  </AccordionItem>
+</Accordion>
+
+---
+
+## 🔑 Part 2: Unlocking the Three Basic Ratios (SOH-CAH-TOA)
+
+### 2.1 Sine, Cosine & Tangent
+
+The three fundamental trigonometric ratios connect the **sides** of a right triangle to its **angles**:
+
+<Formula name="⭐ CORE TRUTH: The Big Three: SOH-CAH-TOA">
+  $$\sin \theta = \frac{\text{Opposite}}{\text{Hypotenuse}} \qquad \cos \theta = \frac{\text{Adjacent}}{\text{Hypotenuse}} \qquad \tan \theta = \frac{\text{Opposite}}{\text{Adjacent}}$$
+</Formula>
+
+To memorize these formulas easily, mathematicians created a famous mnemonic that you can rely on during exams:
+
+| Function | Mnemonic | Ratio | Memory Sentence |
+|----------|----------|-------|-----------------|
+| **S**ine | **S**OH | **O**pp / **H**yp | **S**ome **O**ld **H**orses |
+| **C**osine | **C**AH | **A**dj / **H**yp | **C**an **A**lways **H**ear |
+| **T**angent | **T**OA | **O**pp / **A**dj | **T**heir **O**wner **A**pproaching |
+
+<Callout type="info" emoji="🧠">
+  **SOH-CAH-TOA**: Say it out loud: "So-Cah-Toe-Ah." Once it's stuck in your head, you'll never forget which ratio is which.
+</Callout>
+
+<Example title="Calculating All Three Ratios">
+  <RightTriangle hypotenuse="5" opposite="4 ← Opposite" adjacent="3 (Adjacent)" angle="θ" orientation="right" />
+
+  $$\sin \theta = \frac{4}{5} = 0.8 \qquad \cos \theta = \frac{3}{5} = 0.6 \qquad \tan \theta = \frac{4}{3} \approx 1.333$$
+</Example>
+
+### 2.2 Finding Missing Sides Using Trig Ratios
+
+<Steps>
+  <Step title="Identify what you know">
+    Label the sides relative to the given angle: which is Opposite, Adjacent, Hypotenuse?
+  </Step>
+  <Step title="Choose the right ratio">
+    Pick the trig function that connects your **known side** to your **unknown side**.
+  </Step>
+  <Step title="Set up the equation">
+    Write the ratio and substitute your known values.
+  </Step>
+  <Step title="Solve algebraically">
+    Isolate the unknown variable and calculate.
+  </Step>
+</Steps>
+
+<Tabs items={["Example: Using Tangent", "Example: Using Cosine", "Example: Using Sine"]}>
+  <Tab label="Example: Using Tangent">
+    A right triangle has an angle of **38°** and the adjacent side is **42**. Find the opposite side $x$.
+
+    We have Adjacent and need Opposite → use **Tangent**:
+
+    $$\tan 38^\circ = \frac{x}{42}$$
+
+    $$x = 42 \times \tan 38^\circ = 42 \times 0.7813 \approx 32.81$$
+  </Tab>
+  <Tab label="Example: Using Cosine">
+    A right triangle has an angle of **54°** and the hypotenuse is **26**. Find the adjacent side $x$.
+
+    We have Hypotenuse and need Adjacent → use **Cosine**:
+
+    $$\cos 54^\circ = \frac{x}{26}$$
+
+    $$x = 26 \times \cos 54^\circ = 26 \times 0.5878 \approx 15.28$$
+  </Tab>
+  <Tab label="Example: Using Sine">
+    A right triangle has an angle of **30°** and the hypotenuse is **10**. Find the opposite side $x$.
+
+    We have Hypotenuse and need Opposite → use **Sine**:
+
+    $$\sin 30^\circ = \frac{x}{10}$$
+
+    $$x = 10 \times \sin 30^\circ = 10 \times 0.5 = 5$$
+  </Tab>
+</Tabs>
+
+### 2.3 Finding Missing Angles: Inverse Trig Functions
+
+<Definition term="Inverse Trigonometric Functions (الدوال المثلثية العكسية)">
+  When you know the ratio of two sides and need to find the **angle**, use the **inverse** (arc) functions:
+  - $\theta = \sin^{-1}\!\left(\frac{\text{Opp}}{\text{Hyp}}\right)$, also written $\arcsin$
+  - $\theta = \cos^{-1}\!\left(\frac{\text{Adj}}{\text{Hyp}}\right)$, also written $\arccos$
+  - $\theta = \tan^{-1}\!\left(\frac{\text{Opp}}{\text{Adj}}\right)$, also written $\arctan$
+</Definition>
+
+<Example title="Finding a Missing Angle">
+  In a right triangle, the opposite side is **5** and the adjacent side is **4**. Find $\theta$.
+
+  $$\tan \theta = \frac{5}{4} = 1.25$$
+
+  $$\theta = \tan^{-1}(1.25) = 51.34^\circ$$
+</Example>
+
+<Callout type="warning" emoji="⚠️">
+  **CALCULATOR CHECK:** Always make sure your calculator is in **DEGREE mode** (not radians) when solving these problems! Look for "DEG" on your screen. If you see "RAD", switch it before calculating.
+</Callout>
+
+<Callout type="success" emoji="✅">
+  **Checkpoint: What You Know So Far**
+  - You know how to identify the Hypotenuse, Opposite, and Adjacent sides.
+  - You've mastered the Pythagorean Theorem for finding missing sides.
+  - You've unlocked the magic of SOH-CAH-TOA to connect angles and ratios.
+
+  <details>
+    <summary>🧠 Quick Mental Check</summary>
+    If you know the Opposite side and the Adjacent side, which trigonometric function should you use to find the angle?<br/>**Answer:** Tangent ($\tan \theta$).
+  </details>
+</Callout>
+
+---
+
+## 🧩 Part 3: Discovering the Six Trigonometric Functions
+
+### 3.1 Meet the Full Family
+
+Beyond the Big Three (sin, cos, tan), there are three more functions, each is simply the **reciprocal** (flip) of one of the originals:
+
+<Tabs items={["The Primary Three", "The Reciprocal Three", "All Six Together"]}>
+  <Tab label="The Primary Three">
+    | Function | Symbol | Ratio |
+    |----------|--------|-------|
+    | Sine | $\sin \theta$ | $\dfrac{\text{Opposite}}{\text{Hypotenuse}}$ |
+    | Cosine | $\cos \theta$ | $\dfrac{\text{Adjacent}}{\text{Hypotenuse}}$ |
+    | Tangent | $\tan \theta$ | $\dfrac{\text{Opposite}}{\text{Adjacent}}$ |
+
+    These are the **building blocks**. Master these first.
+  </Tab>
+  <Tab label="The Reciprocal Three">
+    | Function | Symbol | Ratio | Reciprocal of |
+    |----------|--------|-------|---------------|
+    | Cosecant | $\csc \theta$ | $\dfrac{\text{Hypotenuse}}{\text{Opposite}}$ | $\dfrac{1}{\sin \theta}$ |
+    | Secant | $\sec \theta$ | $\dfrac{\text{Hypotenuse}}{\text{Adjacent}}$ | $\dfrac{1}{\cos \theta}$ |
+    | Cotangent | $\cot \theta$ | $\dfrac{\text{Adjacent}}{\text{Opposite}}$ | $\dfrac{1}{\tan \theta}$ |
+
+    **Watch out!** The names are deceptive: **Co**secant is the reciprocal of **S**ine (not cosine!).
+  </Tab>
+  <Tab label="All Six Together">
+    <RightTriangle hypotenuse="hyp" opposite="opp" adjacent="adj" angle="θ" orientation="right" />
+
+    | Primary | Formula | Reciprocal | Formula |
+    |---------|---------|------------|---------|
+    | $\sin \theta$ | $\frac{\text{opp}}{\text{hyp}}$ | $\csc \theta$ | $\frac{\text{hyp}}{\text{opp}}$ |
+    | $\cos \theta$ | $\frac{\text{adj}}{\text{hyp}}$ | $\sec \theta$ | $\frac{\text{hyp}}{\text{adj}}$ |
+    | $\tan \theta$ | $\frac{\text{opp}}{\text{adj}}$ | $\cot \theta$ | $\frac{\text{adj}}{\text{opp}}$ |
+
+    Notice: each pair has the **same two numbers, just flipped**!
+  </Tab>
+</Tabs>
+
+Learning these new functions can be confusing at first, especially because of the tricky names. Here is a helpful tip to keep them straight:
+
+<Callout type="info" emoji="💡">
+  **Memory Trick: The "co-" Crossover:**
+  - **Co**secant flips **S**ine ← the names are **crossed**!
+  - **S**ecant flips **Co**sine ← also crossed!
+  - **Co**tangent flips **T**angent ← this one is straightforward
+
+  The "co-" prefix and the function it flips **never match** (except cotangent).
+</Callout>
+
+<Example title="All Six Functions: Complete Example">
+  Triangle with sides **5**, **12**, **13** where $\theta$ is opposite the side of length **12**:
+
+  - Opposite = 12 &nbsp;&nbsp; Adjacent = 5 &nbsp;&nbsp; Hypotenuse = 13
+
+  | Function | Calculation | Value |
+  |----------|-------------|-------|
+  | $\sin \theta$ | $12 \div 13$ | $\dfrac{12}{13}$ |
+  | $\cos \theta$ | $5 \div 13$ | $\dfrac{5}{13}$ |
+  | $\tan \theta$ | $12 \div 5$ | $\dfrac{12}{5}$ |
+  | $\csc \theta$ | $13 \div 12$ | $\dfrac{13}{12}$ |
+  | $\sec \theta$ | $13 \div 5$ | $\dfrac{13}{5}$ |
+  | $\cot \theta$ | $5 \div 12$ | $\dfrac{5}{12}$ |
+
+  **Pattern:** Once you know the primary three, just flip each fraction to get its reciprocal!
+</Example>
+
+<Callout type="warning" emoji="⚠️">
+  **COMMON MISCONCEPTION: Inverse vs. Reciprocal**
+
+  $\sin^{-1}$ is **NOT** the same as $\csc$!
+
+  - $\sin^{-1}(x)$ = inverse sine = "what angle has a sine of $x$?" → gives you an **angle**
+  - $\csc \theta = \frac{1}{\sin \theta}$ = reciprocal of sine → gives you a **number**
+</Callout>
+
+---
+
+## ⭕ Part 4: Mastering the Unit Circle
+
+### 4A: What Is the Unit Circle?
+
+<Definition term="Unit Circle (دائرة الوحدة)">
+  A circle centered at the origin $(0, 0)$ with a radius of exactly **1**. Every point on this circle can be described using trigonometric functions, making it the single most important tool for understanding trigonometry beyond right triangles.
+</Definition>
+
+Take a look at the basic structure of this circle on the coordinate plane:
+
+<UnitCircle showTriangle={false} />
+
+**Why radius = 1?** Because it makes everything beautifully simple. Watch:
+
+### The Golden Connection
+
+<Callout type="default" emoji="🥇">
+  **The Golden Rule of the Unit Circle:**
+
+  For any angle $\theta$, draw a ray from the origin making that angle with the positive x-axis. The point where this ray intersects the circle has coordinates:
+
+  $$\boxed{\text{Point on unit circle} = (\cos \theta, \;\; \sin \theta)}$$
+
+  **x-coordinate = $\cos \theta$** &nbsp;&nbsp;&nbsp; and &nbsp;&nbsp;&nbsp; **y-coordinate = $\sin \theta$**
+</Callout>
+
+**Why does this work?** Draw a right triangle inside the unit circle:
+
+<UnitCircle showTriangle={true} pointLabel="(cos θ, sin θ)" />
+
+Since the hypotenuse (radius) = 1:
+$$\sin \theta = \frac{\text{opp}}{\text{hyp}} = \frac{\text{opp}}{1} = \text{opp} = y$$
+$$\cos \theta = \frac{\text{adj}}{\text{hyp}} = \frac{\text{adj}}{1} = \text{adj} = x$$
+
+And from these, all six functions on the unit circle:
+
+| Function | Unit Circle Definition |
+|----------|----------------------|
+| $\sin \theta$ | $y$ |
+| $\cos \theta$ | $x$ |
+| $\tan \theta$ | $\dfrac{y}{x}$ (where $x \neq 0$) |
+| $\csc \theta$ | $\dfrac{1}{y}$ (where $y \neq 0$) |
+| $\sec \theta$ | $\dfrac{1}{x}$ (where $x \neq 0$) |
+| $\cot \theta$ | $\dfrac{x}{y}$ (where $y \neq 0$) |
+
+<Callout type="default" emoji="⚡">
+  **10-Second Recall:** On the unit circle, which coordinate gives you the Cosine of the angle?
+  <details>
+    <summary>👀 Show Answer</summary>
+    The **x-coordinate**.
+  </details>
+</Callout>
+
+### 4B: Famous Angles & Patterns
+
+These five angles appear **constantly**. You must know them by heart:
+
+| $\theta$ | $\sin \theta$ | $\cos \theta$ | $\tan \theta$ | Point on Circle |
+|----------|--------------|---------------|---------------|-----------------|
+| **0°** | $0$ | $1$ | $0$ | $(1, 0)$ |
+| **30°** | $\dfrac{1}{2}$ | $\dfrac{\sqrt{3}}{2}$ | $\dfrac{1}{\sqrt{3}}$ | $\left(\dfrac{\sqrt{3}}{2},\; \dfrac{1}{2}\right)$ |
+| **45°** | $\dfrac{\sqrt{2}}{2}$ | $\dfrac{\sqrt{2}}{2}$ | $1$ | $\left(\dfrac{\sqrt{2}}{2},\; \dfrac{\sqrt{2}}{2}\right)$ |
+| **60°** | $\dfrac{\sqrt{3}}{2}$ | $\dfrac{1}{2}$ | $\sqrt{3}$ | $\left(\dfrac{1}{2},\; \dfrac{\sqrt{3}}{2}\right)$ |
+| **90°** | $1$ | $0$ | undefined | $(0, 1)$ |
+
+<Callout type="info" emoji="🧠">
+  **Memorize Without Memorizing!**
+
+  The **$\sin$** column follows a stunning pattern:
+
+  $$\frac{\sqrt{0}}{2}, \quad \frac{\sqrt{1}}{2}, \quad \frac{\sqrt{2}}{2}, \quad \frac{\sqrt{3}}{2}, \quad \frac{\sqrt{4}}{2}$$
+
+  Just count $\sqrt{0}$ through $\sqrt{4}$, all divided by 2!
+
+  The **$\cos$** column? **Exact same numbers, reversed order!**
+
+  And **$\tan$**? Just divide: $\tan = \sin \div \cos$.
+</Callout>
+
+Also know the axis angles:
+
+| $\theta$ | Point | $\sin$ | $\cos$ |
+|----------|-------|--------|--------|
+| **0° / 360°** | $(1, 0)$ | $0$ | $1$ |
+| **90°** | $(0, 1)$ | $1$ | $0$ |
+| **180°** | $(-1, 0)$ | $0$ | $-1$ |
+| **270°** | $(0, -1)$ | $-1$ | $0$ |
+
+<Callout type="default" emoji="⚡">
+  **10-Second Recall:** Without calculating, what is the $\sin 30^\circ$?
+  <details>
+    <summary>👀 Show Answer</summary>
+    $\frac{1}{2}$
+  </details>
+</Callout>
+
+### 4C: The Four Quadrants (Where Signs Live)
+
+<Definition term="Quadrants (الأرباع)">
+  The coordinate plane is divided into four regions called quadrants, numbered I through IV starting from the top-right and going counter-clockwise.
+</Definition>
+
+Here is how those four quadrants are laid out visually:
+
+<Quadrants />
+
+Depending on which quadrant your angle lands in, the trigonometric functions will be either positive or negative. Here is the complete breakdown:
+
+| Quadrant | Angle Range | What's Positive | What's Negative |
+|----------|------------|----------------|-----------------|
+| **I** | 0° → 90° | **All** functions | Nothing |
+| **II** | 90° → 180° | **Sin** & csc | cos, tan, sec, cot |
+| **III** | 180° → 270° | **Tan** & cot | sin, cos, csc, sec |
+| **IV** | 270° → 360° | **Cos** & sec | sin, tan, csc, cot |
+
+<Callout type="default" emoji="🧠">
+  **"All Students Take Calculus"**: The ultimate memory trick for quadrant signs!
+
+  | Letter | Quadrant | What's Positive |
+  |--------|----------|----------------|
+  | **A**ll | **I** (top-right) | Every trig function |
+  | **S**tudents | **II** (top-left) | **S**in and its reciprocal csc |
+  | **T**ake | **III** (bottom-left) | **T**an and its reciprocal cot |
+  | **C**alculus | **IV** (bottom-right) | **C**os and its reciprocal sec |
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+  **COMMON MISTAKE:** Students sometimes start ASTC from Quadrant II. Remember: **start from Quadrant I** (top-right) and go **counter-clockwise**!
+</Callout>
+
+<Example title="Quick Sign Checks">
+  Without calculating values, determine the sign:
+
+  | Expression | Quadrant | Positive Function? | Sign |
+  |------------|----------|--------------------|------|
+  | $\sin 150^\circ$ | II | Sin is positive in QII <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> | **+** |
+  | $\cos 150^\circ$ | II | Cos is negative in QII <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea4335" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> | **−** |
+  | $\tan 225^\circ$ | III | Tan is positive in QIII <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> | **+** |
+  | $\cos 300^\circ$ | IV | Cos is positive in QIV <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg> | **+** |
+  | $\sin 300^\circ$ | IV | Sin is negative in QIV <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea4335" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="18" y1="6" x2="6" y2="18"></line><line x1="6" y1="6" x2="18" y2="18"></line></svg> | **-** |
+</Example>
+
+<Callout type="success" emoji="✅">
+  **Checkpoint: What You Know So Far**
+  - You've met the full family of six trigonometric functions, including the reciprocal ones.
+  - You've mastered the Unit Circle where the radius is exactly 1.
+  - You know how to use ASTC to find the sign of any trig function in any quadrant.
+
+  <details>
+    <summary>🧠 Quick Mental Check</summary>
+    In which quadrant are both Sine and Cosine negative?<br/>**Answer:** Quadrant III (where only Tangent is positive).
+  </details>
+</Callout>
+
+<Callout type="error" emoji="🚨" title="Exam Traps & Tricks">
+  **Listen closely, because this is where the exam will try to get you:**
+  1. **The RAD vs DEG Trap:** The most common mistake in history! Always check your calculator mode. If you are calculating $\sin 30^\circ$ and your calculator is in Radians, you will fail the question instantly.
+  2. **ASTC Illusion:** Don't start ASTC from Quadrant II. It's always from Quadrant I (top-right) and counter-clockwise.
+  3. **Inverse vs Reciprocal:** $\sin^{-1}(x)$ gives you an **angle**. $\csc(x)$ gives you a **ratio**. They are completely different! Don't press the $x^{-1}$ button on your calculator when you want Cosecant.
+</Callout>
+
+---
+
+## 🕵️‍♂️ Part 5: Decoding Reference Angles
+
+### 5.1 What Is a Reference Angle?
+
+<Definition term="Reference Angle (الزاوية المرجعية)">
+  The **acute angle** (between 0° and 90°) formed between the terminal side of your angle and the **x-axis**. It's the "Quadrant I shadow" of any angle, the simple version that tells you the magnitude of the trig value, before you apply the sign.
+</Definition>
+
+<Callout type="info" emoji="💡">
+  **Why do reference angles matter?** Because $\sin 150^\circ$ has the **same numerical value** as $\sin 30^\circ$, the only thing that might change is the **sign** (+ or −). The reference angle gives you the base value; the quadrant gives you the sign.
+</Callout>
+
+### 5.2 How to Calculate the Reference Angle
+
+| Quadrant | Angle Range | Reference Angle Formula |
+|----------|------------|------------------------|
+| **I** | 0° – 90° | $\alpha = \theta$ (already acute!) |
+| **II** | 90° – 180° | $\alpha = 180^\circ - \theta$ |
+| **III** | 180° – 270° | $\alpha = \theta - 180^\circ$ |
+| **IV** | 270° – 360° | $\alpha = 360^\circ - \theta$ |
+
+### 5.3 The Master Method: Three Steps to Any Trig Value
+
+<Steps>
+  <Step title="Find the Quadrant">
+    Determine which quadrant your angle falls in (I, II, III, or IV).
+  </Step>
+  <Step title="Calculate the Reference Angle">
+    Use the appropriate formula from the table above to find the acute reference angle.
+  </Step>
+  <Step title="Apply the Sign">
+    Evaluate the trig function at the reference angle (from the famous angles table), then apply **+ or −** based on ASTC ("All Students Take Calculus").
+  </Step>
+</Steps>
+
+<Tabs items={["sin 150°", "cos 240°", "tan 315°", "sin 330°"]}>
+  <Tab label="sin 150°">
+    **Step 1:** 150° is in **Quadrant II** (between 90° and 180°)
+
+    **Step 2:** Reference angle = $180^\circ - 150^\circ = 30^\circ$
+
+    **Step 3:** $\sin 30^\circ = \frac{1}{2}$. In QII, sin is **positive** ("Students").
+
+    $$\boxed{\sin 150^\circ = +\frac{1}{2}}$$
+  </Tab>
+  <Tab label="cos 240°">
+    **Step 1:** 240° is in **Quadrant III** (between 180° and 270°)
+
+    **Step 2:** Reference angle = $240^\circ - 180^\circ = 60^\circ$
+
+    **Step 3:** $\cos 60^\circ = \frac{1}{2}$. In QIII, cos is **negative**.
+
+    $$\boxed{\cos 240^\circ = -\frac{1}{2}}$$
+  </Tab>
+  <Tab label="tan 315°">
+    **Step 1:** 315° is in **Quadrant IV** (between 270° and 360°)
+
+    **Step 2:** Reference angle = $360^\circ - 315^\circ = 45^\circ$
+
+    **Step 3:** $\tan 45^\circ = 1$. In QIV, tan is **negative**.
+
+    $$\boxed{\tan 315^\circ = -1}$$
+  </Tab>
+  <Tab label="sin 330°">
+    **Step 1:** 330° is in **Quadrant IV** (between 270° and 360°)
+
+    **Step 2:** Reference angle = $360^\circ - 330^\circ = 30^\circ$
+
+    **Step 3:** $\sin 30^\circ = \frac{1}{2}$. In QIV, sin is **negative**.
+
+    $$\boxed{\sin 330^\circ = -\frac{1}{2}}$$
+  </Tab>
+</Tabs>
+
+<Example title="Using Reference Angles with All Multiples of 45°">
+  Since 45° has reference value $\sin 45^\circ = \cos 45^\circ = \frac{\sqrt{2}}{2}$, we can find values at 135°, 225°, and 315°:
+
+  | Angle | Quadrant | Reference | $\sin$ | $\cos$ |
+  |-------|----------|-----------|--------|--------|
+  | **45°** | I | 45° | $+\frac{\sqrt{2}}{2}$ | $+\frac{\sqrt{2}}{2}$ |
+  | **135°** | II | 45° | $+\frac{\sqrt{2}}{2}$ | $-\frac{\sqrt{2}}{2}$ |
+  | **225°** | III | 45° | $-\frac{\sqrt{2}}{2}$ | $-\frac{\sqrt{2}}{2}$ |
+  | **315°** | IV | 45° | $-\frac{\sqrt{2}}{2}$ | $+\frac{\sqrt{2}}{2}$ |
+
+  Notice the beautiful symmetry! The **numbers** stay the same, only the **signs** change based on the quadrant.
+</Example>
+
+<Callout type="default" emoji="🥇">
+  **This is the power of reference angles:** If you memorize the values for 30°, 45°, and 60° in Quadrant I, you automatically know the values for **twelve** different angles across all four quadrants. That's the entire unit circle from just three values!
+</Callout>
+
+<Callout type="default" emoji="⚡">
+  **10-Second Recall:** What is the reference angle for $210^\circ$?
+  <details>
+    <summary>👀 Show Answer</summary>
+    $30^\circ$ (Because $210^\circ - 180^\circ = 30^\circ$).
+  </details>
+</Callout>
+
+---
+
+## 🧭 Part 6: Navigating Directed & Co-terminal Angles
+
+### 6.1 Directed Angles
+
+<Definition term="Directed Angle (الزاوية الموجهة)">
+  An angle with a specified **direction of rotation** from its initial side to its terminal side. The direction determines whether the angle is positive or negative.
+</Definition>
+
+<Compare>
+  <Item label="Positive Angle (+) ↺">
+    - Rotates **counter-clockwise**
+    - This is the **standard** direction
+    - Example: $+90^\circ$ goes from the positive x-axis **up** to the positive y-axis
+  </Item>
+  <Item label="Negative Angle (−) ↻">
+    - Rotates **clockwise**
+    - Example: $-90^\circ$ goes from the positive x-axis **down** to the negative y-axis
+    - $-90^\circ$ lands at the same position as $+270^\circ$
+  </Item>
+</Compare>
+
+Let's visualize how these positive and negative rotations look on the coordinate plane:
+
+<DirectedAngles />
+
+<Callout type="info" emoji="💡">
+  **Initial Side vs. Terminal Side:**
+  - **Initial side** = where the angle starts (always the positive x-axis in standard position)
+  - **Terminal side** = where the angle ends after rotation
+  - The amount and direction of rotation define the directed angle
+</Callout>
+
+### 6.2 Co-terminal Angles
+
+<Definition term="Co-terminal Angles (الزوايا المشتركة في الضلع الانتهائي)">
+  Two or more angles that share the **same terminal side**, they end at the exact same position on the unit circle, even though they traveled different amounts or directions to get there.
+</Definition>
+
+To find these mathematically equivalent angles, you can use a simple addition or subtraction process:
+
+<Formula name="⭐ CORE TRUTH: Co-terminal Angle Formula">
+  $$\theta_{\text{co-terminal}} = \theta \pm 360^\circ \times n$$
+
+  Where $n$ is any positive integer $(1, 2, 3, \ldots)$
+
+  Adding 360° = one more full counter-clockwise rotation.
+  Subtracting 360° = one more full clockwise rotation.
+</Formula>
+
+<Example title="Finding Co-terminal Angles">
+  | Original Angle | + 360° | − 360° | More examples |
+  |---------------|--------|--------|---------------|
+  | **30°** | 390° | −330° | 750°, −690° |
+  | **120°** | 480° | −240° | 840°, −600° |
+  | **−45°** | 315° | −405° | 675°, −765° |
+</Example>
+
+### 6.3 Key Skills with Co-terminal Angles
+
+<Accordion>
+  <AccordionItem title="🔍 Finding the Smallest Positive Co-terminal Angle">
+    Keep **adding 360°** to a negative angle (or **subtracting 360°** from a large positive angle) until your result is between 0° and 360°.
+
+    **Example:** What's the smallest positive co-terminal angle for $-50^\circ$?
+
+    $$-50^\circ + 360^\circ = 310^\circ$$
+
+    Since $0^\circ \leq 310^\circ < 360^\circ$, the answer is **310°**. <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  </AccordionItem>
+  <AccordionItem title="🔍 Finding the Largest Negative Co-terminal Angle">
+    Keep **subtracting 360°** until your result is between $-360^\circ$ and $0^\circ$.
+
+    **Example:** What's the largest negative co-terminal angle for $40^\circ$?
+
+    $$40^\circ - 360^\circ = -320^\circ$$
+
+    Since $-360^\circ < -320^\circ \leq 0^\circ$, the answer is **−320°**. <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+  </AccordionItem>
+  <AccordionItem title="🔍 Checking if Two Angles are Co-terminal">
+    Calculate the **difference** between the two angles. If the difference is a **multiple of 360°**, they're co-terminal!
+
+    **Example:** Are $1000^\circ$ and $-80^\circ$ co-terminal?
+
+    $$1000^\circ - (-80^\circ) = 1080^\circ = 3 \times 360^\circ$$ <svg style={{display:'inline-block'}} width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#10b981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+
+    **Yes!** The difference is exactly 3 full rotations, so they end at the same position.
+  </AccordionItem>
+</Accordion>
+
+<Callout type="warning" emoji="⚠️">
+  **COMMON MISTAKE:** Students confuse co-terminal angles with reference angles.
+  - **Reference angle** = the acute angle to the x-axis (always between 0° and 90°)
+  - **Co-terminal angle** = any angle that ends at the same position (can be any value)
+
+  For example: 30° and 390° are **co-terminal** (same terminal side), but 30° and 150° have the same **reference angle** (both reference to 30°, but different terminal sides).
+</Callout>
+
+---
+
+## ⚔️ Part 7: Conquering the Sine & Cosine Laws
+
+### 7.1 Beyond Right Triangles
+
+Everything so far required a **right triangle** (one 90° angle). But real life is messy, most triangles in architecture, surveying, and navigation **don't have a right angle**. For these **oblique triangles**, we need two powerful laws.
+
+<ObliqueTriangle a="a" b="b" c="c" A="A" B="B" C="C" showHeight={false} />
+
+<Callout type="info" emoji="💡">
+  **Naming Convention:** Lowercase = **side**, Uppercase = **angle opposite that side**. So side $a$ is always opposite angle $A$, side $b$ opposite $B$, and side $c$ opposite $C$.
+</Callout>
+
+### 7.2 The Law of Sines (Sine Law)
+
+<Formula name="⭐ CORE TRUTH: Law of Sines (قانون الجيب)">
+  $$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$
+
+  Each side divided by the sine of its **opposite angle** gives the same constant value.
+</Formula>
+
+**When to use Sine Law:**
+
+| Given Information | Case Name | What You Can Find |
+|-------------------|-----------|-------------------|
+| 2 angles + 1 side | **AAS** or **ASA** | Remaining sides and angle |
+| 2 sides + angle opposite one of them | **SSA** | The opposite angle (⚠️ ambiguous case possible) |
+
+<Example title="Sine Law: AAS Case">
+  In triangle ABC: $A = 40^\circ$, $B = 75^\circ$, $a = 10$. Find $b$.
+
+  **Step 1:** Find the third angle: $C = 180^\circ - 40^\circ - 75^\circ = 65^\circ$
+
+  **Step 2:** Apply Sine Law:
+
+  $$\frac{10}{\sin 40^\circ} = \frac{b}{\sin 75^\circ}$$
+
+  $$b = \frac{10 \times \sin 75^\circ}{\sin 40^\circ} = \frac{10 \times 0.9659}{0.6428} \approx 15.02$$
+</Example>
+
+<Callout type="warning" emoji="⚠️">
+  **The Ambiguous Case (SSA): A Mathematical Trap**
+
+  When you are given two sides and an angle that is NOT between them (Side-Side-Angle), the Sine Law can be dangerous. This is known as the **Ambiguous Case**. Because $\sin \theta = \sin(180^\circ - \theta)$, the math alone cannot tell you which angle is correct. 
+
+  Depending on the given lengths, SSA can result in:
+  1. **Zero triangles:** The given side is too short to reach the base.
+  2. **Exactly one triangle:** It forms a perfect right triangle or a single oblique triangle.
+  3. **Two valid triangles:** The swinging side can connect to the base in two different places, creating two entirely different valid geometries.
+
+  Always check if the second possible angle ($180^\circ - \text{first angle}$) makes sense within the triangle's constraints (all angles must sum to $180^\circ$).
+</Callout>
+
+To see exactly how this ambiguous case plays out in a real problem, follow this step-by-step example:
+
+<Example title="Detecting the Second Triangle (SSA)">
+  Given $\triangle ABC$ with $a = 12$, $b = 15$, and $\angle A = 40^\circ$. Find $\angle B$.
+
+  Using the Sine Law:
+  $$\frac{12}{\sin 40^\circ} = \frac{15}{\sin B}$$
+  $$\sin B = \frac{15 \times \sin 40^\circ}{12} \approx 0.8035$$
+  $$B_1 = \sin^{-1}(0.8035) \approx 53.5^\circ$$
+
+  Now, check for the **Ambiguous Case** (the second possible angle):
+  $$B_2 = 180^\circ - 53.5^\circ = 126.5^\circ$$
+
+  Is $B_2$ valid? Add it to the given angle $A$:
+  $$126.5^\circ + 40^\circ = 166.5^\circ$$
+  Since $166.5^\circ < 180^\circ$, there is enough room for a third angle. Thus, **two valid triangles** exist!
+</Example>
+
+### 7.3 Deriving the Sine Law
+
+<Accordion>
+  <AccordionItem title="🧠 For Curious Minds: The Proof Behind the Magic">
+    Consider triangle ABC. Drop a perpendicular of height $h$ from vertex $B$ to side $b$:
+
+    <ObliqueTriangle a="a" b="" c="c" A="A" B="B" C="C" showHeight={true} />
+
+    From the **left** right triangle: $\sin A = \frac{h}{c}$ → so $h = c \sin A$
+
+    From the **right** right triangle: $\sin C = \frac{h}{a}$ → so $h = a \sin C$
+
+    Since both expressions equal $h$:
+
+    $$c \sin A = a \sin C$$
+
+    $$\frac{a}{\sin A} = \frac{c}{\sin C}$$
+
+    Dropping a perpendicular from a different vertex and repeating the process gives us the complete law:
+
+    $$\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$$
+  </AccordionItem>
+</Accordion>
+
+### 7.4 The Law of Cosines (Cosine Law)
+
+<Formula name="⭐ CORE TRUTH: Law of Cosines (قانون جيب التمام)">
+  $$a^2 = b^2 + c^2 - 2bc \cos A$$
+
+  Can be rewritten for any side:
+
+  $$b^2 = a^2 + c^2 - 2ac \cos B$$
+  $$c^2 = a^2 + b^2 - 2ab \cos C$$
+</Formula>
+
+This law might look complex, but it contains a brilliant hidden secret that connects it directly back to the very first concept we learned:
+
+<Callout type="info" emoji="🥇">
+  **Beautiful Connection:** When $A = 90^\circ$, we get $\cos 90^\circ = 0$, so:
+
+  $$a^2 = b^2 + c^2 - 2bc(0) = b^2 + c^2$$
+
+  That's the **Pythagorean Theorem**! The Cosine Law is the generalized version, it works for **every** triangle, not just right triangles.
+</Callout>
+
+**When to use Cosine Law:**
+
+| Given Information | Case Name | What You Can Find |
+|-------------------|-----------|-------------------|
+| 3 sides, no angles | **SSS** | Any angle |
+| 2 sides + the angle **between** them | **SAS** | The third side |
+
+<Example title="Cosine Law: SAS Case">
+  In triangle ABC: $a = 8$, $b = 6$, $C = 60^\circ$. Find $c$.
+
+  $$c^2 = a^2 + b^2 - 2ab\cos C$$
+  $$c^2 = 8^2 + 6^2 - 2(8)(6)\cos 60^\circ$$
+  $$c^2 = 64 + 36 - 96 \times 0.5$$
+  $$c^2 = 100 - 48 = 52$$
+  $$c = \sqrt{52} \approx 7.21$$
+</Example>
+
+<Example title="Cosine Law: SSS Case (Finding an Angle)">
+  In triangle ABC: $a = 5$, $b = 7$, $c = 8$. Find angle $C$.
+
+  Rearrange the Cosine Law to solve for $\cos C$:
+
+  $$\cos C = \frac{a^2 + b^2 - c^2}{2ab}$$
+
+  $$\cos C = \frac{25 + 49 - 64}{2(5)(7)} = \frac{10}{70} = \frac{1}{7}$$
+
+  $$C = \cos^{-1}\!\left(\frac{1}{7}\right) \approx 81.79^\circ$$
+</Example>
+
+### 7.5 Deriving the Cosine Law
+
+<Accordion>
+  <AccordionItem title="🧠 For Curious Minds: The Proof Behind the Magic">
+    Place the triangle with vertex $C$ at the origin and side $b$ along the x-axis.
+
+    **Coordinates:**
+    - $C = (0, 0)$
+    - $A = (b, 0)$
+    - $B = (a\cos C, \; a\sin C)$
+
+    Using the **distance formula** for side $c$ (from $A$ to $B$):
+
+    $$c^2 = (a\cos C - b)^2 + (a\sin C - 0)^2$$
+
+    Expanding:
+
+    $$c^2 = a^2\cos^2 C - 2ab\cos C + b^2 + a^2\sin^2 C$$
+
+    Since $\cos^2 C + \sin^2 C = 1$:
+
+    $$c^2 = a^2(\cos^2 C + \sin^2 C) + b^2 - 2ab\cos C$$
+
+    $$\boxed{c^2 = a^2 + b^2 - 2ab\cos C}$$
+  </AccordionItem>
+</Accordion>
+
+### 7.6 The Decision Flowchart: Which Law Do I Use?
+
+<Callout type="default" emoji="🧠">
+  **The One Question That Decides Everything:**
+
+  *"Do I have a **complete pair**, a side AND its opposite angle?"*
+
+  - **YES** → Use **Sine Law**
+  - **NO** → Use **Cosine Law**
+</Callout>
+
+| Scenario | What You Have | Which Law | Why |
+|----------|---------------|-----------|-----|
+| **AAS / ASA** | 2 angles + 1 side | Sine Law | You can find the 3rd angle, then you have a complete pair |
+| **SSA** | 2 sides + opposite angle | Sine Law | You already have a side-angle pair |
+| **SAS** | 2 sides + included angle | Cosine Law | The known angle is **between** the known sides, no complete pair |
+| **SSS** | 3 sides, 0 angles | Cosine Law | No angles at all, so no pair exists |
+
+<Callout type="warning" emoji="⚠️">
+  **Why can't SSS use Sine Law?**
+
+  With $\frac{a}{\sin A} = \frac{b}{\sin B}$, if you know $a$, $b$, but **neither** $A$ nor $B$, the equation has **two unknowns**, it's impossible to solve! You must use Cosine Law first to find at least one angle.
+</Callout>
+
+<Callout type="success" emoji="✅">
+  **Checkpoint: What You Know So Far**
+  - You know how reference angles unlock values across all quadrants.
+  - You understand directed angles and how to find co-terminal angles.
+  - You've conquered oblique triangles using the Sine and Cosine Laws.
+
+  <details>
+    <summary>🧠 Quick Mental Check</summary>
+    If you are given all three sides of a triangle (SSS) but no angles, which law must you use first?<br/>**Answer:** The Law of Cosines.
+  </details>
+</Callout>
+
+<Callout type="error" emoji="🚨" title="Exam Traps & Tricks">
+  **Veteran Teacher Warning: How they will test you here:**
+  1. **The Hidden Triangle (SSA):** When you are given two sides and an angle not between them, the exam is **begging** you to forget the second possible angle ($180^\circ - \theta$). Always check it!
+  2. **The SSS Trap:** If you try to use Sine Law on three sides, you will stare at your paper forever because there are two unknown angles. **No complete pair = Cosine Law!**
+  3. **Rounding Too Early:** Keep all decimal places in your calculator until the very final step. Rounding in the middle of a Cosine Law calculation will ruin your final answer.
+</Callout>
+
+---
+
+## 🏗️ Part 8: Applying Trigonometry to the Real World (Elevation & Depression)
+
+### 8.1 Trigonometry Meets the Real World
+
+This is where trigonometry stops being abstract and starts solving problems you can see with your own eyes, from measuring building heights to calculating flight paths.
+
+<Compare>
+  <Item label="Angle of Elevation (زاوية الارتفاع)">
+    - Looking **UP** from the horizontal
+    - From your eye level to an object **above** you
+    - Example: Looking up at an airplane, the top of a building, or a mountain peak
+    <ElevationDepression type="elevation" objectLabel="* Object" observerLabel="You (horizontal)" angle="θ (elevation)" height="" distance="" />
+  </Item>
+  <Item label="Angle of Depression (زاوية الانخفاض)">
+    - Looking **DOWN** from the horizontal
+    - From your eye level to an object **below** you
+    - Example: Looking down from a lighthouse at a ship, or from a cliff to the ground
+    <ElevationDepression type="depression" objectLabel="* Object" observerLabel="You" angle="θ (depression)" height="" distance="" />
+  </Item>
+</Compare>
+
+<Callout type="default" emoji="🥇">
+  **The Rule of Equality:**
+
+  The angle of elevation from point A looking **up** to point B **always equals** the angle of depression from point B looking **down** to point A.
+
+  **Why?** Because they are **alternate interior angles** formed between two parallel horizontal lines cut by a transversal (your line of sight).
+
+  <ElevationDepression type="elevation" objectLabel="Observer above" observerLabel="Observer below" angle="θ" height="" distance="(line of sight)" />
+</Callout>
+
+<Example title="Finding the Height of a Building">
+  You stand **50 meters** from the base of a building. The angle of elevation to the top is **35°**. Find the building's height.
+
+  <ElevationDepression type="elevation" objectLabel="Top of building" observerLabel="You" angle="35°" height="h = ?" distance="50m" />
+
+  You have the Adjacent side (50m) and need the Opposite side ($h$) → use **Tangent**:
+
+  $$\tan 35^\circ = \frac{h}{50}$$
+  $$h = 50 \times \tan 35^\circ \approx 50 \times 0.7002 = 35.01 \text{ meters}$$
+</Example>
+
+<Example title="Angle of Depression Problem">
+  A person stands on top of an **80-meter** building and sees a car on the street at an angle of depression of **25°**. Find the horizontal distance $d$ between the building and the car.
+
+  <ElevationDepression type="depression" objectLabel="Car" observerLabel="Top" angle="25°" height="80m" distance="d" />
+
+  The angle of depression from the top equals the angle of elevation from the car (alternate interior angles), so:
+
+  $$\tan 25^\circ = \frac{80}{d}$$
+  $$d = \frac{80}{\tan 25^\circ} = \frac{80}{0.4663} \approx 171.56 \text{ meters}$$
+</Example>
+
+<Callout type="info" emoji="💡">
+  **Problem-Solving Strategy for Elevation/Depression:**
+
+  1. **Draw the diagram**, always! Even if it's rough.
+  2. **Mark the right angle**, these problems always form a right triangle.
+  3. **Label the sides** as Opposite, Adjacent, or Hypotenuse relative to the given angle.
+  4. **Choose SOH, CAH, or TOA** based on which sides you know and need.
+  5. **Solve**, and don't forget units!
+
+  Most problems use **tangent** because you typically know the horizontal distance and need the height (or vice versa), and $\tan = \frac{\text{opposite}}{\text{adjacent}}$ connects height to distance.
+</Callout>
+
+---
+
+## 🏡 Capstone Connection: Sustainable Houses
+
+<Callout type="default" emoji="🏗️">
+  **How does this connect to your Capstone Project?**
+
+  In the sustainable houses project, you'll need to determine dimensions of geometrical shapes, roof angles, wall heights, room diagonals, and solar panel tilts. Every single one of these uses the trigonometry from this unit:
+
+  - **Roof pitch** → angle of elevation + tangent ratio
+  - **Room diagonal** → Pythagorean Theorem
+  - **Non-rectangular plots** → Sine Law & Cosine Law
+  - **Solar panel angle** → angle of elevation to maximize sunlight
+
+  The math you're learning here isn't just for exams, it's the foundation of real engineering design!
+</Callout>
+
+---
+
+## 🌍 The Bigger Picture
+
+You have just mastered the exact mathematical tools that ancient civilizations used to navigate oceans and build architectural wonders. You didn't just memorize formulas; you learned a mathematical framework to decode the physical world. Whether you're aiming for engineering, physics, or computer science, you now have the tools to model and solve complex real-world problems. Keep building on this foundation!
+
+---
+
+## 📖 Vocabulary
+
+<Vocabulary title="Core Exam Vocabulary">
+  <Term word="Hypotenuse (الوتر)">The longest side of a right triangle, always opposite the right angle.</Term>
+  <Term word="Opposite Side (الضلع المقابل)">The side directly across from the angle being considered.</Term>
+  <Term word="Adjacent Side (الضلع المجاور)">The side next to the angle being considered (excluding the hypotenuse).</Term>
+  <Term word="Sine (جيب الزاوية)">The ratio of the opposite side to the hypotenuse in a right triangle.</Term>
+  <Term word="Cosine (جيب تمام الزاوية)">The ratio of the adjacent side to the hypotenuse. The "co-" indicates it is the sine of the complementary angle.</Term>
+  <Term word="Tangent (ظل الزاوية)">The ratio of the opposite side to the adjacent side in a right triangle.</Term>
+  <Term word="Reference Angle (الزاوية المرجعية)">The acute angle formed between the terminal side of an angle and the x-axis.</Term>
+  <Term word="Co-terminal Angles (زوايا مشتركة الضلع الانتهائي)">Angles that share the same terminal side, differing by multiples of 360°.</Term>
+  <Term word="Law of Sines (قانون الجيب)">The relationship $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$ for any triangle.</Term>
+  <Term word="Law of Cosines (قانون جيب التمام)">The generalized Pythagorean Theorem: $a^2 = b^2 + c^2 - 2bc\cos A$ for any triangle.</Term>
+</Vocabulary>
+
+<Accordion>
+  <AccordionItem title="📚 Extended Concepts & Definitions">
+    <Vocabulary title="">
+      <Term word="Trigonometry (حساب المثلثات)">The branch of mathematics dealing with relationships between the sides and angles of triangles. From Greek *trigōnon* (triangle) and *metron* (measure).</Term>
+      <Term word="Right Triangle (مثلث قائم الزاوية)">A triangle with exactly one 90° angle.</Term>
+      <Term word="Pythagorean Theorem (نظرية فيثاغورس)">The relationship $a^2 + b^2 = c^2$ for right triangles, where $c$ is the hypotenuse.</Term>
+      <Term word="Euclidean Theorem (نظريات إقليدس)">Geometric mean theorems relating the altitude and hypotenuse segments of a right triangle.</Term>
+      <Term word="Cosecant (قاطع تمام الزاوية)">The reciprocal of sine: hypotenuse divided by opposite.</Term>
+      <Term word="Secant (قاطع الزاوية)">The reciprocal of cosine: hypotenuse divided by adjacent.</Term>
+      <Term word="Cotangent (ظل تمام الزاوية)">The reciprocal of tangent: adjacent divided by opposite.</Term>
+      <Term word="Unit Circle (دائرة الوحدة)">A circle centered at the origin with radius 1, where every point is $(\cos\theta, \sin\theta)$.</Term>
+      <Term word="Directed Angle (الزاوية الموجهة)">An angle with a specified direction: positive (counter-clockwise) or negative (clockwise).</Term>
+      <Term word="Angle of Elevation (زاوية الارتفاع)">The angle above the horizontal when looking up at an object.</Term>
+      <Term word="Angle of Depression (زاوية الانخفاض)">The angle below the horizontal when looking down at an object.</Term>
+      <Term word="Ambiguous Case (الحالة المبهمة)">The SSA scenario in the Sine Law that can yield 0, 1, or 2 valid triangles.</Term>
+      <Term word="Inverse Trigonometric Functions (الدوال المثلثية العكسية)">Functions like $\sin^{-1}$, $\cos^{-1}$, $\tan^{-1}$ that return an angle given a side ratio.</Term>
+    </Vocabulary>
+  </AccordionItem>
+</Accordion>
+
+---
+
+## ⏳ 30-Second Exam Memory Triggers
+
+<Callout type="default" emoji="🎯">
+  **Read this right before you walk into the exam:**
+  - **SOH-CAH-TOA** $\rightarrow$ Only works for right triangles.
+  - **Reference Angles** $\rightarrow$ Always acute, always glued to the x-axis.
+  - **ASTC (Quadrants)** $\rightarrow$ Start top-right (QI), go counter-clockwise.
+  - **QIII Survival** $\rightarrow$ Only **TAN** (and cot) survives in QIII. Sin and Cos are negative.
+  - **Co-terminal** $\rightarrow$ Just $\pm 360^\circ$ until you get a normal number.
+  - **Sine Law** $\rightarrow$ You need a **complete pair** (Side & opposite Angle).
+  - **SSA Trap** $\rightarrow$ Check for the hidden second triangle ($180^\circ - \theta$).
+  - **Cosine Law** $\rightarrow$ Use when you have a "corner" (SAS) or a "cage" (SSS).
+  - **Elevation/Depression** $\rightarrow$ They are **equal**! Usually solved with Tangent.
+</Callout>
+
+---
+
+## 🧾 Formula Summary
+
+<Callout type="default" emoji="📐">
+  **The Master Formula Sheet**
+  
+  Keep this section bookmarked. These are all the equations you will need to conquer any trigonometry problem.
+</Callout>
+
+### Right Triangles
+- **Pythagorean Theorem:** $a^2 + b^2 = c^2$
+- **Primary Ratios:** $\sin \theta = \frac{\text{Opp}}{\text{Hyp}}$, $\cos \theta = \frac{\text{Adj}}{\text{Hyp}}$, $\tan \theta = \frac{\text{Opp}}{\text{Adj}}$
+- **Reciprocal Ratios:** $\csc \theta = \frac{\text{Hyp}}{\text{Opp}}$, $\sec \theta = \frac{\text{Hyp}}{\text{Adj}}$, $\cot \theta = \frac{\text{Adj}}{\text{Opp}}$
+- **Euclidean Altitude Rule:** $AD^2 = BD \times CD$
+- **Euclidean Leg Rule:** $AB^2 = BD \times BC$, $AC^2 = CD \times BC$
+- **Complementary Angles:** $\sin \theta = \cos(90^\circ - \theta)$, $\cos \theta = \sin(90^\circ - \theta)$, $\tan \theta = \cot(90^\circ - \theta)$
+
+### The Unit Circle
+- **Unit Circle Coordinates:** $(x, y) = (\cos \theta, \sin \theta)$
+
+### Oblique Triangles
+- **Law of Sines:** $\frac{a}{\sin A} = \frac{b}{\sin B} = \frac{c}{\sin C}$
+- **Law of Cosines:** $a^2 = b^2 + c^2 - 2bc\cos A$
+- **Co-terminal Angles:** $\theta_{\text{new}} = \theta \pm 360^\circ n$
+
+---
+
+## 🎯 Key Takeaways
+
+<KeyPoints title="What You MUST Remember for the Exam 🎯">
+  <Point>**SOH-CAH-TOA**: $\sin = \frac{\text{opp}}{\text{hyp}}$, $\cos = \frac{\text{adj}}{\text{hyp}}$, $\tan = \frac{\text{opp}}{\text{adj}}$. The reciprocals (csc, sec, cot) are just the fractions flipped.</Point>
+  <Point>**Unit Circle**: Every point is $(\cos\theta, \sin\theta)$. The radius is 1, so $x = \cos\theta$ and $y = \sin\theta$ directly.</Point>
+  <Point>**Famous Angles** (0°, 30°, 45°, 60°, 90°): For sin, use the pattern $\frac{\sqrt{0}}{2}$ through $\frac{\sqrt{4}}{2}$. For cos, reverse the order. For tan, divide sin by cos.</Point>
+  <Point>**ASTC**: "All Students Take Calculus": QI: All positive, QII: Sin positive, QIII: Tan positive, QIV: Cos positive.</Point>
+  <Point>**Reference Angles**: QI = $\theta$, QII = $180^\circ-\theta$, QIII = $\theta-180^\circ$, QIV = $360^\circ-\theta$. Get the numerical value from the reference angle, get the sign from ASTC.</Point>
+  <Point>**Directed Angles**: Counter-clockwise is positive (+), Clockwise is negative (-).</Point>
+  <Point>**Sine Law**: Use when you have a complete side-angle pair. Beware of the Ambiguous Case (SSA) which can create two triangles.</Point>
+  <Point>**Cosine Law**: Use when you do not have a complete pair (SAS, SSS). It reduces to the Pythagorean Theorem when the angle is 90°.</Point>
+  <Point>**Elevation & Depression**: Both form right triangles. The angle of elevation from below is equal to the angle of depression from above. Most problems use tangent.</Point>
+</KeyPoints>
+
+---
+
+## 📝 Practice Questions
+
+<Callout type="info" emoji="📝">
+  Practice questions will be added soon. Stay tuned!
+</Callout>

@@ -1,0 +1,1850 @@
+/**
+ * EduTrace skeleton system - single shimmer, design tokens, reduced motion
+ */
+
+/* ============================================
+   Base Skeleton Animation
+   ============================================ */
+@keyframes skeleton-shimmer {
+    0% {
+        background-position: 100% 0;
+    }
+
+    100% {
+        background-position: -100% 0;
+    }
+}
+
+@keyframes skeleton-pulse {
+    0%,
+    100% {
+        opacity: 0.55;
+    }
+
+    50% {
+        opacity: 0.28;
+    }
+}
+
+/* ============================================
+   Base Skeleton Element
+   ============================================ */
+.skeleton {
+    --sk-a: color-mix(in srgb, var(--ds-text-primary) 6%, transparent);
+    --sk-b: color-mix(in srgb, var(--ds-text-primary) 12%, transparent);
+    --sk-c: color-mix(in srgb, var(--ds-text-primary) 8%, transparent);
+    background: linear-gradient(
+        110deg,
+        var(--sk-a) 0%,
+        var(--sk-b) 42%,
+        var(--sk-c) 78%,
+        var(--sk-a) 100%
+    );
+    background-size: 220% 100%;
+    animation: skeleton-shimmer 1.6s ease-in-out infinite;
+    border-radius: var(--ds-radius-md, 8px);
+    position: relative;
+    overflow: hidden;
+}
+
+.skeleton-pulse {
+    background: color-mix(in srgb, var(--ds-text-primary) 8%, transparent);
+    animation: skeleton-pulse 1.8s ease-in-out infinite;
+    border-radius: var(--ds-radius-md, 8px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .skeleton {
+        animation: none;
+        background: color-mix(in srgb, var(--ds-text-primary) 9%, transparent);
+    }
+
+    .skeleton-pulse {
+        animation: none;
+        opacity: 0.75;
+    }
+}
+
+/* Screen reader: page-level skeleton roots use role="status" + label */
+.skeleton-screen {
+    outline: none;
+}
+
+.skeleton-page-container {
+    min-height: 100%;
+    padding: var(--ds-space-8) var(--ds-space-6);
+    max-width: var(--ds-container-lg, 1200px);
+    margin: 0 auto;
+}
+
+.calendar-skeleton-card {
+    max-width: 640px;
+    margin: var(--ds-space-16) auto 0;
+    padding: var(--ds-space-10) var(--ds-space-8);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--ds-space-4);
+    background: var(--ds-bg-secondary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-2xl);
+}
+
+.calendar-skeleton-icon {
+    margin-bottom: var(--ds-space-2);
+}
+
+/* ============================================
+   Skeleton Shapes
+   ============================================ */
+.skeleton-text {
+    height: 14px;
+    border-radius: 6px;
+}
+
+.skeleton-text-xs {
+    height: 10px;
+    border-radius: 4px;
+}
+
+.skeleton-text-sm {
+    height: 12px;
+    border-radius: 5px;
+}
+
+.skeleton-text-lg {
+    height: 18px;
+    border-radius: 6px;
+}
+
+.skeleton-text-xl {
+    height: 24px;
+    border-radius: 8px;
+}
+
+.skeleton-title {
+    height: 32px;
+    border-radius: 8px;
+}
+
+.skeleton-title-lg {
+    height: 40px;
+    border-radius: 10px;
+}
+
+.skeleton-circle {
+    border-radius: 50%;
+}
+
+.skeleton-avatar-xs {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-avatar-sm {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-avatar-md {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-avatar-lg {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-avatar-xl {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-avatar-2xl {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-button {
+    height: 40px;
+    border-radius: 20px;
+    min-width: 100px;
+}
+
+.skeleton-button-sm {
+    height: 32px;
+    border-radius: 16px;
+    min-width: 80px;
+}
+
+.skeleton-button-lg {
+    height: 48px;
+    border-radius: 24px;
+    min-width: 120px;
+}
+
+.skeleton-input {
+    height: 44px;
+    border-radius: 12px;
+}
+
+.skeleton-input-sm {
+    height: 36px;
+    border-radius: 10px;
+}
+
+.skeleton-badge {
+    height: 24px;
+    border-radius: 12px;
+    min-width: 60px;
+}
+
+.skeleton-badge-sm {
+    height: 20px;
+    border-radius: 10px;
+    min-width: 48px;
+}
+
+.skeleton-icon {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.skeleton-icon-sm {
+    width: 18px;
+    height: 18px;
+    border-radius: 4px;
+    flex-shrink: 0;
+}
+
+.skeleton-icon-lg {
+    width: 32px;
+    height: 32px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.skeleton-icon-xl {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   Skeleton Card Base
+   ============================================ */
+.skeleton-card {
+    background: var(--ds-bg-secondary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: 16px;
+    padding: 20px;
+}
+
+.skeleton-card-glass {
+    background: var(--ds-bg-secondary);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--ds-border-default);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+/* ============================================
+   DASHBOARD SKELETON
+   ============================================ */
+.skeleton-dashboard {
+    min-height: 100vh;
+    padding: 32px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.skeleton-dashboard-welcome {
+    margin-bottom: 32px;
+}
+
+.skeleton-dashboard-welcome .skeleton-title {
+    width: 320px;
+    max-width: 100%;
+    margin-bottom: 12px;
+}
+
+.skeleton-dashboard-welcome .skeleton-text {
+    width: 200px;
+}
+
+/* Stats Grid */
+.skeleton-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.skeleton-stat-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skeleton-stat-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.skeleton-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.skeleton-stat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeleton-stat-label {
+    height: 12px;
+    width: 80px;
+    border-radius: 4px;
+}
+
+.skeleton-stat-value {
+    height: 28px;
+    width: 60px;
+    border-radius: 6px;
+}
+
+.skeleton-stat-badge {
+    height: 20px;
+    width: 100px;
+    border-radius: 10px;
+    align-self: flex-start;
+}
+
+/* Content Grid */
+.skeleton-content-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+    margin-bottom: 32px;
+}
+
+.skeleton-progress-card,
+.skeleton-actions-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 24px;
+}
+
+.skeleton-card-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 24px;
+}
+
+.skeleton-card-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+}
+
+.skeleton-card-title {
+    height: 20px;
+    width: 140px;
+    border-radius: 6px;
+}
+
+/* Progress Items */
+.skeleton-progress-items {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.skeleton-progress-item {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skeleton-progress-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.skeleton-progress-label {
+    height: 14px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.skeleton-progress-value {
+    height: 14px;
+    width: 40px;
+    border-radius: 4px;
+}
+
+.skeleton-progress-bar {
+    height: 8px;
+    width: 100%;
+    border-radius: 4px;
+    background: rgba(255, 255, 255, 0.04);
+    overflow: hidden;
+}
+
+.skeleton-progress-fill {
+    height: 100%;
+    border-radius: 4px;
+}
+
+/* Quick Actions */
+.skeleton-actions-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-action-item {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+}
+
+.skeleton-action-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+}
+
+.skeleton-action-label {
+    height: 16px;
+    width: 100px;
+    border-radius: 4px;
+    flex: 1;
+}
+
+.skeleton-action-arrow {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+/* Recent Grid */
+.skeleton-recent-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.skeleton-recent-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 20px;
+    padding: 24px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.skeleton-recent-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skeleton-recent-title {
+    height: 20px;
+    width: 120px;
+    border-radius: 6px;
+}
+
+.skeleton-recent-link {
+    height: 16px;
+    width: 70px;
+    border-radius: 4px;
+}
+
+.skeleton-recent-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-recent-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 14px;
+}
+
+.skeleton-recent-item-checkbox {
+    width: 20px;
+    height: 20px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.skeleton-recent-item-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.skeleton-recent-item-title {
+    height: 14px;
+    width: 70%;
+    border-radius: 4px;
+}
+
+.skeleton-recent-item-subtitle {
+    height: 12px;
+    width: 50%;
+    border-radius: 3px;
+}
+
+.skeleton-recent-item-date {
+    height: 24px;
+    width: 70px;
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+/* ============================================
+   NOTES SKELETON
+   ============================================ */
+.skeleton-notes {
+    display: flex;
+    height: calc(100vh - 64px);
+}
+
+.skeleton-notes-sidebar {
+    width: 320px;
+    background: var(--ds-bg-secondary);
+    border-right: 1px solid var(--ds-border-default);
+    display: flex;
+    flex-direction: column;
+    padding: 8px;
+}
+
+.skeleton-notes-new-btn {
+    height: 44px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.skeleton-notes-search {
+    height: 44px;
+    border-radius: 12px;
+    margin-bottom: 16px;
+}
+
+.skeleton-notes-list {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    overflow: hidden;
+}
+
+.skeleton-note-item {
+    padding: 16px;
+    background: rgba(255, 255, 255, 0.02);
+    border: 1px solid rgba(255, 255, 255, 0.04);
+    border-radius: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.skeleton-note-item-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.skeleton-note-item-title {
+    height: 16px;
+    width: 70%;
+    border-radius: 4px;
+}
+
+.skeleton-note-item-pin {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-note-item-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skeleton-note-item-line {
+    height: 12px;
+    border-radius: 3px;
+}
+
+.skeleton-note-item-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 4px;
+}
+
+.skeleton-note-item-subject {
+    height: 20px;
+    width: 70px;
+    border-radius: 10px;
+}
+
+.skeleton-note-item-date {
+    height: 12px;
+    width: 60px;
+    border-radius: 3px;
+}
+
+/* Notes Main Content */
+.skeleton-notes-main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px;
+}
+
+.skeleton-notes-empty {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+}
+
+.skeleton-notes-empty-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+}
+
+.skeleton-notes-empty-title {
+    height: 24px;
+    width: 200px;
+    border-radius: 6px;
+}
+
+.skeleton-notes-empty-text {
+    height: 14px;
+    width: 280px;
+    border-radius: 4px;
+}
+
+/* Public note view (shared route loading) */
+.skeleton-public-note {
+    min-height: 100vh;
+    background: var(--ds-bg-primary);
+    padding: var(--ds-space-8) var(--ds-space-6);
+}
+
+.skeleton-public-note-inner {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.skeleton-public-note-breadcrumb {
+    display: flex;
+    gap: var(--ds-space-2);
+    margin-bottom: var(--ds-space-8);
+}
+
+.skeleton-public-note-crumb {
+    height: 20px;
+    width: 60px;
+    border-radius: var(--ds-radius-sm);
+}
+
+.skeleton-public-note-crumb--wide {
+    width: 100px;
+}
+
+.skeleton-public-note-author {
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-3);
+    margin-bottom: var(--ds-space-6);
+}
+
+.skeleton-public-note-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-public-note-author-text {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    min-width: 0;
+}
+
+.skeleton-public-note-line {
+    height: 20px;
+    width: 100%;
+    border-radius: 5px;
+}
+
+.skeleton-public-note-line--lg {
+    width: 120px;
+    height: 16px;
+}
+
+.skeleton-public-note-line--sm {
+    width: 80px;
+    height: 14px;
+}
+
+.skeleton-public-note-heading {
+    height: 36px;
+    width: min(80%, 560px);
+    border-radius: var(--ds-radius-md);
+    margin-bottom: var(--ds-space-4);
+}
+
+.skeleton-public-note-badges {
+    display: flex;
+    gap: var(--ds-space-3);
+    margin-bottom: var(--ds-space-8);
+}
+
+.skeleton-public-note-badge {
+    height: 24px;
+    width: 80px;
+    border-radius: var(--ds-radius-md);
+}
+
+.skeleton-public-note-badge--wide {
+    width: 100px;
+}
+
+.skeleton-public-note-card {
+    background: var(--ds-bg-secondary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-xl);
+    padding: var(--ds-space-8);
+}
+
+.skeleton-public-note-block {
+    border-radius: var(--ds-radius-lg);
+}
+
+.skeleton-public-note-page {
+    background: var(--ds-bg-primary);
+}
+
+/* ============================================
+   TODOS SKELETON (matches /todos layout)
+   ============================================ */
+.skeleton-todos {
+    min-height: 100vh;
+    padding: var(--ds-space-8) var(--ds-space-6);
+    max-width: var(--container-max, var(--ds-container-xl));
+    margin: 0 auto;
+}
+
+.skeleton-todos-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: var(--ds-space-8);
+    padding-bottom: var(--ds-space-6);
+    border-bottom: 1px solid var(--ds-border-default);
+}
+
+.skeleton-todos-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-2);
+}
+
+.skeleton-todos-title {
+    height: 36px;
+    width: min(200px, 45vw);
+    border-radius: var(--ds-radius-md);
+}
+
+.skeleton-todos-subtitle {
+    height: 14px;
+    width: min(260px, 70vw);
+    border-radius: var(--ds-radius-sm);
+}
+
+.skeleton-todos-header-right {
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-3);
+    flex-shrink: 0;
+}
+
+.skeleton-todos-view-toggle {
+    display: flex;
+    gap: 4px;
+    background: var(--ds-bg-tertiary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-lg);
+    padding: 4px;
+}
+
+.skeleton-todos-view-btn {
+    width: 38px;
+    height: 38px;
+    border-radius: var(--ds-radius-lg);
+}
+
+.skeleton-todos-add-btn {
+    height: 44px;
+    width: 120px;
+    border-radius: var(--ds-radius-lg);
+}
+
+/* Overview: metrics + progress (same card as .todos-overview) */
+.skeleton-todos-overview {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-5);
+    padding: var(--ds-space-5) var(--ds-space-6);
+    margin-bottom: var(--ds-space-5);
+    background: var(--ds-bg-secondary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-xl);
+}
+
+.skeleton-todos-metrics {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: var(--ds-space-3);
+}
+
+.skeleton-todos-metric {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    padding: var(--ds-space-3) var(--ds-space-4);
+    background: var(--ds-bg-primary);
+    border: 1px solid var(--ds-border-subtle);
+    border-radius: var(--ds-radius-lg);
+    min-width: 0;
+}
+
+.skeleton-todos-metric-value {
+    height: 26px;
+    width: 48px;
+    border-radius: var(--ds-radius-sm);
+}
+
+.skeleton-todos-metric-label {
+    height: 10px;
+    width: 72%;
+    border-radius: 4px;
+}
+
+.skeleton-todos-progress-head {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: var(--ds-space-3);
+}
+
+.skeleton-todos-progress-label {
+    height: 14px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+.skeleton-todos-progress-pct {
+    height: 14px;
+    width: 36px;
+    border-radius: 4px;
+}
+
+.skeleton-todos-progress-bar {
+    height: 6px;
+    width: 100%;
+    border-radius: var(--ds-radius-md);
+}
+
+/* All / Active / Done */
+.skeleton-todos-scope {
+    display: flex;
+    gap: 4px;
+    margin-bottom: var(--ds-space-5);
+    padding: 4px;
+    width: fit-content;
+    max-width: 100%;
+    background: var(--ds-bg-secondary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-lg);
+}
+
+.skeleton-todos-scope-pill {
+    height: 32px;
+    width: 72px;
+    border-radius: var(--ds-radius-md);
+}
+
+/* Filters */
+.skeleton-todos-filters {
+    display: flex;
+    align-items: center;
+    gap: var(--ds-space-3);
+    margin-bottom: var(--ds-space-6);
+    flex-wrap: wrap;
+}
+
+.skeleton-todos-search {
+    flex: 1;
+    min-width: 200px;
+    height: 44px;
+    border-radius: var(--ds-radius-lg);
+}
+
+.skeleton-todos-filter {
+    height: 44px;
+    width: 140px;
+    border-radius: var(--ds-radius-lg);
+}
+
+/* Todo List - checkbox | body (title+desc+meta) | actions */
+.skeleton-todos-list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-3);
+}
+
+.skeleton-todo-item {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--ds-space-4);
+    padding: var(--ds-space-5);
+    background: var(--ds-bg-secondary);
+    border: 1px solid var(--ds-border-default);
+    border-radius: var(--ds-radius-lg);
+}
+
+.skeleton-todo-checkbox {
+    width: 24px;
+    height: 24px;
+    border-radius: var(--ds-radius-md);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.skeleton-todo-main {
+    flex: 1;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--ds-space-2);
+}
+
+.skeleton-todo-title {
+    height: 18px;
+    width: min(65%, 420px);
+    border-radius: 5px;
+}
+
+.skeleton-todo-desc {
+    height: 12px;
+    width: min(85%, 520px);
+    border-radius: 4px;
+}
+
+.skeleton-todo-meta {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--ds-space-2);
+    margin-top: var(--ds-space-1);
+}
+
+.skeleton-todo-priority {
+    height: 24px;
+    width: 56px;
+    border-radius: var(--ds-radius-md);
+}
+
+.skeleton-todo-category {
+    height: 24px;
+    width: 88px;
+    border-radius: var(--ds-radius-md);
+}
+
+.skeleton-todo-date {
+    height: 24px;
+    width: 96px;
+    border-radius: var(--ds-radius-md);
+}
+
+.skeleton-todo-actions {
+    display: flex;
+    gap: 4px;
+    flex-shrink: 0;
+}
+
+.skeleton-todo-action {
+    width: 36px;
+    height: 36px;
+    border-radius: var(--ds-radius-lg);
+}
+
+/* ============================================
+   QUIZ SKELETON
+   ============================================ */
+.skeleton-quiz {
+    padding: 32px 24px;
+    max-width: var(--ds-container-lg);
+    margin: 0 auto;
+}
+
+.skeleton-quiz-header {
+    margin-bottom: 32px;
+}
+
+.skeleton-quiz-title {
+    height: 36px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.skeleton-quiz-filters {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 32px;
+}
+
+.skeleton-quiz-filter {
+    flex: 1;
+    max-width: 240px;
+}
+
+.skeleton-quiz-filter-label {
+    height: 14px;
+    width: 100px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-quiz-filter-select {
+    height: 44px;
+    border-radius: 12px;
+}
+
+.skeleton-quiz-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.skeleton-quiz-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skeleton-quiz-card-header {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeleton-quiz-card-title {
+    height: 20px;
+    width: 80%;
+    border-radius: 6px;
+}
+
+.skeleton-quiz-card-desc {
+    height: 14px;
+    width: 100%;
+    border-radius: 4px;
+}
+
+.skeleton-quiz-card-meta {
+    display: flex;
+    gap: 16px;
+}
+
+.skeleton-quiz-card-stat {
+    height: 14px;
+    width: 80px;
+    border-radius: 4px;
+}
+
+.skeleton-quiz-card-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.skeleton-quiz-card-tag {
+    height: 28px;
+    width: 100px;
+    border-radius: 14px;
+}
+
+.skeleton-quiz-card-footer {
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-quiz-card-btn {
+    height: 16px;
+    width: 100px;
+    border-radius: 4px;
+}
+
+/* ============================================
+   EXAMS SKELETON
+   ============================================ */
+.skeleton-exams {
+    padding: 32px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.skeleton-exams-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.skeleton-exams-header-left {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeleton-exams-title {
+    height: 36px;
+    width: 180px;
+    border-radius: 8px;
+}
+
+.skeleton-exams-subtitle {
+    height: 14px;
+    width: 240px;
+    border-radius: 4px;
+}
+
+.skeleton-exams-search {
+    width: 300px;
+    height: 44px;
+    border-radius: 12px;
+}
+
+.skeleton-exams-filters {
+    display: flex;
+    gap: 12px;
+    margin-bottom: 24px;
+    flex-wrap: wrap;
+}
+
+.skeleton-exams-filter {
+    height: 40px;
+    width: 140px;
+    border-radius: 10px;
+}
+
+.skeleton-exams-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 20px;
+}
+
+.skeleton-exam-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.skeleton-exam-card-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.skeleton-exam-card-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.skeleton-exam-card-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skeleton-exam-card-name {
+    height: 16px;
+    width: 80%;
+    border-radius: 4px;
+}
+
+.skeleton-exam-card-type {
+    height: 22px;
+    width: 70px;
+    border-radius: 11px;
+}
+
+.skeleton-exam-card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.skeleton-exam-card-badge {
+    height: 26px;
+    width: 90px;
+    border-radius: 13px;
+}
+
+.skeleton-exam-card-footer {
+    display: flex;
+    gap: 12px;
+    padding-top: 16px;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-exam-card-btn {
+    flex: 1;
+    height: 40px;
+    border-radius: 10px;
+}
+
+/* ============================================
+   PROFILE SKELETON
+   ============================================ */
+.skeleton-profile {
+    min-height: 100vh;
+    padding: 32px 24px;
+    max-width: var(--ds-container-md);
+    margin: 0 auto;
+}
+
+.skeleton-profile-header {
+    display: flex;
+    gap: 32px;
+    margin-bottom: 40px;
+    padding-bottom: 32px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-profile-avatar {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-profile-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-profile-name {
+    height: 32px;
+    width: 200px;
+    border-radius: 8px;
+}
+
+.skeleton-profile-username {
+    height: 16px;
+    width: 120px;
+    border-radius: 4px;
+}
+
+.skeleton-profile-badges {
+    display: flex;
+    gap: 8px;
+    margin-top: 8px;
+}
+
+.skeleton-profile-badge {
+    height: 28px;
+    width: 90px;
+    border-radius: 14px;
+}
+
+.skeleton-profile-bio {
+    margin-top: 8px;
+}
+
+.skeleton-profile-bio-line {
+    height: 14px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-profile-meta {
+    display: flex;
+    gap: 24px;
+    margin-top: 12px;
+}
+
+.skeleton-profile-meta-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.skeleton-profile-meta-icon {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+}
+
+.skeleton-profile-meta-text {
+    height: 14px;
+    width: 80px;
+    border-radius: 4px;
+}
+
+/* Profile Content */
+.skeleton-profile-section {
+    margin-bottom: 32px;
+}
+
+.skeleton-profile-section-title {
+    height: 24px;
+    width: 150px;
+    border-radius: 6px;
+    margin-bottom: 20px;
+}
+
+.skeleton-profile-notes-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 16px;
+}
+
+.skeleton-profile-note {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-profile-note-title {
+    height: 18px;
+    width: 70%;
+    border-radius: 4px;
+}
+
+.skeleton-profile-note-preview {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skeleton-profile-note-line {
+    height: 12px;
+    border-radius: 3px;
+}
+
+.skeleton-profile-note-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.skeleton-profile-note-subject {
+    height: 22px;
+    width: 70px;
+    border-radius: 11px;
+}
+
+.skeleton-profile-note-date {
+    height: 12px;
+    width: 60px;
+    border-radius: 3px;
+}
+
+/* ============================================
+   ADMIN SKELETON
+   ============================================ */
+.skeleton-admin {
+    padding: 32px 24px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.skeleton-admin-header {
+    margin-bottom: 32px;
+}
+
+.skeleton-admin-subtitle {
+    height: 14px;
+    width: 80px;
+    border-radius: 4px;
+    margin-bottom: 8px;
+}
+
+.skeleton-admin-title {
+    height: 36px;
+    width: 220px;
+    border-radius: 8px;
+}
+
+.skeleton-admin-stats {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    margin-bottom: 32px;
+}
+
+.skeleton-admin-stat {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+    display: flex;
+    gap: 16px;
+}
+
+.skeleton-admin-stat-icon {
+    width: 48px;
+    height: 48px;
+    border-radius: 12px;
+    flex-shrink: 0;
+}
+
+.skeleton-admin-stat-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.skeleton-admin-stat-label {
+    height: 12px;
+    width: 80px;
+    border-radius: 3px;
+}
+
+.skeleton-admin-stat-value {
+    height: 28px;
+    width: 60px;
+    border-radius: 6px;
+}
+
+.skeleton-admin-stat-change {
+    height: 14px;
+    width: 70px;
+    border-radius: 4px;
+}
+
+/* Admin Grid */
+.skeleton-admin-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+}
+
+.skeleton-admin-card {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    padding: 24px;
+}
+
+.skeleton-admin-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.skeleton-admin-card-title {
+    height: 20px;
+    width: 140px;
+    border-radius: 5px;
+}
+
+.skeleton-admin-card-link {
+    height: 16px;
+    width: 70px;
+    border-radius: 4px;
+}
+
+.skeleton-admin-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.skeleton-admin-list-item {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.02);
+    border-radius: 12px;
+}
+
+.skeleton-admin-list-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.skeleton-admin-list-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.skeleton-admin-list-name {
+    height: 14px;
+    width: 120px;
+    border-radius: 4px;
+}
+
+.skeleton-admin-list-email {
+    height: 12px;
+    width: 160px;
+    border-radius: 3px;
+}
+
+.skeleton-admin-list-badges {
+    display: flex;
+    gap: 6px;
+}
+
+.skeleton-admin-list-badge {
+    height: 22px;
+    width: 60px;
+    border-radius: 11px;
+}
+
+/* ============================================
+   CALENDAR SKELETON
+   ============================================ */
+.skeleton-calendar {
+    padding: 32px 24px;
+    max-width: var(--ds-container-lg);
+    margin: 0 auto;
+}
+
+.skeleton-calendar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+}
+
+.skeleton-calendar-title {
+    height: 36px;
+    width: 180px;
+    border-radius: 8px;
+}
+
+.skeleton-calendar-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.skeleton-calendar-nav-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.skeleton-calendar-month {
+    height: 24px;
+    width: 160px;
+    border-radius: 6px;
+}
+
+.skeleton-calendar-grid {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.06);
+    border-radius: 16px;
+    overflow: hidden;
+}
+
+.skeleton-calendar-weekdays {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.skeleton-calendar-weekday {
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.skeleton-calendar-weekday-text {
+    height: 12px;
+    width: 32px;
+    border-radius: 3px;
+}
+
+.skeleton-calendar-days {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+.skeleton-calendar-day {
+    aspect-ratio: 1;
+    padding: 8px;
+    border-right: 1px solid rgba(255, 255, 255, 0.04);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.skeleton-calendar-day:nth-child(7n) {
+    border-right: none;
+}
+
+.skeleton-calendar-day-number {
+    height: 24px;
+    width: 24px;
+    border-radius: 50%;
+}
+
+.skeleton-calendar-day-events {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.skeleton-calendar-event {
+    height: 6px;
+    border-radius: 3px;
+}
+
+/* ============================================
+   GPA SKELETON
+   ============================================ */
+.skeleton-gpa {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 32px 24px;
+}
+
+.skeleton-gpa-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 20px;
+    margin-bottom: 24px;
+}
+
+.skeleton-gpa-title {
+    height: 32px;
+    width: 180px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+}
+
+.skeleton-gpa-badge {
+    height: 32px;
+    width: 140px;
+    border-radius: 16px;
+}
+
+/* ============================================
+   RESPONSIVE STYLES
+   ============================================ */
+@media (max-width: 1200px) {
+    .skeleton-stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .skeleton-admin-stats {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 1024px) {
+    .skeleton-notes {
+        flex-direction: column;
+    }
+
+    .skeleton-notes-sidebar {
+        width: 100%;
+        height: auto;
+        max-height: 300px;
+        border-right: none;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    }
+
+    .skeleton-content-grid,
+    .skeleton-recent-grid,
+    .skeleton-admin-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-todos-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 768px) {
+    .skeleton-dashboard,
+    .skeleton-todos,
+    .skeleton-quiz,
+    .skeleton-exams,
+    .skeleton-profile,
+    .skeleton-admin,
+    .skeleton-calendar {
+        padding: 24px 16px;
+    }
+
+    .skeleton-stats-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-admin-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .skeleton-todos-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .skeleton-todos-metrics {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .skeleton-todos-filters {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .skeleton-todos-search,
+    .skeleton-todos-filter {
+        width: 100%;
+    }
+
+    .skeleton-quiz-filters {
+        flex-direction: column;
+    }
+
+    .skeleton-quiz-filter {
+        max-width: 100%;
+    }
+
+    .skeleton-exams-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .skeleton-exams-search {
+        width: 100%;
+    }
+
+    .skeleton-profile-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .skeleton-profile-info {
+        align-items: center;
+    }
+
+    .skeleton-profile-meta {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .skeleton-calendar-header {
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .skeleton-todos-metrics {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .skeleton-profile-avatar {
+        width: 100px;
+        height: 100px;
+    }
+}

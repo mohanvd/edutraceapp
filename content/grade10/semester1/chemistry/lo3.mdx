@@ -1,0 +1,1096 @@
+---
+title: "Light, Electrons & the Electromagnetic Spectrum"
+sidebarTitle: "Light & Electrons"
+---
+
+# Light, Electrons & the Electromagnetic Spectrum
+
+<Callout type="info" emoji="🎆">
+Ever watched fireworks explode into red, green, blue, and gold? Each colour comes from a **different metal salt** burning in the flame – strontium for red, barium for green, copper for blue. But **why** do different elements produce different colours? The answer lies in the **quantum world of electrons** – how they absorb energy, jump to higher levels, and release light when they fall back down. This LO connects **atomic structure**, **quantum numbers**, **electromagnetic radiation**, and the **photoelectric effect** into one beautiful, unified story. Master it, and you'll never look at a streetlamp the same way again.
+</Callout>
+
+<Callout type="default" emoji="❓">
+**Essential Question:** *"How do fireworks create different colors?"*
+</Callout>
+
+---
+
+## The Atom – A Quick Refresher
+
+Before we dive into light and energy, let's make sure the atomic foundations are rock-solid.
+
+### Electrons – The Stars of This Story
+
+<Definition term="Electron (الإلكترون)">
+A negatively charged subatomic particle that exists in **energy levels (shells)** surrounding the nucleus. Electrons are responsible for **all chemical behaviour** – bonding, reactions, and the emission of light.
+</Definition>
+
+<Compare>
+<Item label="Valence Electrons (إلكترونات التكافؤ)">
+The electrons in the **outermost energy level** (highest *n* value). These determine:
+- How an element **reacts** chemically
+- The element's **valence** (combining power)
+- The element's position in its **group**
+
+**Example:** Sodium (Na) has **1** valence electron → Group 1 → easily loses it to form Na⁺.
+</Item>
+<Item label="Core Electrons (الإلكترونات الداخلية)">
+All electrons in **inner energy levels** (below the outermost). They:
+- **Shield** valence electrons from the full nuclear charge
+- Generally do **not** participate in chemical reactions
+- Remain unchanged in most chemical processes
+
+**Example:** Sodium's core electrons are the 10 electrons in the 1s, 2s, and 2p orbitals.
+</Item>
+</Compare>
+
+**Key constants to know:**
+| Property | Value |
+| --- | --- |
+| **Charge** | $e = 1.60 \times 10^{-19}$ C (negative) |
+| **Mass** | $m_e = 9.11 \times 10^{-31}$ kg |
+
+### The Nucleus – Identity & Stability
+
+<Definition term="Nucleus (النواة)">
+The dense, positively charged centre of the atom containing **protons** (positive, determine the element's identity) and **neutrons** (neutral, provide nuclear stability by offsetting proton-proton repulsion). The nucleus contains virtually all of the atom's mass.
+</Definition>
+
+<Callout type="default" emoji="💡">
+**Identity rule:** The number of protons = **atomic number** = element identity. **6 protons = carbon. Always.** Neutrons can vary (isotopes), electrons can be gained/lost (ions), but the proton count defines what element you have.
+</Callout>
+
+---
+
+## Quantum Numbers – The Electron's Complete Address
+
+Think of quantum numbers as an electron's **postal address**. Just like a full address tells you the country, city, street, and apartment number, four quantum numbers tell you everything about where an electron lives and how it behaves. **No two electrons in an atom can share the exact same four numbers** – this is the **Pauli Exclusion Principle**.
+
+<Tabs>
+<Tab label="n – The Floor">
+### Principal Quantum Number (*n*)
+
+**What it tells you:** Which **energy level (shell)** the electron is in – like which **floor** of a building.
+
+| *n* | Shell Letter | Subshells Available | Max Electrons ($2n^2$) |
+| --- | --- | --- | --- |
+| 1 | K | s only | 2 |
+| 2 | L | s, p | 8 |
+| 3 | M | s, p, d | 18 |
+| 4 | N | s, p, d, f | 32 |
+| 5 | O | s, p, d, f | 50 |
+
+**Rules:**
+- $n = 1, 2, 3, 4, 5, 6, 7$ (positive integers only)
+- Higher $n$ → farther from nucleus → **higher energy**
+- Number of orbitals in level $n$ = $n^2$
+- Maximum electrons in level $n$ = $2n^2$
+</Tab>
+<Tab label="ℓ – The Room Type">
+### Angular Momentum Quantum Number (*ℓ*)
+
+**What it tells you:** The **shape** and **type** of subshell (sublevel) – like what **type of room** (studio, suite, penthouse).
+
+| *ℓ* | Subshell | Shape | Orbitals | Max e⁻ |
+| --- | --- | --- | --- | --- |
+| 0 | s | Spherical | 1 | 2 |
+| 1 | p | Dumbbell | 3 | 6 |
+| 2 | d | Double dumbbell (cloverleaf) | 5 | 10 |
+| 3 | f | Complex / multiple lobes | 7 | 14 |
+
+**Rules:**
+- $\ell$ ranges from **0** to **$n - 1$**
+- If $n = 1$: $\ell$ can only be 0 (only s subshell exists)
+- If $n = 3$: $\ell$ can be 0, 1, or 2 (s, p, and d subshells exist)
+- Energy order within a shell: **s < p < d < f**
+
+<Callout type="warning" emoji="⚠️">
+**Exam trap:** There is **no** 1p, 1d, 1f, 2d, 2f, or 3f orbital! If $\ell$ must be less than $n$, then $n = 1$ only allows $\ell = 0$ (1s), $n = 2$ allows $\ell = 0, 1$ (2s, 2p), and $n = 3$ allows $\ell = 0, 1, 2$ (3s, 3p, 3d). Any question offering "1p" or "2d" as an orbital is testing whether you know this rule.
+</Callout>
+</Tab>
+<Tab label="mₗ – The Room Number">
+### Magnetic Quantum Number (*mₗ*)
+
+**What it tells you:** Which **specific orbital** within the subshell – like the **room number** on a floor.
+
+**Rule:** $m_\ell$ ranges from **$-\ell$** to **$+\ell$** (including zero).
+
+| Subshell | *ℓ* | Possible *mₗ* values | Number of orbitals |
+| --- | --- | --- | --- |
+| s | 0 | 0 | 1 |
+| p | 1 | −1, 0, +1 | 3 |
+| d | 2 | −2, −1, 0, +1, +2 | 5 |
+| f | 3 | −3, −2, −1, 0, +1, +2, +3 | 7 |
+
+Each individual orbital can hold a **maximum of 2 electrons**.
+
+For p orbitals, the three orientations correspond to the three spatial axes: $p_x$, $p_y$, and $p_z$.
+</Tab>
+<Tab label="mₛ – Which Bed">
+### Spin Quantum Number (*mₛ*)
+
+**What it tells you:** The **spin direction** of the electron – like which **bed** in a double room (top bunk or bottom bunk).
+
+- Only two possible values: $+\frac{1}{2}$ (spin up, ↑) or $-\frac{1}{2}$ (spin down, ↓)
+- Two electrons in the same orbital **must** have opposite spins (Pauli Exclusion Principle)
+- This is why each orbital holds exactly **2 electrons** – one spin-up, one spin-down
+</Tab>
+</Tabs>
+
+<Example>
+**Reading an electron's full address:**
+
+An electron with quantum numbers $n = 3, \, \ell = 1, \, m_\ell = 0, \, m_s = +\frac{1}{2}$ tells us:
+
+| Quantum Number | Value | Meaning |
+| --- | --- | --- |
+| $n = 3$ | Energy level 3 | **3rd floor** (M shell) |
+| $\ell = 1$ | p subshell | **Dumbbell-shaped room** |
+| $m_\ell = 0$ | Middle p orbital | **Room number 0** (the $p_y$ orbital) |
+| $m_s = +\frac{1}{2}$ | Spin up ↑ | **Top bed** |
+
+So this electron is in the **3p** subshell, in the middle orbital, with spin-up. Its address: **3p, orbital 0, spin ↑**.
+</Example>
+
+<Callout type="warning" emoji="⚠️">
+**How to spot invalid quantum numbers on exams:** Check these three rules in order:
+1. $n$ must be a **positive integer** (1, 2, 3, …)
+2. $\ell$ must satisfy: $0 \leq \ell \leq n - 1$
+3. $m_\ell$ must satisfy: $-\ell \leq m_\ell \leq +\ell$
+
+If **any** rule is broken, the set of quantum numbers is **not allowed**.
+
+**Example:** $n = 1, \, \ell = 1$ → **INVALID** because $\ell$ must be less than $n$, but $1 \not< 1$.
+</Callout>
+
+---
+
+## Atomic Orbitals vs Orbits – The Modern Truth
+
+<Compare>
+<Item label="Orbit (Bohr Model – المدار الدائري)">
+A **definite, circular path** that an electron follows around the nucleus – like a planet orbiting the Sun.
+
+- Fixed, predictable trajectory
+- You know **exactly** where the electron is at any moment
+- Was the model proposed by **Niels Bohr** (1913)
+- **Outdated** – but Bohr was right about one thing: **energy is quantized**
+</Item>
+<Item label="Orbital (Quantum Model – الفلك الذري)">
+A **3D region of space** where an electron is **most likely** to be found – a probability cloud, not a fixed path.
+
+- You can **never** know exactly where the electron is (Heisenberg Uncertainty Principle)
+- You only know the **probability** of finding it in a certain region
+- Different shapes: s (sphere), p (dumbbell), d (cloverleaf), f (complex)
+- This is the **correct, modern model**
+</Item>
+</Compare>
+
+<ImageWithText src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Hydrogen_Density_Plots.png" alt="Cross-sectional plots of hydrogen atom orbitals showing 1s, 2s, 2p, 3s, 3p, 3d probability density distributions in 2D colour-coded diagrams" caption="Orbital probability density distributions for hydrogen – brighter regions indicate higher probability of finding the electron. Notice the spherical s orbitals, dumbbell-shaped p orbitals, and cloverleaf d orbitals" width="500px" />
+
+<Callout type="info" emoji="📌">
+**What Bohr got right:** Even though electrons don't travel in neat circular paths, Bohr's key insight was correct – electron energies are **quantized**. Electrons can only have **specific energy values** (like steps on a staircase), not any value in between. They **cannot exist between energy levels**.
+</Callout>
+
+---
+
+## Electron Configuration – The Seating Chart
+
+Electron configuration tells you exactly where every electron in an atom lives. Think of it as a **seating chart** assigning each electron to its proper energy level and subshell.
+
+### The Three Rules
+
+<Steps>
+<Step title="1. Aufbau Principle – Fill lowest energy first">
+Electrons fill orbitals starting from the **lowest energy** and working upward. "Aufbau" is German for "building up."
+
+**The filling order (memorise this!):**
+
+$$1s \rightarrow 2s \rightarrow 2p \rightarrow 3s \rightarrow 3p \rightarrow 4s \rightarrow 3d \rightarrow 4p \rightarrow 5s \rightarrow 4d \rightarrow 5p \rightarrow 6s \rightarrow 4f \rightarrow 5d \rightarrow 6p \rightarrow 7s \rightarrow 5f \rightarrow 6d$$
+
+Notice: **4s fills before 3d**, and **5s fills before 4d**. This is because the energy of an orbital depends on ($n + \ell$), not just $n$.
+
+<ImageWithText src="https://upload.wikimedia.org/wikipedia/commons/2/2e/Aufbau_Principle-en.svg" alt="Aufbau principle diagonal filling order diagram showing arrows crossing energy levels 1s through 7s, indicating the order in which orbitals are filled" caption="The Aufbau diagonal rule – follow the arrows from top to bottom to get the correct filling order" width="350px" />
+</Step>
+<Step title="2. Hund's Rule – Spread out before pairing">
+When filling orbitals of **equal energy** (like the three p orbitals), place **one electron in each orbital first** (all with the **same spin ↑**) before adding a second electron to any orbital.
+
+Think of it like sitting on a bus – everyone picks an **empty seat** before sitting next to a stranger.
+</Step>
+<Step title="3. Pauli Exclusion Principle – Max 2 per orbital, opposite spins">
+No two electrons can have the **same four quantum numbers**. Each orbital holds a **maximum of 2 electrons**, and they must have **opposite spins** (↑↓).
+</Step>
+</Steps>
+
+### Subshell Capacities
+
+| Subshell | Orbitals | Max Electrons |
+| --- | --- | --- |
+| **s** | 1 | **2** |
+| **p** | 3 | **6** |
+| **d** | 5 | **10** |
+| **f** | 7 | **14** |
+
+### The Diagonal Rule – A Memory Trick
+
+Write out the subshells in a grid and draw diagonal arrows:
+
+```
+1s
+2s  2p
+3s  3p  3d
+4s  4p  4d  4f
+5s  5p  5d  5f
+6s  6p  6d
+7s  7p
+```
+
+Follow the diagonals from top-right to bottom-left: **1s → 2s → 2p → 3s → 3p → 4s → 3d → 4p → 5s → 4d → 5p → 6s → 4f → 5d → 6p → 7s → 5f → 6d**
+
+<Callout type="default" emoji="💡">
+**Singing it helps!** Memorise the letter pattern: **s, s, ps, ps, dps, dps, fdps, fdp**. Write the numbers starting from 1 for each letter type, and you'll reconstruct the entire filling order in seconds.
+</Callout>
+
+### Worked Examples
+
+<Accordion>
+<AccordionItem title="Carbon (C, Z = 6)">
+Distribute 6 electrons:
+- 1s² (2 electrons used, 4 remaining)
+- 2s² (2 used, 2 remaining)
+- 2p² (2 remaining placed here)
+
+**Configuration:** $1s^2 \, 2s^2 \, 2p^2$
+
+**Orbital diagram:** The two 2p electrons go into **separate** p orbitals with the **same spin** (Hund's Rule):
+(↑↓)(↑↓)(↑ ↑ _ )
+</AccordionItem>
+<AccordionItem title="Potassium (K, Z = 19)">
+Distribute 19 electrons:
+- 1s² 2s² 2p⁶ = 10 electrons (fills through neon)
+- 3s² 3p⁶ = 8 more (total 18, fills through argon)
+- 4s¹ = 1 remaining
+
+**Configuration:** $1s^2 \, 2s^2 \, 2p^6 \, 3s^2 \, 3p^6 \, 4s^1$ or $[\text{Ar}] \, 4s^1$
+
+Note: The 19th electron goes to **4s**, not 3d, because 4s has lower energy!
+</AccordionItem>
+<AccordionItem title="Iron (Fe, Z = 26)">
+Distribute 26 electrons:
+- [Ar] accounts for 18 electrons
+- 4s² = 2 more (total 20)
+- 3d⁶ = 6 remaining
+
+**Configuration:** $[\text{Ar}] \, 4s^2 \, 3d^6$
+</AccordionItem>
+<AccordionItem title="Tin (Sn, Z = 50)">
+Distribute 50 electrons:
+- [Kr] accounts for 36 electrons
+- 5s² = 2 more (total 38)
+- 4d¹⁰ = 10 more (total 48)
+- 5p² = 2 remaining
+
+**Configuration:** $[\text{Kr}] \, 5s^2 \, 4d^{10} \, 5p^2$
+</AccordionItem>
+</Accordion>
+
+### Special Stability – The Cr and Cu Exceptions
+
+Some atoms "cheat" because a **half-filled** ($d^5$) or **fully filled** ($d^{10}$) d subshell is extra stable. The symmetry of having every d orbital equally occupied provides a stability bonus.
+
+<Callout type="warning" emoji="⚠️">
+**The two exceptions you MUST memorise:**
+
+| Element | Expected Config | Actual Config | Why? |
+| --- | --- | --- | --- |
+| **Chromium (Cr, Z=24)** | $[\text{Ar}] \, 4s^2 \, 3d^4$ | $[\text{Ar}] \, 4s^1 \, 3d^5$ | Half-filled d ($d^5$) is extra stable |
+| **Copper (Cu, Z=29)** | $[\text{Ar}] \, 4s^2 \, 3d^9$ | $[\text{Ar}] \, 4s^1 \, 3d^{10}$ | Fully-filled d ($d^{10}$) is extra stable |
+
+**The rule:** There are **no** $d^4$ or $d^9$ configurations in reality. An electron "borrows" from the 4s to complete the more stable half-filled or fully-filled d arrangement.
+</Callout>
+
+### Electron Configurations of Ions (Cations)
+
+When a metal atom forms a **positive ion**, electrons are removed from the **outermost shell first** (highest $n$ value).
+
+<Callout type="info" emoji="📌">
+**Critical rule for transition metals:** Remove the $ns$ electrons **before** the $(n-1)d$ electrons, even though $ns$ filled first! Think: "last in energy terms, first out."
+</Callout>
+
+<Example>
+**Element X (Z = 22, Titanium):**
+
+- **Atom:** $[\text{Ar}] \, 4s^2 \, 3d^2$
+- **X⁺ (lose 1e⁻):** Remove from 4s first → $[\text{Ar}] \, 4s^1 \, 3d^2$
+- **X²⁺ (lose 2e⁻):** Remove both 4s electrons → $[\text{Ar}] \, 3d^2$
+- **X³⁺ (lose 3e⁻):** Remove from 3d now → $[\text{Ar}] \, 3d^1$
+
+**For ions, always write the atom's configuration first, then remove from the outermost shell!**
+</Example>
+
+### Valence Electrons – The Important Ones
+
+<Definition term="Valence Electrons (إلكترونات التكافؤ)">
+The electrons in the **outermost (farthest) energy level** from the nucleus. They determine an element's chemical behaviour, bonding capacity, and position in the periodic table. For main-group elements, the number of valence electrons equals the group number.
+</Definition>
+
+<Callout type="warning" emoji="⚠️">
+**Don't confuse "outermost" with "highest energy"!** For an atom like $[\text{Ar}] \, 4s^2 \, 3d^3$:
+- The **outermost** electrons (highest $n$) are in **4s** → these are the valence electrons
+- The **highest energy** electrons are in **3d**
+- Valence electrons = those in the **4th shell** = **2** (the 4s electrons)
+- When making ions, you remove the **outermost** (4s) first, not the highest energy (3d)
+</Callout>
+
+---
+
+## The Electromagnetic Spectrum
+
+Now we shift from the world of electrons to the world of **light** – and we'll soon see they're deeply connected.
+
+<Definition term="Electromagnetic Spectrum (الطيف الكهرومغناطيسي)">
+The complete range of **electromagnetic radiation**, from low-energy radio waves to high-energy gamma rays. All electromagnetic waves travel at the **speed of light** in a vacuum and differ only in their **frequency**, **wavelength**, and **energy**.
+</Definition>
+
+### The Full Spectrum – From Gentle to Deadly
+
+| Type | Wavelength | Frequency | Energy | Uses | Hazards |
+| --- | --- | --- | --- | --- | --- |
+| **Radio** | Longest | Lowest | Lowest | TV, radio signals; reflect off ionosphere | None proven |
+| **Microwaves** | ↓ | ↓ | ↓ | Satellite comms, mobile phones, microwave ovens | Burns (intense) |
+| **Infrared (IR)** | ↓ | ↓ | ↓ | Thermal imaging, optical fibres, grills | Burns (intense) |
+| **Visible (ROYGBIV)** | ↓ | ↓ | ↓ | Sight, optical fibres | None |
+| **Ultraviolet (UV)** | ↓ | ↓ | ↓ | Sunbeds, security inks, sterilisation | Skin cancer |
+| **X-rays** | ↓ | ↓ | ↓ | Medical imaging (bones) | Ionisation → cell damage, cancer |
+| **Gamma rays** | Shortest | Highest | Highest | Kill bacteria, sterilise, cancer radiotherapy | Ionisation → DNA damage, cancer |
+
+<Callout type="info" emoji="📌">
+**Key facts about ALL electromagnetic waves:**
+- Travel at the **speed of light** in vacuum: $c = 3.00 \times 10^8$ m/s
+- Can be **reflected**, **refracted**, and **diffracted**
+- Are **transverse waves** (oscillating electric and magnetic fields perpendicular to direction of travel)
+- The **only difference** between types is frequency/wavelength/energy
+</Callout>
+
+<ImageWithText src="https://upload.wikimedia.org/wikipedia/commons/c/cf/EM_Spectrum_Properties_edit.svg" alt="Diagram of the electromagnetic spectrum showing wavelength, frequency, and energy for radio waves, microwaves, infrared, visible light, ultraviolet, X-rays, and gamma rays" caption="The electromagnetic spectrum – from long-wavelength, low-energy radio waves to short-wavelength, high-energy gamma rays. Visible light occupies a tiny sliver in the middle" width="650px" />
+
+### Visible Light – The Rainbow Slice
+
+Within the visible spectrum, colours range from **red** (longest wavelength, ~700 nm) to **violet** (shortest wavelength, ~400 nm):
+
+$$\text{Red} \rightarrow \text{Orange} \rightarrow \text{Yellow} \rightarrow \text{Green} \rightarrow \text{Blue} \rightarrow \text{Indigo} \rightarrow \text{Violet}$$
+
+**Remember:** **ROYGBIV** – or the mnemonic **"Richard Of York Gave Battle In Vain"**
+
+<Callout type="default" emoji="💡">
+As you move from **red → violet**: wavelength **decreases**, frequency **increases**, energy **increases**. Red light is the most "gentle" visible light; violet is the most energetic.
+</Callout>
+
+### Ionising vs Non-ionising Radiation
+
+<Compare>
+<Item label="Non-ionising (Radio → Visible)">
+- **Low** energy – not enough to remove electrons from atoms
+- Generally considered **safe** at normal intensities
+- Intense IR can cause **burns**, but no ionisation
+- Includes: radio, microwaves, infrared, visible light
+</Item>
+<Item label="Ionising (UV → Gamma)">
+- **High** energy – enough to **knock electrons off atoms** (ionisation)
+- Can damage **DNA**, cause **mutations**, and lead to **cancer**
+- Workers must minimise exposure; lead shielding used for X-rays
+- Includes: UV (partially), X-rays, gamma rays
+</Item>
+</Compare>
+
+---
+
+## Wave Properties & Key Equations
+
+Light behaves as a **wave**, and understanding wave properties is essential for solving problems.
+
+### Wave Vocabulary
+
+<Definition term="Frequency (التردد)">
+The number of complete wave cycles passing a point per second. Symbol: $f$ or $\nu$ (Greek letter "nu"). Unit: **Hertz (Hz)** = $s^{-1}$.
+</Definition>
+
+<Definition term="Wavelength (الطول الموجي)">
+The distance between two consecutive identical points on a wave (e.g., crest to crest, or trough to trough). Symbol: $\lambda$ (Greek letter "lambda"). Unit: **metres (m)**.
+</Definition>
+
+<Definition term="Amplitude (السعة)">
+The maximum displacement from the equilibrium (rest) position to a crest or trough. Amplitude relates to **intensity** (brightness for light, loudness for sound) – **not** to energy per photon.
+</Definition>
+
+### The Three Fundamental Relationships
+
+<Tabs>
+<Tab label="λ and f – Inversely Proportional">
+As wavelength **increases**, frequency **decreases** (and vice versa). They are inversely related through the speed of light:
+
+<Formula>
+
+$$c = \lambda f$$
+
+</Formula>
+
+Where $c = 3.00 \times 10^8$ m/s, $\lambda$ = wavelength in metres, $f$ = frequency in Hz.
+
+**Rearranged:** λ = c / f and f = c / λ
+</Tab>
+<Tab label="f and E – Directly Proportional">
+Higher frequency = **more energy** per photon. This is why gamma rays are dangerous and radio waves are harmless.
+
+<Formula>
+
+$$E = hf$$
+
+</Formula>
+
+Where $h = 6.63 \times 10^{-34}$ J·s (**Planck's constant**) and $f$ = frequency in Hz.
+</Tab>
+<Tab label="λ and E – Inversely Proportional">
+Shorter wavelength = **more energy**. Combining the two equations above:
+
+<Formula>
+
+$$E = hc / \lambda$$
+
+</Formula>
+
+This single equation connects energy directly to wavelength – very useful for calculations!
+</Tab>
+</Tabs>
+
+### Summary of Relationships
+
+| If this increases... | Then... | Relationship |
+| --- | --- | --- |
+| Wavelength ($\lambda$) ↑ | Frequency ($f$) ↓ | **Inversely** proportional |
+| Wavelength ($\lambda$) ↑ | Energy ($E$) ↓ | **Inversely** proportional |
+| Frequency ($f$) ↑ | Energy ($E$) ↑ | **Directly** proportional |
+
+<Callout type="default" emoji="💡">
+**The golden rule:** High frequency = short wavelength = high energy. Low frequency = long wavelength = low energy. Gamma rays have the highest frequency, shortest wavelength, and most energy. Radio waves have the lowest frequency, longest wavelength, and least energy.
+</Callout>
+
+### Additional Important Equations
+
+<Accordion>
+<AccordionItem title="Speed of light in a medium">
+
+$$v = \frac{c}{n}$$
+
+Where $v$ = speed in the medium, $c$ = speed in vacuum, and $n$ = **refractive index** of the medium. Light slows down when entering a denser medium.
+</AccordionItem>
+<AccordionItem title="de Broglie wavelength (wave-particle duality)">
+
+$$\lambda = \frac{h}{p} = \frac{h}{mv}$$
+
+Every moving particle has a wavelength! For everyday objects this wavelength is unimaginably small, but for electrons it's significant – this is why electron microscopes work.
+</AccordionItem>
+<AccordionItem title="Rydberg equation (hydrogen-like atoms)">
+
+$$\frac{1}{\lambda} = RZ^2 \left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right)$$
+
+Where $R$ = Rydberg constant, $Z$ = atomic number, $n_i$ = initial energy level, $n_f$ = final energy level. Used to calculate wavelengths of light emitted or absorbed by hydrogen-like (one-electron) atoms.
+</AccordionItem>
+<AccordionItem title="Mass-energy equivalence">
+
+$$E = mc^2$$
+
+Einstein's famous equation showing that energy and mass are interconvertible. This becomes important in nuclear reactions.
+</AccordionItem>
+</Accordion>
+
+---
+
+## Photons & the Quantum Nature of Light
+
+Here's where physics got weird – and beautiful. Classical physics said light was purely a wave. But experiments in the early 1900s proved that light also behaves like a stream of **particles** called photons. This **wave-particle duality** is one of the most profound discoveries in all of science.
+
+<Definition term="Photon (الفوتون)">
+The smallest indivisible packet (**quantum**) of electromagnetic energy. Each photon carries a specific amount of energy determined by its frequency: $E = hf$. Photons have **zero rest mass** but carry momentum.
+</Definition>
+
+<Callout type="info" emoji="📌">
+**Max Planck's revolution (1900):** Energy is NOT continuous – it comes in discrete packets called **quanta**. This was radical. Imagine being told you can only walk up stairs, never a ramp – you can stand on step 1 or step 2, but **never between them**. That's what quantisation means for energy.
+</Callout>
+
+### The Photoelectric Effect – Einstein's Nobel Prize
+
+<Definition term="Photoelectric Effect (الظاهرة الكهروضوئية)">
+The emission of electrons from a metal surface when **light of sufficient frequency** strikes it. This phenomenon proved that light consists of particles (photons) and earned Einstein the 1921 Nobel Prize in Physics.
+</Definition>
+
+<Steps>
+<Step title="The Observation">
+When light shines on certain metals, electrons are ejected from the surface. These ejected electrons are called **photoelectrons**.
+</Step>
+<Step title="The Surprise">
+Classical wave theory predicted that brighter light (higher intensity) should eject electrons regardless of colour. But experiments showed:
+- **Red light** (low frequency) could **never** eject electrons from certain metals, no matter how bright
+- **Violet light** (high frequency) ejected electrons even at **very low intensity**
+- This contradicted the wave model completely!
+</Step>
+<Step title="Einstein's Explanation">
+Light consists of **photons**, each carrying energy $E = hf$. A single photon interacts with a single electron:
+- If the photon's energy ≥ the **work function** ($h\nu_0$) of the metal → electron is ejected
+- If the photon's energy < the work function → **nothing happens**, regardless of how many photons hit
+- Extra energy (above the work function) becomes the electron's **kinetic energy**
+
+<ImageWithText src="https://upload.wikimedia.org/wikipedia/commons/a/a6/Photoelectric_effect_in_a_solid_-_diagram.svg" alt="Diagram of the photoelectric effect showing ultraviolet photons striking a metal surface and ejecting electrons" caption="The photoelectric effect – photons (light particles) with sufficient energy strike a metal surface, transferring their energy to electrons. If the photon energy exceeds the work function, the electron is ejected" width="450px" />
+</Step>
+</Steps>
+
+<Formula>
+
+$$KE_{electron} = hf - h\nu_0 = hf - \phi$$
+
+</Formula>
+
+Where:
+- $KE$ = kinetic energy of the ejected electron
+- $hf$ = energy of the incoming photon
+- $h\nu_0 = \phi$ = **work function** (minimum energy needed to free an electron from the metal)
+- $\nu_0$ = **threshold frequency** (minimum frequency needed)
+
+<Callout type="warning" emoji="⚠️">
+**Critical exam points about the photoelectric effect:**
+
+1. **Frequency matters, not intensity.** Below the threshold frequency, NO electrons are ejected – even with incredibly bright light
+2. **Above threshold:** increasing intensity (more photons) ejects **more** electrons but doesn't change their kinetic energy
+3. **Above threshold:** increasing frequency gives ejected electrons **more** kinetic energy
+4. **One photon → one electron.** Energy transfer is one-to-one
+5. This proves **wave-particle duality** – light behaves as both a wave AND a particle
+</Callout>
+
+<Example>
+**Analogy – The Heavy Box:**
+
+Imagine trying to push a heavy box off a table:
+- Gentle pushes (low frequency photons) will **never** move it, no matter how many gentle pushes you give (high intensity doesn't help)
+- One strong push (high frequency photon) can knock it off
+- An even stronger push sends it off with extra speed (kinetic energy)
+
+The "minimum push needed" = the **work function**. Extra force beyond that = the electron's **kinetic energy**.
+</Example>
+
+---
+
+## Hydrogen Emission Spectrum – The Atomic Barcode
+
+If electrons could have **any** energy value, heating hydrogen would produce a **continuous rainbow** of all colours. Instead, we see something remarkable – only **specific, discrete lines** of colour appear, like a barcode.
+
+<Definition term="Line Emission Spectrum (طيف الانبعاث الخطي)">
+A spectrum consisting of only **specific wavelengths** (coloured lines) separated by dark gaps. Each element produces a **unique** set of lines – an atomic fingerprint. The line spectrum of hydrogen proves that electron energies are **quantized**.
+</Definition>
+
+<Compare>
+<Item label="Continuous Spectrum (الطيف المتصل)">
+Contains **all** wavelengths with no gaps – like a full rainbow. Produced by hot, dense objects (the Sun, a heated filament).
+
+If energy were NOT quantized, hydrogen would produce this. But it doesn't!
+</Item>
+<Item label="Line (Discrete) Spectrum (الطيف الخطي)">
+Contains only **specific wavelengths** – discrete coloured lines on a dark background. Produced by excited atoms of individual elements.
+
+Each line corresponds to a **specific electron transition** between energy levels. This proves energy is quantized!
+
+<ImageWithText src="https://upload.wikimedia.org/wikipedia/commons/6/60/Emission_spectrum-H.svg" alt="Hydrogen emission spectrum showing discrete coloured lines (red, blue-green, blue, violet) on a dark background with wavelengths labelled" caption="The hydrogen emission spectrum – only specific wavelengths appear as bright lines, proving that electron energies are quantised. Each line corresponds to a specific electron transition" width="600px" />
+</Item>
+</Compare>
+
+<Callout type="info" emoji="📌">
+**Why this matters:** The fact that hydrogen only emits light at specific wavelengths is **direct proof** that electrons can only exist at specific energy levels – like standing on the steps of a staircase. If you could stand anywhere (continuous energy), you'd see all colours. Since you see only certain colours, the energy levels must be fixed.
+</Callout>
+
+---
+
+## Ground State, Excited State & Electron Transitions
+
+This is where everything comes together – **atomic structure meets light emission**.
+
+<Compare>
+<Item label="Ground State (الحالة المستقرة)">
+The **lowest energy configuration** of an atom. All electrons are in their lowest possible energy levels. This is the most **stable** state – where atoms "want" to be.
+
+Think of it as standing on the **bottom step** of a staircase. You're comfortable here.
+</Item>
+<Item label="Excited State (الحالة المثارة)">
+Any configuration where one or more electrons have **absorbed energy** and jumped to a **higher energy level**. This state is **unstable and temporary** – like balancing on a high step. The electron quickly falls back down.
+
+An atom enters the excited state by absorbing energy from **heat**, **light**, or **electricity**.
+</Item>
+</Compare>
+
+### The Absorption-Emission Cycle
+
+<Steps>
+<Step title="1. Absorption – Electron Jumps Up">
+The atom absorbs a **specific amount of energy** (a photon, or heat). An electron jumps from a lower energy level to a higher one.
+
+$$E_{absorbed} = E_{higher} - E_{lower}$$
+
+The electron can **only** jump to levels that match the exact energy of the absorbed photon – no in-between!
+</Step>
+<Step title="2. Excited State – Temporary and Unstable">
+The electron is now in a higher-than-normal energy level. This is **unstable** – like holding a ball in the air. It won't stay there long.
+
+Multiple electrons can be excited simultaneously, and an electron **can** jump to a shell that already has electrons in it.
+</Step>
+<Step title="3. Emission – Electron Falls Back Down">
+The electron falls back to a **lower energy level** (not necessarily the ground state – it might fall in steps). As it falls, it **releases** the excess energy as a **photon of light**.
+
+$$E_{photon} = E_{initial} - E_{final} = hf = \frac{hc}{\lambda}$$
+
+**The bigger the drop**, the more energy the photon carries → shorter wavelength → bluer/more violet light.
+**Smaller drops** → less energy → longer wavelength → redder light.
+</Step>
+</Steps>
+
+<Callout type="default" emoji="💡">
+**Why different elements glow different colours:** Every element has a **unique set of energy levels** – like a staircase with steps at different heights. Since the gaps between levels are different for each element, the photons emitted have different energies (frequencies), producing different colours. This is the basis of **spectral analysis** and **flame tests**.
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+**Exam clarification:** The *emitted* photon's wavelength depends on the **size of the energy gap** the electron falls through – not on the absolute energy level. A transition from $n = 5 \to n = 2$ releases more energy (shorter wavelength) than $n = 3 \to n = 2$.
+</Callout>
+
+---
+
+## Flame Tests – The Colourful Fingerprints
+
+<Definition term="Flame Test (اختبار اللهب)">
+A laboratory technique used to identify **metal ions** in a compound. When a metal salt is heated in a flame, the heat excites electrons in the metal atoms. As the electrons fall back to their ground state, they emit light of **characteristic colours** unique to each element.
+</Definition>
+
+### Why Flame Tests Work
+
+The process is exactly the **absorption-emission cycle** we just described:
+1. **Flame provides energy** → electrons get excited (jump to higher levels)
+2. Electrons are **unstable** in excited state → quickly fall back
+3. As they fall, they emit photons with **specific wavelengths** → we see a specific **colour**
+4. Each metal has **unique energy level spacings** → unique colour → identification!
+
+### Flame Test Colours – Memorise These!
+
+<ImageWithText src="https://sciencenotes.org/wp-content/uploads/2022/06/Flame-Test-Colors.png" alt="Photographs of flame tests showing different metal ions producing characteristic colours: red, yellow, green, blue, and violet flames" caption="Flame test colours of various metal ions – each element produces a unique and identifiable colour when heated in a flame" width="550px" />
+
+| Metal Ion | Flame Colour | Memory Aid |
+| --- | --- | --- |
+| **Lithium (Li)** | Red (crimson) | **Li**ght a **red** candle |
+| **Sodium (Na)** | Golden yellow / intense orange | **Na** = street lamps (those yellow-orange streetlights are sodium!) |
+| **Potassium (K)** | Lilac (pink-violet) | **K** for **K**ing in purple robes |
+| **Rubidium (Rb)** | Red (reddish-violet) | |
+| **Caesium (Cs)** | Blue-violet | |
+| **Calcium (Ca)** | Orange-red | |
+| **Strontium (Sr)** | Red (scarlet) | **Sr** = **S**ca**r**let **r**ed fireworks |
+| **Barium (Ba)** | Pale green | **Ba**-**na**-**na** = green (think unripe banana) |
+| **Copper (Cu)** | Blue-green | **Cu** = **Cu**pric verdigris (Statue of Liberty's green colour!) |
+| **Lead (Pb)** | Greyish-white | |
+
+<Callout type="info" emoji="📌">
+**That's how fireworks work!** Different metal salts are added to fireworks to produce different colours:
+- **Strontium** salts → red fireworks
+- **Barium** salts → green fireworks
+- **Copper** salts → blue fireworks
+- **Sodium** salts → golden/yellow fireworks
+- Mixtures create purple, white, and multicoloured effects!
+</Callout>
+
+<Callout type="warning" emoji="⚠️">
+**Exam note:** Not all metals give visible flame colours. The flame test is most reliable for **alkali metals** (Group 1) and some **alkaline earth metals** (Group 2). Transition metals often produce less distinct or no visible colours in simple flame tests.
+
+**Why each element has a unique colour:** Because each element has a **unique electronic configuration** → unique energy gaps between levels → unique wavelengths of light emitted. This is option **A** on exam questions asking about flame test colour differences!
+</Callout>
+
+---
+
+## Summary of Key Equations
+
+<Formula>
+
+$$c = \lambda f \quad \text{(wave equation)}$$
+
+</Formula>
+
+<Formula>
+
+$$E = hf = \frac{hc}{\lambda} \quad \text{(photon energy)}$$
+
+</Formula>
+
+<Formula>
+
+$$KE = hf - h\nu_0 \quad \text{(photoelectric effect)}$$
+
+</Formula>
+
+<Formula>
+
+$$E_{photon} = E_{initial} - E_{final} \quad \text{(atomic transition energy)}$$
+
+</Formula>
+
+<Formula>
+
+$$\frac{1}{\lambda} = RZ^2\left(\frac{1}{n_f^2} - \frac{1}{n_i^2}\right) \quad \text{(Rydberg equation)}$$
+
+</Formula>
+
+<Formula>
+
+$$\lambda = \frac{h}{mv} \quad \text{(de Broglie wavelength)}$$
+
+</Formula>
+
+| Constant | Symbol | Value |
+| --- | --- | --- |
+| Speed of light | $c$ | $3.00 \times 10^8$ m/s |
+| Planck's constant | $h$ | $6.63 \times 10^{-34}$ J·s |
+| Electron mass | $m_e$ | $9.11 \times 10^{-31}$ kg |
+| Electron charge | $e$ | $1.60 \times 10^{-19}$ C |
+
+---
+
+## Vocabulary
+
+<Vocabulary title="Key Terms – LO 3">
+<Term word="Electron (الإلكترون)">A negatively charged subatomic particle that occupies orbitals around the nucleus; determines chemical behaviour.</Term>
+<Term word="Valence Electrons (إلكترونات التكافؤ)">Electrons in the outermost energy level; determine an element's chemical behaviour and bonding.</Term>
+<Term word="Core Electrons (الإلكترونات الداخلية)">Inner electrons that shield valence electrons from the full nuclear charge.</Term>
+<Term word="Quantum Numbers (الأعداد الكمية)">Four numbers (n, ℓ, mₗ, mₛ) that uniquely describe the state and location of an electron in an atom.</Term>
+<Term word="Principal Quantum Number (n)">Indicates the main energy level (shell) of an electron; n = 1, 2, 3, …</Term>
+<Term word="Angular Momentum Quantum Number (ℓ)">Indicates the shape/type of subshell (s=0, p=1, d=2, f=3).</Term>
+<Term word="Magnetic Quantum Number (mₗ)">Indicates the specific orbital within a subshell; ranges from −ℓ to +ℓ.</Term>
+<Term word="Spin Quantum Number (mₛ)">Indicates the spin direction of an electron; +½ (↑) or −½ (↓).</Term>
+<Term word="Orbital (الفلك الذري)">A region of space where an electron is most likely to be found; holds a maximum of 2 electrons.</Term>
+<Term word="Electron Configuration (التوزيع الإلكتروني)">The arrangement of electrons in an atom's orbitals, showing which subshells are occupied.</Term>
+<Term word="Aufbau Principle (مبدأ البناء التصاعدي)">Electrons fill orbitals starting from the lowest energy level first.</Term>
+<Term word="Hund's Rule (قاعدة هوند)">Electrons occupy degenerate orbitals singly (same spin) before pairing up.</Term>
+<Term word="Pauli Exclusion Principle (مبدأ باولي)">No two electrons can have the same four quantum numbers; max 2 per orbital with opposite spins.</Term>
+<Term word="Electromagnetic Spectrum (الطيف الكهرومغناطيسي)">The complete range of electromagnetic radiation, from radio waves to gamma rays.</Term>
+<Term word="Frequency (التردد)">Number of wave cycles per second; measured in Hertz (Hz).</Term>
+<Term word="Wavelength (الطول الموجي)">Distance between consecutive identical points on a wave; measured in metres.</Term>
+<Term word="Photon (الفوتون)">The smallest packet of electromagnetic energy; has energy E = hf.</Term>
+<Term word="Photoelectric Effect (الظاهرة الكهروضوئية)">Emission of electrons from a metal when light of sufficient frequency strikes it.</Term>
+<Term word="Threshold Frequency (تردد العتبة)">The minimum frequency of light needed to eject electrons from a specific metal.</Term>
+<Term word="Work Function (دالة الشغل)">The minimum energy needed to free an electron from a metal surface; φ = hν₀.</Term>
+<Term word="Ground State (الحالة المستقرة)">The lowest energy configuration of an atom; most stable state.</Term>
+<Term word="Excited State (الحالة المثارة)">A higher-energy state where an electron has absorbed energy and jumped to a higher orbital; temporary.</Term>
+<Term word="Emission (الانبعاث)">The release of a photon when an electron falls from a higher to a lower energy level.</Term>
+<Term word="Absorption (الامتصاص)">The gain of energy by an electron, causing it to jump to a higher energy level.</Term>
+<Term word="Line Spectrum (الطيف الخطي)">A spectrum of discrete wavelengths unique to each element; proves energy quantisation.</Term>
+<Term word="Flame Test (اختبار اللهب)">A technique to identify metal ions by the characteristic colour they produce in a flame.</Term>
+<Term word="Wave-Particle Duality (ازدواجية الموجة-الجسيم)">The concept that light (and matter) exhibits both wave and particle properties.</Term>
+</Vocabulary>
+
+---
+
+## Key Takeaways
+
+<KeyPoints title="What You Need to Remember">
+<Point>**Quantum numbers** are an electron's complete address: $n$ (energy level), $\ell$ (subshell shape), $m_\ell$ (specific orbital), $m_s$ (spin direction). No two electrons share all four.</Point>
+<Point>**Orbital rules:** $\ell < n$, $m_\ell$ ranges from $-\ell$ to $+\ell$, $m_s = \pm\frac{1}{2}$. If any rule is broken, the quantum number set is **invalid**.</Point>
+<Point>**Electron configuration** follows Aufbau (lowest energy first), Hund (spread out before pairing), and Pauli (max 2 per orbital, opposite spins).</Point>
+<Point>**Exceptions:** Cr = $[\text{Ar}] \, 4s^1 \, 3d^5$ and Cu = $[\text{Ar}] \, 4s^1 \, 3d^{10}$ – half-filled and fully-filled d subshells are extra stable.</Point>
+<Point>**Ions:** Remove electrons from the **outermost shell first** (4s before 3d for transition metal cations).</Point>
+<Point>**EM spectrum order:** Radio → Micro → IR → Visible → UV → X-ray → Gamma. Frequency, energy increase →. Wavelength decreases →.</Point>
+<Point>**Key equations:** $c = \lambda f$, $E = hf = hc/\lambda$, $KE = hf - \phi$ (photoelectric effect).</Point>
+<Point>**Photoelectric effect:** Depends on **frequency**, NOT intensity. Below threshold frequency, no electrons are ejected regardless of brightness.</Point>
+<Point>**Line spectra** prove energy is quantized. Each element has a unique "barcode" of spectral lines.</Point>
+<Point>**Emission:** Electron falls down → releases photon. **Absorption:** Electron jumps up → absorbs photon. Bigger energy gaps → shorter wavelength (bluer light).</Point>
+<Point>**Flame tests** work because each element's unique energy levels produce unique colours: Na = yellow, Cu = blue-green, Li/Sr = red, Ba = green, K = lilac.</Point>
+<Point>**Firework colours** come from different metal salts – each metal's electrons have unique energy level gaps, emitting light at unique wavelengths.</Point>
+</KeyPoints>
+
+---
+
+## Test Yourself
+
+<Callout type="info" emoji="📝">
+Questions sourced from STEM exams and chemistry question banks. These cover **all key concepts** – electron configuration, quantum numbers, electromagnetic spectrum, photon energy, photoelectric effect, emission, flame tests, and excited states.
+</Callout>
+
+### Concepts 1–3: Electron Configuration, Valence Numbers & Quantum Numbers
+
+<Quiz question="1. Which element has the electron configuration 1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹ 3d⁵?">
+<Choice>Zinc</Choice>
+<Choice correct>Chromium</Choice>
+<Choice>Copper</Choice>
+<Choice>Nickel</Choice>
+</Quiz>
+
+<Quiz question="2. Which electron configuration represents an atom in an excited state?">
+<Choice>1s² 2s² 2p⁶</Choice>
+<Choice>1s² 2s² 2p⁶ 3s²</Choice>
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹</Choice>
+<Choice correct>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 4p¹</Choice>
+</Quiz>
+
+<Quiz question="3. How many f orbitals have the value n = 3?">
+<Choice correct>0</Choice>
+<Choice>3</Choice>
+<Choice>5</Choice>
+<Choice>7</Choice>
+</Quiz>
+
+<Quiz question="4. Which of the following is NOT determined by the principal quantum number (n) of the electron in a hydrogen atom?">
+<Choice>The energy of the electron</Choice>
+<Choice>The minimum wavelength of light needed to remove the electron</Choice>
+<Choice>The size of the corresponding atomic orbital(s)</Choice>
+<Choice correct>The shape of the corresponding atomic orbital(s)</Choice>
+</Quiz>
+
+<Quiz question="5. How many f orbitals have n = 6?">
+<Choice>2</Choice>
+<Choice correct>7</Choice>
+<Choice>10</Choice>
+<Choice>5</Choice>
+</Quiz>
+
+<Quiz question="6. If n = 2, how many orbitals are possible?">
+<Choice>3</Choice>
+<Choice correct>4</Choice>
+<Choice>2</Choice>
+<Choice>8</Choice>
+</Quiz>
+
+<Quiz question="7. A given set of p orbitals consists of ______ orbitals.">
+<Choice>1</Choice>
+<Choice>2</Choice>
+<Choice correct>3</Choice>
+<Choice>5</Choice>
+</Quiz>
+
+<Quiz question="8. Which of the following is an incorrect designation for an atomic orbital?">
+<Choice>1s</Choice>
+<Choice>3d</Choice>
+<Choice correct>1p</Choice>
+<Choice>4f</Choice>
+</Quiz>
+
+<Quiz question="9. How many electrons in an atom can have the quantum numbers n = 3, l = 2?">
+<Choice>2</Choice>
+<Choice>5</Choice>
+<Choice correct>10</Choice>
+<Choice>18</Choice>
+</Quiz>
+
+<Quiz question="10. How many electrons can be described by the quantum numbers n = 3, l = 3, ml = 1?">
+<Choice correct>0</Choice>
+<Choice>2</Choice>
+<Choice>6</Choice>
+<Choice>10</Choice>
+</Quiz>
+
+<Quiz question="11. How many electrons can be contained in all of the orbitals with n = 4?">
+<Choice>2</Choice>
+<Choice>8</Choice>
+<Choice>18</Choice>
+<Choice correct>32</Choice>
+</Quiz>
+
+<Quiz question="12. Which of the following could NOT be a valid mₗ quantum number for a 4d orbital?">
+<Choice>2</Choice>
+<Choice>0</Choice>
+<Choice>-2</Choice>
+<Choice correct>4</Choice>
+</Quiz>
+
+<Quiz question="13. If l = 3, how many electrons can be contained in all the possible orbitals?">
+<Choice>7</Choice>
+<Choice>6</Choice>
+<Choice correct>14</Choice>
+<Choice>10</Choice>
+</Quiz>
+
+<Quiz question="14. Which of the following combinations of quantum numbers is NOT allowed?">
+<Choice correct>n = 1, l = 1, ml = 0, ms = +1/2</Choice>
+<Choice>n = 3, l = 0, ml = 0, ms = -1/2</Choice>
+<Choice>n = 2, l = 1, ml = -1, ms = +1/2</Choice>
+<Choice>n = 4, l = 3, ml = -2, ms = -1/2</Choice>
+</Quiz>
+
+<Quiz question="15. The electron configuration for the barium atom is:">
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰</Choice>
+<Choice correct>[Xe] 6s²</Choice>
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s¹</Choice>
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s²</Choice>
+</Quiz>
+
+<Quiz question="16. The complete electron configuration of tin (Sn, Z=50) is:">
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5d¹⁰ 5p²</Choice>
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4d¹⁰ 4p²</Choice>
+<Choice>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 4p⁶ 5s² 4d¹⁰ 5d¹⁰ 5p²</Choice>
+<Choice correct>1s² 2s² 2p⁶ 3s² 3p⁶ 4s² 3d¹⁰ 4p⁶ 5s² 4d¹⁰ 5p²</Choice>
+</Quiz>
+
+<Quiz question="17. Which of the following best describes an orbital?">
+<Choice>Space where electrons are unlikely to be found</Choice>
+<Choice>Space containing electrons, protons, and neutrons</Choice>
+<Choice correct>The space in an atom where an electron is most likely to be found</Choice>
+<Choice>Small, walled spheres that contain electrons</Choice>
+</Quiz>
+
+<Quiz question="18. An element has the electron configuration [Kr] 5s² 4d¹⁰ 5p². The element is a(n):">
+<Choice>Nonmetal</Choice>
+<Choice>Transition element</Choice>
+<Choice correct>Metal</Choice>
+<Choice>Lanthanide</Choice>
+</Quiz>
+
+<Quiz question="19. An element with the electron configuration [Xe] 6s² 4f¹⁴ 5d⁷ would belong to which class?">
+<Choice correct>Transition elements</Choice>
+<Choice>Alkaline earth elements</Choice>
+<Choice>Halogens</Choice>
+<Choice>Rare earth elements</Choice>
+</Quiz>
+
+<Quiz question="20. If n = 3 and ℓ = 1, the possible value of mₗ will be:">
+<Choice>-3</Choice>
+<Choice>-1/2</Choice>
+<Choice correct>0</Choice>
+<Choice>+2</Choice>
+</Quiz>
+
+<Quiz question="21. What is the number of unpaired electrons in an atom with atomic number 42 (Mo)?">
+<Choice>2</Choice>
+<Choice>4</Choice>
+<Choice correct>6</Choice>
+<Choice>5</Choice>
+</Quiz>
+
+<Quiz question="22. An atom has the electronic configuration: [Xe] 6s² 4f¹⁴ 5d¹⁰ 6p³. How many valence electrons does it have?">
+<Choice>3</Choice>
+<Choice correct>5</Choice>
+<Choice>29</Choice>
+<Choice>83</Choice>
+</Quiz>
+
+<Quiz question="23. The 22nd electron in an atom of iron (₂₆Fe) has the quantum numbers:">
+<Choice>3, 2, 1, +1/2</Choice>
+<Choice>3, 1, 0, +1/2</Choice>
+<Choice>4, 0, 0, +1/2</Choice>
+<Choice correct>3, 2, 0, +1/2</Choice>
+</Quiz>
+
+### Concepts 4–12: EM Spectrum, Frequency, Wavelength, Photons, Emission & Flame Tests
+
+<Quiz question="24. When ignited, a uranium compound burns with a green flame. The wavelength of the light given off by this flame is greater than that of:">
+<Choice>Red light</Choice>
+<Choice>Infrared light</Choice>
+<Choice>Radio waves</Choice>
+<Choice correct>Ultraviolet light</Choice>
+</Quiz>
+
+<Quiz question="25. Which form of electromagnetic radiation has the longest wavelengths?">
+<Choice>Gamma rays</Choice>
+<Choice>Microwaves</Choice>
+<Choice correct>Radio waves</Choice>
+<Choice>X-rays</Choice>
+</Quiz>
+
+<Quiz question="26. Which of the following frequencies corresponds to light with the longest wavelength?">
+<Choice>3.00 x 10¹³ s⁻¹</Choice>
+<Choice>4.12 x 10⁵ s⁻¹</Choice>
+<Choice>8.50 x 10²⁰ s⁻¹</Choice>
+<Choice correct>3.20 x 10⁹ s⁻¹</Choice>
+</Quiz>
+
+<Quiz question="27. Which of the following are incorrectly paired?">
+<Choice>Wavelength – λ</Choice>
+<Choice>Frequency – ν</Choice>
+<Choice>Speed of light – c</Choice>
+<Choice>Hertz – s⁻¹</Choice>
+<Choice correct>X-rays – shortest wavelength</Choice>
+</Quiz>
+
+<Quiz question="28. When a strontium salt is ignited, it burns with a red flame. The frequency of the light is greater than:">
+<Choice>Yellow light</Choice>
+<Choice correct>Infrared light</Choice>
+<Choice>Ultraviolet light</Choice>
+<Choice>X-rays</Choice>
+</Quiz>
+
+<Quiz question="29. Green light has a wavelength of 543 nm. The energy of a photon of this light is:">
+<Choice>1.08 x 10⁻³¹ J</Choice>
+<Choice>5.43 x 10⁻⁷ J</Choice>
+<Choice correct>3.66 x 10⁻¹⁹ J</Choice>
+<Choice>5.52 x 10¹⁴ J</Choice>
+</Quiz>
+
+<Quiz question="30. Which type of radiation has the shortest wavelength, greatest energy, and highest frequency?">
+<Choice correct>Ultraviolet radiation</Choice>
+<Choice>Infrared radiation</Choice>
+<Choice>Visible red light</Choice>
+<Choice>Visible blue light</Choice>
+</Quiz>
+
+<Quiz question="31. What is the energy of a photon of blue light that has a wavelength of 453 nm?">
+<Choice>4.53 x 10⁻⁷ J</Choice>
+<Choice correct>4.39 x 10⁻¹⁹ J</Choice>
+<Choice>6.62 x 10¹⁴ J</Choice>
+<Choice>9.00 x 10⁻³² J</Choice>
+</Quiz>
+
+<Quiz question="32. How many of these statements is/are incorrect? (i) E = mc² shows energy has mass. (ii) EM radiation is a stream of photons. (iii) EM radiation exhibits wave properties. (iv) Energy can only occur in discrete quanta.">
+<Choice>0</Choice>
+<Choice correct>1</Choice>
+<Choice>2</Choice>
+<Choice>3</Choice>
+</Quiz>
+
+<Quiz question="33. Which observation most clearly supports: 'Electrons have wave properties'?">
+<Choice>Emission spectrum of hydrogen</Choice>
+<Choice>The photoelectric effect</Choice>
+<Choice>Scattering of alpha particles by metal foil</Choice>
+<Choice correct>Diffraction of cathode rays</Choice>
+</Quiz>
+
+<Quiz question="34. Which observation most clearly supports: 'Electrons in atoms have quantized energies'?">
+<Choice correct>Emission spectrum of hydrogen</Choice>
+<Choice>The photoelectric effect</Choice>
+<Choice>Scattering of alpha particles by metal foil</Choice>
+<Choice>Diffraction of cathode rays</Choice>
+</Quiz>
+
+<Quiz question="35. When a hydrogen electron makes a transition from n = 3 to n = 1, which statements are true? (I) Energy is emitted. (II) Energy is absorbed. (III) The electron loses energy. (IV) The electron gains energy.">
+<Choice>I, IV</Choice>
+<Choice correct>I, III</Choice>
+<Choice>II, III</Choice>
+<Choice>II, IV</Choice>
+</Quiz>
+
+<Quiz question="36. Which statements are true? (III) The energy of EM radiation increases as frequency increases. (IV) A hydrogen electron at n = 4 can go to n = 2 by emitting EM radiation. (V) Frequency and wavelength are inversely proportional.">
+<Choice>II, III, IV</Choice>
+<Choice>III, V</Choice>
+<Choice>I, II, III</Choice>
+<Choice correct>III, IV, V</Choice>
+</Quiz>
+
+<Quiz question="37. Which explains why different metals produce different colours during a flame test?">
+<Choice correct>Each metal has a unique electronic configuration</Choice>
+<Choice>Each metal was isolated from a different place</Choice>
+<Choice>Each metal has a unique salt bond</Choice>
+<Choice>Each metal has a unique number of extra electrons</Choice>
+</Quiz>
+
+<Quiz question="38. A line in the spectrum of atomic mercury has a wavelength of 254 nm. The frequency of this light is:">
+<Choice>8.47 x 10⁻¹⁶ s⁻¹</Choice>
+<Choice>7.82 x 10⁻¹⁹ s⁻¹</Choice>
+<Choice correct>1.18 x 10¹⁵ s⁻¹</Choice>
+<Choice>76.1 s⁻¹</Choice>
+</Quiz>
+
+<Quiz question="39. Red light has the frequency 4.567 x 10¹⁴ Hz. Its energy is: (h = 6.63 x 10⁻³⁴ J·s)">
+<Choice>4.04 x 10⁻¹⁹ J</Choice>
+<Choice>2.1 x 10⁻¹⁸ J</Choice>
+<Choice correct>3.03 x 10⁻¹⁹ J</Choice>
+<Choice>5 x 10⁻¹⁵ J</Choice>
+</Quiz>
+
+
+<FeedbackForm />

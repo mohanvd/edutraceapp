@@ -1,0 +1,486 @@
+/* MDX Layout Styles */
+
+.mdx-loading-spacer {
+    min-height: 80vh;
+}
+
+.mdx-fade-in {
+    animation: mdxFadeIn 0.3s ease-in;
+}
+
+@keyframes mdxFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+.mdx-wrapper {
+    min-height: 100vh;
+    background: transparent;
+    color: var(--ds-text-secondary);
+    padding: var(--ds-space-5) var(--ds-space-6) var(--ds-space-12) var(--ds-space-6);
+    padding-left: max(24px, calc(50% - 45rem + var(--sidebar-width, 0px) + 24px));
+    padding-right: max(24px, calc(50% - 45rem));
+}
+
+body.sidebar-collapsed .mdx-wrapper,
+body:not([style*='--sidebar-width: 240px']) .mdx-wrapper {
+    padding-left: max(48px, calc(50% - 50rem));
+    padding-right: max(48px, calc(50% - 50rem));
+}
+
+.mdx-wrapper main {
+    max-width: var(--content-max-width);
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (max-width: 1024px) {
+    .mdx-wrapper {
+        padding-left: var(--ds-space-6);
+        padding-right: var(--ds-space-6);
+    }
+}
+
+/* Headings */
+.mdx-wrapper h1 {
+    font-size: var(--ds-font-size-4xl);
+    font-weight: var(--font-bold);
+    color: #ffffff;
+    margin: var(--ds-space-8) 0 var(--ds-space-4) 0;
+    line-height: var(--leading-tight);
+}
+
+.mdx-wrapper h2 {
+    font-size: var(--ds-font-size-3xl);
+    font-weight: 600;
+    color: #ffffff;
+    margin: var(--ds-space-7) 0 var(--ds-space-4) 0;
+    padding-bottom: var(--ds-space-2);
+    border-bottom: 1px solid var(--ds-border-default);
+}
+
+.mdx-wrapper h3 {
+    font-size: var(--ds-font-size-2xl);
+    font-weight: 600;
+    color: var(--ds-text-primary);
+    margin: var(--ds-space-6) 0 var(--ds-space-3) 0;
+}
+
+.mdx-wrapper h4 {
+    font-size: var(--ds-font-size-xl);
+    font-weight: 600;
+    color: var(--ds-text-secondary);
+    margin: var(--ds-space-5) 0 var(--ds-space-2) 0;
+}
+
+/* Paragraphs and text */
+.mdx-wrapper p {
+    margin: var(--ds-space-4) 0;
+    line-height: var(--leading-relaxed);
+    color: var(--ds-text-tertiary);
+}
+
+.mdx-wrapper strong {
+    font-weight: 600;
+    color: var(--ds-text-primary);
+}
+
+/* Lists */
+.mdx-wrapper ul,
+.mdx-wrapper ol {
+    margin: var(--ds-space-4) 0;
+    padding-left: var(--ds-space-6);
+    line-height: var(--leading-loose);
+}
+
+.mdx-wrapper li {
+    margin: var(--ds-space-2) 0;
+    color: var(--ds-text-tertiary);
+}
+
+.mdx-wrapper ul li::marker {
+    color: var(--ds-text-tertiary);
+}
+
+/* Code */
+.mdx-wrapper code {
+    background: var(--ds-bg-tertiary);
+    color: var(--ds-color-primary);
+    padding: var(--ds-space-1) var(--ds-space-2);
+    border-radius: var(--ds-radius-sm);
+    font-size: 0.9em;
+    font-family: var(--font-mono);
+}
+
+/* Only style inline code, not code blocks */
+.mdx-wrapper code {
+    background: rgba(110, 118, 129, 0.2);
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+    font-family: 'Fira Code', 'JetBrains Mono', 'Consolas', monospace;
+    color: #e6edf3;
+}
+
+/* Don't style code inside pre tags */
+.mdx-wrapper pre code,
+.codesnap-wrapper code {
+    background: transparent;
+    padding: 0;
+    border-radius: 0;
+    font-size: inherit;
+}
+
+/* Code Blocks Responsive */
+.mdx-wrapper pre {
+    max-width: 100%;
+    overflow-x: auto;
+    border-radius: var(--ds-radius-lg);
+    margin: var(--ds-space-6) 0;
+    padding: var(--ds-space-4);
+    background: #1e1e1e;
+    /* Fallback background */
+}
+
+.mdx-wrapper pre code {
+    white-space: pre;
+    /* Ensure code doesn't wrap weirdly unless intended */
+    word-break: normal;
+    overflow-wrap: normal;
+}
+
+/* Syntax Highlighting - VS Code Dark+ Theme */
+.mdx-wrapper pre code .token.comment,
+.mdx-wrapper pre code .token.prolog,
+.mdx-wrapper pre code .token.doctype,
+.mdx-wrapper pre code .token.cdata {
+    color: #6a9955;
+    font-style: italic;
+}
+
+.mdx-wrapper pre code .token.punctuation {
+    color: #d4d4d4;
+}
+
+.mdx-wrapper pre code .token.property,
+.mdx-wrapper pre code .token.tag,
+.mdx-wrapper pre code .token.boolean,
+.mdx-wrapper pre code .token.number,
+.mdx-wrapper pre code .token.constant,
+.mdx-wrapper pre code .token.symbol,
+.mdx-wrapper pre code .token.deleted {
+    color: #b5cea8;
+}
+
+.mdx-wrapper pre code .token.selector,
+.mdx-wrapper pre code .token.attr-name,
+.mdx-wrapper pre code .token.string,
+.mdx-wrapper pre code .token.char,
+.mdx-wrapper pre code .token.builtin,
+.mdx-wrapper pre code .token.inserted {
+    color: #ce9178;
+}
+
+.mdx-wrapper pre code .token.operator,
+.mdx-wrapper pre code .token.entity,
+.mdx-wrapper pre code .token.url,
+.mdx-wrapper pre code .language-css .token.string,
+.mdx-wrapper pre code .style .token.string {
+    color: #d4d4d4;
+}
+
+.mdx-wrapper pre code .token.atrule,
+.mdx-wrapper pre code .token.attr-value,
+.mdx-wrapper pre code .token.keyword {
+    color: #c586c0;
+}
+
+.mdx-wrapper pre code .token.function,
+.mdx-wrapper pre code .token.class-name {
+    color: #dcdcaa;
+}
+
+.mdx-wrapper pre code .token.regex,
+.mdx-wrapper pre code .token.important,
+.mdx-wrapper pre code .token.variable {
+    color: #4fc1ff;
+}
+
+/* MDX specific tokens */
+.mdx-wrapper pre code .token.tag.script,
+.mdx-wrapper pre code .token.tag.style {
+    color: #569cd6;
+}
+
+.mdx-wrapper pre code .token.parameter {
+    color: #9cdcfe;
+}
+
+/* Language Label */
+.mdx-wrapper pre.language-javascript::before {
+    content: 'JavaScript';
+}
+
+.mdx-wrapper pre.language-js::before {
+    content: 'JS';
+}
+
+.mdx-wrapper pre.language-typescript::before {
+    content: 'TypeScript';
+}
+
+.mdx-wrapper pre.language-ts::before {
+    content: 'TS';
+}
+
+.mdx-wrapper pre.language-jsx::before {
+    content: 'JSX';
+}
+
+.mdx-wrapper pre.language-tsx::before {
+    content: 'TSX';
+}
+
+.mdx-wrapper pre.language-python::before {
+    content: 'Python';
+}
+
+.mdx-wrapper pre.language-java::before {
+    content: 'Java';
+}
+
+.mdx-wrapper pre.language-cpp::before,
+.mdx-wrapper pre.language-c\\  + \\ + ::before {
+    content: 'C++';
+}
+
+.mdx-wrapper pre.language-css::before {
+    content: 'CSS';
+}
+
+.mdx-wrapper pre.language-html::before {
+    content: 'HTML';
+}
+
+.mdx-wrapper pre.language-json::before {
+    content: 'JSON';
+}
+
+.mdx-wrapper pre.language-bash::before,
+.mdx-wrapper pre.language-shell::before {
+    content: 'Shell';
+}
+
+.mdx-wrapper pre.language-sql::before {
+    content: 'SQL';
+}
+
+.mdx-wrapper pre.language-markdown::before,
+.mdx-wrapper pre.language-md::before {
+    content: 'Markdown';
+}
+
+.mdx-wrapper pre.language-mdx::before {
+    content: 'MDX';
+}
+
+.mdx-wrapper pre.language-yaml::before,
+.mdx-wrapper pre.language-yml::before {
+    content: 'YAML';
+}
+
+/* Math equations */
+.mdx-wrapper .katex {
+    font-size: 1.1em;
+    color: var(--ds-text-primary);
+}
+
+.mdx-wrapper .katex-display {
+    margin: var(--ds-space-6) 0;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+/* Links */
+.mdx-wrapper a {
+    color: var(--ds-color-primary);
+    text-decoration: none;
+    transition: color var(--ds-transition-base);
+}
+
+.mdx-wrapper a:hover {
+    color: var(--color-info);
+    text-decoration: underline;
+}
+
+/* Tables */
+.mdx-wrapper table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: var(--ds-space-6) 0;
+    background: rgba(13, 17, 23, 0.6);
+    border: 1px solid rgba(48, 54, 61, 0.5);
+    border-radius: var(--ds-radius-md);
+    overflow: hidden;
+}
+
+.mdx-wrapper th,
+.mdx-wrapper td {
+    padding: var(--ds-space-3) var(--ds-space-4);
+    text-align: left;
+    border-bottom: 1px solid rgba(48, 54, 61, 0.5);
+}
+
+.mdx-wrapper th {
+    background: rgba(22, 27, 34, 0.8);
+    font-weight: 600;
+    color: rgba(201, 209, 217, 0.95);
+    font-size: var(--ds-font-size-sm);
+}
+
+.mdx-wrapper td {
+    color: rgba(139, 148, 158, 0.95);
+    font-size: var(--ds-font-size-sm);
+}
+
+.mdx-wrapper tbody tr:hover {
+    background: rgba(22, 27, 34, 0.4);
+}
+
+.mdx-wrapper tbody tr:last-child td {
+    border-bottom: none;
+}
+
+/* Blockquotes */
+.mdx-wrapper blockquote {
+    border-left: 4px solid var(--ds-color-primary);
+    padding-left: var(--ds-space-4);
+    margin: var(--ds-space-6) 0;
+    color: var(--ds-text-tertiary);
+    font-style: italic;
+}
+
+/* Horizontal rule */
+.mdx-wrapper hr {
+    border: none;
+    border-top: 1px solid var(--ds-border-default);
+    margin: var(--ds-space-8) 0;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .mdx-wrapper {
+        padding: var(--ds-space-4) var(--ds-space-4) var(--ds-space-20) var(--ds-space-4) !important;
+        /* Added bottom padding for mobile nav/AI button */
+    }
+
+    .mdx-wrapper h1 {
+        font-size: var(--ds-font-size-2xl);
+        margin-top: var(--ds-space-6);
+    }
+
+    .mdx-wrapper h2 {
+        font-size: var(--ds-font-size-2xl);
+        margin-top: var(--ds-space-5);
+    }
+
+    .mdx-wrapper h3 {
+        font-size: var(--ds-font-size-xl);
+        margin-top: var(--ds-space-4);
+    }
+
+    .mdx-wrapper h4 {
+        font-size: var(--ds-font-size-lg);
+    }
+
+    .mdx-wrapper p,
+    .mdx-wrapper li {
+        font-size: var(--ds-font-size-base);
+        line-height: var(--leading-relaxed);
+    }
+
+    .mdx-wrapper ul,
+    .mdx-wrapper ol {
+        padding-left: var(--ds-space-5);
+    }
+
+    .mdx-wrapper img {
+        max-width: 100%;
+        height: auto;
+        border-radius: var(--ds-radius-lg);
+        margin: var(--ds-space-4) 0;
+    }
+
+    .mdx-wrapper table {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        border-collapse: collapse;
+        margin: var(--ds-space-4) 0;
+    }
+
+    .mdx-wrapper th,
+    .mdx-wrapper td {
+        min-width: 120px;
+        /* Ensure columns don't get too squished */
+        padding: var(--ds-space-3);
+        border: 1px solid var(--ds-border-default);
+        text-align: left;
+    }
+
+    blockquote {
+        margin: var(--ds-space-4) 0;
+        padding: var(--ds-space-2) var(--ds-space-4);
+        border-left: 4px solid var(--ds-color-primary);
+        background: var(--ds-color-primary-light);
+        border-radius: 0 var(--ds-radius-sm) var(--ds-radius-sm) 0;
+    }
+}
+
+/* Practical page content */
+.practical-page-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: var(--ds-text-secondary);
+}
+
+.practical-page-content p {
+    margin-bottom: var(--ds-space-4);
+}
+
+.practical-page-content .video-embed {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    margin: var(--ds-space-6) 0;
+    border-radius: var(--ds-radius-lg);
+    overflow: hidden;
+    background: var(--ds-bg-tertiary);
+}
+
+.practical-page-content .video-embed iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Reduce animations for users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+    .mdx-fade-in {
+        animation: none;
+    }
+
+    .mdx-wrapper a {
+        transition: none;
+    }
+}

@@ -1,0 +1,224 @@
+/* ===================================
+   EduTrace Embed Mode Styles
+   Renders LO content in a clean embeddable
+   frame with persistent EduTrace branding.
+   =================================== */
+
+/* ========== HIDE SITE CHROME ========== */
+body:has([data-embed-mode]) .nav-navbar,
+body:has([data-embed-mode]) .sidebar-container,
+body:has([data-embed-mode]) .sidebar-toggleBtn,
+body:has([data-embed-mode]) .sidebar-collapseBtn,
+body:has([data-embed-mode]) .mobile-bottom-nav,
+body:has([data-embed-mode]) .ai-fab,
+body:has([data-embed-mode]) .ai-window,
+body:has([data-embed-mode]) .cmd-overlay,
+body:has([data-embed-mode]) .cmd-modal,
+body:has([data-embed-mode]) .skip-link,
+body:has([data-embed-mode]) .offline-indicator,
+body:has([data-embed-mode]) .pwa-update-prompt {
+    display: none !important;
+}
+
+body:has([data-embed-mode]) .app-main {
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+/* ========== EMBED CONTAINER ========== */
+.embed-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--ds-bg-primary, #0a0a0a);
+}
+
+/* ========== TOP BAR ========== */
+.embed-topbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    min-height: 44px;
+    flex-shrink: 0;
+}
+
+.embed-topbar-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 600;
+    font-size: 14px;
+    min-width: 0;
+}
+
+.embed-topbar-brand:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+.embed-topbar-logo {
+    width: 24px;
+    height: 24px;
+    border-radius: 6px;
+    flex-shrink: 0;
+}
+
+.embed-topbar-title {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13px;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.embed-topbar-cta {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 14px;
+    background: rgba(66, 133, 244, 0.12);
+    color: var(--ds-color-primary);
+    border: 1px solid rgba(66, 133, 244, 0.25);
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: color 0.2s ease, background-color 0.2s ease, border-color 0.2s ease, opacity 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+}
+
+.embed-topbar-cta:hover {
+    background: rgba(66, 133, 244, 0.22);
+    color: #5a95f5;
+    text-decoration: none;
+    border-color: rgba(66, 133, 244, 0.4);
+}
+
+.embed-topbar-cta svg {
+    width: 12px;
+    height: 12px;
+}
+
+/* ========== CONTENT AREA ========== */
+.embed-content {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+/* Override mdx-wrapper padding in embed mode */
+body:has([data-embed-mode]) .mdx-wrapper {
+    padding: 12px 24px 60px 24px !important;
+    min-height: auto;
+    transition: none;
+}
+
+body:has([data-embed-mode]) .mdx-wrapper main {
+    max-width: 100%;
+}
+
+/* ========== BOTTOM WATERMARK ========== */
+.embed-watermark {
+    position: sticky;
+    bottom: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #0d1117 0%, #161b22 100%);
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    flex-shrink: 0;
+}
+
+.embed-watermark a {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 12px;
+    transition: color 0.2s ease;
+}
+
+.embed-watermark a:hover {
+    color: rgba(255, 255, 255, 0.75);
+    text-decoration: none;
+}
+
+.embed-watermark-logo {
+    width: 16px;
+    height: 16px;
+    border-radius: 4px;
+    opacity: 0.5;
+}
+
+.embed-watermark a:hover .embed-watermark-logo {
+    opacity: 0.8;
+}
+
+.embed-watermark-divider {
+    color: rgba(255, 255, 255, 0.15);
+}
+
+/* ========== RESPONSIVE ========== */
+@media (max-width: 640px) {
+    .embed-topbar {
+        padding: 6px 12px;
+    }
+
+    .embed-topbar-title {
+        display: none;
+    }
+
+    .embed-topbar-cta {
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+
+    body:has([data-embed-mode]) .mdx-wrapper {
+        padding: 8px 12px 60px 12px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .embed-topbar-brand span:first-of-type {
+        font-size: 12px;
+    }
+}
+
+/* ========== ANTI-REMOVAL PROTECTION ========== */
+/* Tie content visibility to watermark presence */
+.embed-container:not(:has(.embed-watermark)) .embed-content,
+.embed-container:not(:has(.embed-topbar)) .embed-content {
+    filter: blur(20px);
+    pointer-events: none;
+    user-select: none;
+}
+
+/* ========== PRINT STYLES ========== */
+@media print {
+    .embed-topbar,
+    .embed-watermark {
+        position: relative;
+    }
+
+    .embed-content {
+        overflow: visible;
+    }
+}

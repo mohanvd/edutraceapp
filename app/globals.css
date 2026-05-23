@@ -1,0 +1,637 @@
+/* Primary typefaces loaded via next/font in app/layout.tsx (DM Sans, JetBrains Mono, Newsreader) */
+
+/*
+ * Global CSS load order (app/layout.tsx):
+ *   1. globals.css (this file → design-system via @import)
+ *   2. styles/components.css
+ *   3. styles/micro-interactions.css
+ *   4. components/ui/Skeleton/skeleton.css
+ * Feature routes add their own CSS; prefer --ds-* tokens and @/app/styles/* for shared patterns.
+ */
+
+/* Design System Import */
+@import './styles/design-system.css';
+
+/* ===================================
+   EduTrace - Global Styles v3.0
+   Variables & Reset Only
+   Component styles in components.css
+   =================================== */
+
+/* ==================== DESIGN TOKENS ==================== */
+/* Legacy aliases - point to canonical --ds-* tokens in design-system.css */
+:root {
+    /* ===== LAYOUT ===== */
+    --navbar-height: var(--ds-navbar-height);
+    --navbar-height-mobile: var(--ds-navbar-height-mobile);
+    --mobile-nav-height: var(--ds-mobile-nav-height);
+    --sidebar-width: var(--ds-sidebar-width);
+    --container-xs: var(--ds-container-xs);
+    --container-sm: var(--ds-container-sm);
+    --container-md: var(--ds-container-md);
+    --container-lg: var(--ds-container-lg);
+    --container-xl: var(--ds-container-xl);
+    --container-max: var(--ds-container-xl);
+    --container-focused: var(--ds-container-sm);
+    --content-max-width: var(--ds-container-xl);
+    --touch-target-min: var(--ds-touch-target-min);
+
+    /* ===== COLORS - Legacy Aliases ===== */
+    --color-bg-primary: var(--ds-bg-primary);
+    --color-bg-secondary: var(--ds-bg-secondary);
+    --color-bg-tertiary: var(--ds-bg-tertiary);
+    --color-bg-elevated: var(--ds-bg-elevated);
+    --color-bg-hover: var(--ds-bg-hover);
+    --color-bg-active: var(--ds-bg-active);
+
+    --color-text-primary: var(--ds-text-primary);
+    --color-text-secondary: var(--ds-text-secondary);
+    --color-text-tertiary: var(--ds-text-tertiary);
+    --color-text-quaternary: var(--ds-text-quaternary);
+    --color-text-muted: var(--ds-text-muted);
+
+    --color-border-default: var(--ds-border-default);
+    --color-border-subtle: var(--ds-border-subtle);
+    --color-border-emphasis: var(--ds-border-emphasis);
+    --color-border-strong: var(--ds-border-strong);
+    --color-border-focus: var(--ds-border-focus);
+
+    /* Primary (Indigo) */
+    --color-primary: var(--ds-color-primary);
+    --color-primary-hover: var(--ds-color-primary-hover);
+    --color-primary-active: var(--ds-color-primary-active);
+    --color-primary-bg: var(--ds-color-primary-light);
+    --color-primary-bg-hover: rgba(66, 133, 244, 0.15);
+    --color-primary-border: var(--ds-color-primary-border);
+
+    /* Accent */
+    --color-accent: var(--ds-color-accent);
+    --color-accent-hover: var(--ds-color-accent-hover);
+
+    /* Success */
+    --color-success: var(--ds-color-success);
+    --color-success-hover: var(--ds-color-success-hover);
+    --color-success-bg: var(--ds-color-success-light);
+    --color-success-border: var(--ds-color-success-border);
+
+    /* Warning */
+    --color-warning: var(--ds-color-warning);
+    --color-warning-hover: var(--ds-color-warning-hover);
+    --color-warning-bg: var(--ds-color-warning-light);
+    --color-warning-border: var(--ds-color-warning-border);
+
+    /* Danger */
+    --color-danger: var(--ds-color-error);
+    --color-danger-hover: var(--ds-color-error-hover);
+    --color-danger-bg: var(--ds-color-error-light);
+    --color-danger-border: var(--ds-color-error-border);
+
+    /* Info */
+    --color-info: var(--ds-color-info);
+    --color-info-hover: var(--ds-color-info-hover);
+    --color-info-bg: var(--ds-color-info-light);
+    --color-info-border: var(--ds-color-info-border);
+
+    /* Purple */
+    --color-purple: var(--ds-color-purple);
+    --color-purple-hover: var(--ds-color-purple-hover);
+    --color-purple-bg: var(--ds-color-purple-light);
+    --color-purple-border: var(--ds-color-purple-border);
+
+    /* Gradient Accents */
+    --gradient-primary: var(--ds-gradient-primary);
+    --gradient-success: var(--ds-gradient-success);
+    --gradient-hero: var(--ds-gradient-hero);
+
+    /* ===== SPACING - Legacy Aliases ===== */
+    --space-0: 0;
+    --space-1: var(--ds-space-1);
+    --space-2: var(--ds-space-2);
+    --space-3: var(--ds-space-3);
+    --space-4: var(--ds-space-4);
+    --space-5: var(--ds-space-5);
+    --space-6: var(--ds-space-6);
+    --space-8: var(--ds-space-8);
+    --space-10: var(--ds-space-10);
+    --space-12: var(--ds-space-12);
+    --space-16: var(--ds-space-16);
+    --space-20: var(--ds-space-20);
+
+    /* ===== TYPOGRAPHY - Legacy Aliases ===== */
+    --font-sans: var(--ds-font-sans);
+    --font-mono: var(--ds-font-mono);
+
+    /* Font sizes (rem - canonical values from design-system.css) */
+    --text-xs: var(--ds-font-size-xs);
+    --text-sm: var(--ds-font-size-sm);
+    --text-base: var(--ds-font-size-base);
+    --text-md: var(--ds-font-size-md);
+    --text-lg: var(--ds-font-size-lg);
+    --text-xl: var(--ds-font-size-xl);
+    --text-2xl: var(--ds-font-size-2xl);
+    --text-3xl: var(--ds-font-size-3xl);
+    --text-4xl: var(--ds-font-size-4xl);
+    --text-5xl: var(--ds-font-size-5xl);
+
+    /* Font weights */
+    --font-normal: var(--ds-font-normal);
+    --font-medium: var(--ds-font-medium);
+    --font-semibold: var(--ds-font-semibold);
+    --font-bold: var(--ds-font-bold);
+
+    /* Line heights */
+    --leading-none: var(--ds-leading-none);
+    --leading-tight: var(--ds-leading-tight);
+    --leading-snug: var(--ds-leading-snug);
+    --leading-normal: var(--ds-leading-normal);
+    --leading-relaxed: var(--ds-leading-relaxed);
+    --leading-loose: var(--ds-leading-loose);
+
+    /* Letter spacing */
+    --tracking-tighter: var(--ds-tracking-tighter);
+    --tracking-tight: var(--ds-tracking-tight);
+    --tracking-normal: var(--ds-tracking-normal);
+    --tracking-wide: var(--ds-tracking-wide);
+    --tracking-wider: var(--ds-tracking-wider);
+
+    /* ===== TRANSITIONS - Legacy Aliases ===== */
+    --ease-default: var(--ds-ease-default);
+    --ease-in: var(--ds-ease-in);
+    --ease-out: var(--ds-ease-out);
+    --ease-in-out: var(--ds-ease-in-out);
+    --ease-bounce: var(--ds-ease-bounce);
+    --ease-apple: var(--ds-ease-default);
+    --ease-spring: var(--ds-ease-spring);
+
+    --transition-fast: 0.15s var(--ds-ease-default);
+    --transition-base: 0.2s var(--ds-ease-default);
+    --transition-slow: 0.3s var(--ds-ease-default);
+    --transition-slower: 0.4s var(--ds-ease-default);
+
+    /* Motion */
+    --motion-fade: var(--ds-motion-fade);
+    --motion-slide: var(--ds-motion-slide);
+    --motion-scale: var(--ds-motion-scale);
+    --motion-bounce: var(--ds-motion-bounce);
+
+    /* ===== Z-INDEX - Legacy Aliases ===== */
+    --z-dropdown: var(--ds-z-dropdown);
+    --z-sticky: var(--ds-z-sticky);
+    --z-fixed: var(--ds-z-fixed);
+    --z-modal-backdrop: var(--ds-z-modal-backdrop);
+    --z-modal: var(--ds-z-modal);
+    --z-popover: var(--ds-z-popover);
+    --z-tooltip: var(--ds-z-tooltip);
+    --z-toast: var(--ds-z-toast);
+    --z-max: var(--ds-z-max);
+}
+
+/* ==================== RESET ==================== */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust: 100%;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    /* Disable floating/particle animations */
+    .landing-page [style*='animation'] {
+        animation: none !important;
+    }
+}
+
+/* Focus visibility for interactive elements */
+:where(a, button, input, textarea, select, summary, [role='button'], [tabindex]):focus-visible {
+    outline: none;
+    border-color: var(--ds-border-focus);
+}
+
+::selection {
+    background: var(--ds-color-primary-light);
+    color: var(--ds-text-primary);
+}
+
+body {
+    /* Sidebar width - set dynamically by SidebarWrapper */
+    --sidebar-width: 0px;
+
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+    background-color: var(--ds-bg-primary);
+    color: var(--ds-text-primary);
+    min-height: 100vh;
+    line-height: var(--leading-normal);
+    font-size: var(--text-base);
+    overflow-x: hidden;
+}
+
+/* ==================== SCROLLBAR ==================== */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(250, 250, 250, 0.12);
+    border-radius: 4px;
+    border: 2px solid transparent;
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(250, 250, 250, 0.2);
+    background-clip: padding-box;
+}
+
+::-webkit-scrollbar-corner {
+    background: transparent;
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(250, 250, 250, 0.12) transparent;
+}
+
+/* ==================== FOCUS - Enhanced Visibility ==================== */
+
+/* ==================== BASE ELEMENTS ==================== */
+a {
+    color: inherit;
+    text-decoration: none;
+    transition: color var(--transition-base);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: var(--ds-font-serif-display);
+    font-weight: var(--font-semibold);
+    line-height: var(--leading-tight);
+    letter-spacing: var(--tracking-tight);
+    color: var(--ds-text-primary);
+}
+
+h1 {
+    font-size: var(--text-4xl);
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
+}
+
+h5 {
+    font-size: var(--text-lg);
+}
+
+h6 {
+    font-size: var(--text-md);
+}
+
+p {
+    line-height: var(--leading-relaxed);
+    color: var(--ds-text-secondary);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+code,
+pre {
+    font-family: var(--font-mono);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    background: transparent;
+    transition:
+        color var(--transition-base),
+        background-color var(--transition-base),
+        border-color var(--transition-base);
+}
+
+button:active:not(:disabled) {
+    transform: scale(0.97);
+}
+
+/* ==================== GLOBAL FORM RESET ==================== */
+input,
+textarea,
+select {
+    font-family: inherit;
+    font-size: var(--text-base);
+    color: var(--ds-text-primary);
+}
+
+input::placeholder,
+textarea::placeholder {
+    color: var(--ds-text-muted);
+}
+
+input:disabled,
+textarea:disabled,
+select:disabled {
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
+/* ==================== MAIN CONTENT LAYOUT ==================== */
+.app-main {
+    padding-top: var(--navbar-height);
+    min-height: 100vh;
+}
+
+/* Mobile bottom padding to prevent content from being hidden behind bottom nav */
+@media (max-width: 768px) {
+    .app-main {
+        padding-bottom: calc(
+            var(--ds-mobile-nav-height) + env(safe-area-inset-bottom, 0px) + var(--ds-space-4)
+        );
+    }
+}
+
+/* Landing page - no top padding, starts from top */
+.app-main:has(.landing-page) {
+    padding-top: 0;
+}
+
+.landing-page {
+    padding-top: var(--navbar-height);
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    /* Hide navigation and interactive elements */
+    .nav-navbar,
+    .sidebar-container,
+    .sidebar-collapseBtn,
+    .sidebar-toggleBtn,
+    .mobile-bottom-nav,
+    .ai-assistant,
+    .pwa-prompt,
+    .offline-indicator,
+    button,
+    .code-copy-btn {
+        display: none !important;
+    }
+
+    /* Reset page layout */
+    body {
+        background: white !important;
+        color: black !important;
+        font-size: 12pt !important;
+        line-height: 1.5 !important;
+    }
+
+    .app-main {
+        margin: 0 !important;
+        padding: 0 !important;
+        width: 100% !important;
+    }
+
+    /* Typography adjustments */
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+        color: black !important;
+        page-break-after: avoid !important;
+    }
+
+    p,
+    li {
+        orphans: 3;
+        widows: 3;
+    }
+
+    /* Links */
+    a {
+        color: black !important;
+        text-decoration: underline !important;
+    }
+
+    a[href^='http']:after {
+        content: ' (' attr(href) ')';
+        font-size: 10pt;
+        color: #666;
+    }
+
+    /* Code blocks */
+    pre,
+    code {
+        background: #f5f5f5 !important;
+        border: 1px solid #ddd !important;
+        color: black !important;
+        page-break-inside: avoid !important;
+        white-space: pre-wrap !important;
+        word-wrap: break-word !important;
+    }
+
+    /* Images */
+    img {
+        max-width: 100% !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Cards and containers */
+    .card,
+    .dashboard-stat-card,
+    .quick-actions-card {
+        background: white !important;
+        border: 1px solid #ddd !important;
+        box-shadow: none !important;
+        page-break-inside: avoid !important;
+    }
+
+    /* Page breaks */
+    .page-break {
+        page-break-before: always !important;
+    }
+
+    /* Print header/footer */
+    @page {
+        margin: 2cm;
+    }
+}
+
+/* ==================== ACCESSIBILITY ==================== */
+/* Screen reader only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+/* Skip link visible on focus */
+.skip-link {
+    position: absolute;
+    left: -9999px;
+    z-index: 9999;
+    padding: 1rem;
+    background: var(--ds-color-primary);
+    color: white;
+    text-decoration: none;
+    border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    * {
+        border-color: currentColor !important;
+    }
+}
+
+/* ==================== MOBILE OPTIMIZATIONS ==================== */
+/* Touch target minimum size - 44px for accessibility */
+@media (max-width: 768px) {
+    /* Ensure all interactive elements have proper touch targets */
+    button:not(.btn-icon),
+    a.btn,
+    .touch-target,
+    input[type='submit'],
+    input[type='button'] {
+        min-height: var(--touch-target-min);
+        min-width: var(--touch-target-min);
+    }
+
+    /* Increase tap areas for links in navigation */
+    nav a,
+    .nav-link {
+        padding: var(--space-3);
+    }
+
+    /* Better form input sizing on mobile */
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    input[type='search'],
+    input[type='tel'],
+    input[type='url'],
+    input[type='number'],
+    input[type='date'],
+    textarea,
+    select {
+        font-size: 16px !important;
+        /* Prevents iOS zoom on focus */
+        min-height: var(--touch-target-min);
+        padding: var(--space-3) var(--space-4);
+    }
+
+    /* Prevent horizontal scroll on mobile */
+    body {
+        overflow-x: hidden;
+    }
+
+    /* Better text sizes for mobile readability */
+    h1 {
+        font-size: var(--text-2xl);
+    }
+
+    h2 {
+        font-size: var(--text-xl);
+    }
+
+    h3 {
+        font-size: var(--text-lg);
+    }
+}
+
+/* Extra small screens (320px) */
+@media (max-width: 375px) {
+    :root {
+        --space-4: 14px;
+        --space-5: 18px;
+        --space-6: 22px;
+    }
+
+    h1 {
+        font-size: var(--text-xl);
+    }
+
+    h2 {
+        font-size: var(--text-lg);
+    }
+
+    h3 {
+        font-size: var(--text-base);
+    }
+}
+
+/* Safe area support for notched devices */
+@supports (padding: env(safe-area-inset-bottom)) {
+    .app-main {
+        padding-left: env(safe-area-inset-left);
+        padding-right: env(safe-area-inset-right);
+    }
+}
+
+/* Landscape orientation optimizations */
+@media (max-height: 500px) and (orientation: landscape) {
+    .app-main {
+        padding-bottom: var(--space-4);
+    }
+}
+
+@keyframes gradient-animation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}

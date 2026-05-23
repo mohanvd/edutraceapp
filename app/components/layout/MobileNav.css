@@ -1,0 +1,121 @@
+/* =============================================
+   Mobile Bottom Navigation
+   Premium App-Style Tab Bar - Mobile-First
+   ============================================= */
+
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: calc(var(--ds-mobile-nav-height) + env(safe-area-inset-bottom, 0px));
+    padding-bottom: env(safe-area-inset-bottom, 0px);
+    background: var(--ds-bg-primary);
+    border-top: 1px solid var(--ds-border-subtle);
+    display: none;
+    z-index: var(--ds-z-fixed);
+}
+
+.mobile-bottom-nav-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: var(--ds-mobile-nav-height);
+    max-width: var(--ds-container-xs);
+    margin: 0 auto;
+    padding: 0 var(--ds-space-2);
+}
+
+.mobile-nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--ds-space-2) var(--ds-space-4);
+    min-width: 56px;
+    min-height: var(--ds-touch-target-min);
+    border-radius: var(--ds-radius-xl);
+    color: var(--ds-text-quaternary);
+    text-decoration: none;
+    transition: color 0.15s var(--ds-ease-default);
+    -webkit-tap-highlight-color: transparent;
+    position: relative;
+}
+
+.mobile-nav-item:active {
+    transform: scale(0.95);
+}
+
+.mobile-nav-item.active {
+    color: var(--ds-color-primary);
+}
+
+.mobile-nav-icon {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mobile-nav-icon svg {
+    width: 22px;
+    height: 22px;
+}
+
+.mobile-nav-label {
+    font-size: var(--ds-font-size-xs);
+    font-weight: 500;
+    margin-top: 2px;
+    line-height: 1;
+}
+
+/* Hover state (for devices that support it) */
+@media (hover: hover) {
+    .mobile-nav-item:hover {
+        color: var(--ds-text-secondary);
+    }
+
+    .mobile-nav-item.active:hover {
+        color: var(--ds-color-primary);
+    }
+}
+
+/* Show bottom nav on mobile only */
+@media (max-width: 768px) {
+    .mobile-bottom-nav {
+        display: block;
+    }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+    .mobile-nav-item {
+        padding: var(--ds-space-2) var(--ds-space-2);
+        min-width: 48px;
+    }
+
+    .mobile-nav-label {
+        font-size: 9px;
+    }
+}
+
+/* Landscape mode adjustments */
+@media (max-height: 500px) and (orientation: landscape) {
+    .mobile-bottom-nav {
+        height: calc(52px + env(safe-area-inset-bottom, 0px));
+    }
+
+    .mobile-bottom-nav-inner {
+        height: 52px;
+    }
+
+    .mobile-nav-item {
+        padding: var(--ds-space-1) var(--ds-space-3);
+    }
+
+    .mobile-nav-icon svg {
+        width: 20px;
+        height: 20px;
+    }
+}
